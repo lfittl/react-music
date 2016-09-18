@@ -2,10 +2,9 @@
   "name": "react-music",
   "version": "1.0.1",
   "description": "Make beats with react",
-  "main": "lib",
+  "main": "dist/bundle.js",
   "files": [
-    "lib",
-    "umd"
+    "dist"
   ],
   "scripts": {
     "start": "webpack-dev-server --hot --inline --port 3000 --config webpack.config.dev.js --content-base public/",

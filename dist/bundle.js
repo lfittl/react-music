@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(86);
+	module.exports = __webpack_require__(92);
 
 
 /***/ },
@@ -161,7 +161,7 @@
 
 	'use strict';
 
-	var emptyFunction = __webpack_require__(7);
+	var emptyFunction = __webpack_require__(8);
 
 	/**
 	 * Similar to invariant but only logs a warning if the condition is not met.
@@ -309,6 +309,15 @@
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	module.exports = __webpack_require__(143);
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/**
 	 * Copyright 2013-present, Facebook, Inc.
 	 * All rights reserved.
@@ -324,8 +333,8 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var DOMProperty = __webpack_require__(17);
-	var ReactDOMComponentFlags = __webpack_require__(65);
+	var DOMProperty = __webpack_require__(19);
+	var ReactDOMComponentFlags = __webpack_require__(71);
 
 	var invariant = __webpack_require__(1);
 
@@ -499,7 +508,7 @@
 	module.exports = ReactDOMComponentTree;
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports) {
 
 	/**
@@ -539,7 +548,7 @@
 	module.exports = ExecutionEnvironment;
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -582,7 +591,7 @@
 	module.exports = emptyFunction;
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -608,7 +617,7 @@
 	module.exports = { debugTool: debugTool };
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -626,10 +635,10 @@
 
 	var _assign = __webpack_require__(4);
 
-	var ReactCurrentOwner = __webpack_require__(15);
+	var ReactCurrentOwner = __webpack_require__(16);
 
 	var warning = __webpack_require__(3);
-	var canDefineProperty = __webpack_require__(78);
+	var canDefineProperty = __webpack_require__(84);
 	var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 	// The Symbol used to tag the ReactElement type. If there is no native Symbol
@@ -977,7 +986,7 @@
 	module.exports = ReactElement;
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -996,11 +1005,11 @@
 	var _prodInvariant = __webpack_require__(2),
 	    _assign = __webpack_require__(4);
 
-	var CallbackQueue = __webpack_require__(61);
-	var PooledClass = __webpack_require__(14);
-	var ReactFeatureFlags = __webpack_require__(68);
-	var ReactReconciler = __webpack_require__(18);
-	var Transaction = __webpack_require__(24);
+	var CallbackQueue = __webpack_require__(67);
+	var PooledClass = __webpack_require__(15);
+	var ReactFeatureFlags = __webpack_require__(74);
+	var ReactReconciler = __webpack_require__(20);
+	var Transaction = __webpack_require__(26);
 
 	var invariant = __webpack_require__(1);
 
@@ -1233,7 +1242,7 @@
 	module.exports = ReactUpdates;
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1249,7 +1258,7 @@
 
 	'use strict';
 
-	var keyMirror = __webpack_require__(26);
+	var keyMirror = __webpack_require__(27);
 
 	var PropagationPhases = keyMirror({ bubbled: null, captured: null });
 
@@ -1335,7 +1344,7 @@
 	module.exports = EventConstants;
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1353,9 +1362,9 @@
 
 	var _assign = __webpack_require__(4);
 
-	var PooledClass = __webpack_require__(14);
+	var PooledClass = __webpack_require__(15);
 
-	var emptyFunction = __webpack_require__(7);
+	var emptyFunction = __webpack_require__(8);
 	var warning = __webpack_require__(3);
 
 	var didWarnForAddedNewProperty = false;
@@ -1607,7 +1616,7 @@
 	}
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1646,7 +1655,7 @@
 	module.exports = keyOf;
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1772,7 +1781,7 @@
 	module.exports = PooledClass;
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports) {
 
 	/**
@@ -1808,7 +1817,2117 @@
 	module.exports = ReactCurrentOwner;
 
 /***/ },
-/* 16 */
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	    Copyright (c) 2012 DinahMoe AB & Oskar Eriksson
+
+	    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+	    files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+	    modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software
+	    is furnished to do so, subject to the following conditions:
+
+	    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+	    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	    DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+	    OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	*/
+	/*global module*/
+	(function() {
+
+	    var userContext,
+	        userInstance,
+	        pipe = function(param, val) {
+	            param.value = val;
+	        },
+	        Super = Object.create(null, {
+	            activate: {
+	                writable: true,
+	                value: function(doActivate) {
+	                    if (doActivate) {
+	                        this.input.disconnect();
+	                        this.input.connect(this.activateNode);
+	                        if (this.activateCallback) {
+	                            this.activateCallback(doActivate);
+	                        }
+	                    } else {
+	                        this.input.disconnect();
+	                        this.input.connect(this.output);
+	                    }
+	                }
+	            },
+	            bypass: {
+	                get: function() {
+	                    return this._bypass;
+	                },
+	                set: function(value) {
+	                    if (this._lastBypassValue === value) {
+	                        return;
+	                    }
+	                    this._bypass = value;
+	                    this.activate(!value);
+	                    this._lastBypassValue = value;
+	                }
+	            },
+	            connect: {
+	                value: function(target) {
+	                    this.output.connect(target);
+	                }
+	            },
+	            disconnect: {
+	                value: function(target) {
+	                    this.output.disconnect(target);
+	                }
+	            },
+	            connectInOrder: {
+	                value: function(nodeArray) {
+	                    var i = nodeArray.length - 1;
+	                    while (i--) {
+	                        if (!nodeArray[i].connect) {
+	                            return console.error("AudioNode.connectInOrder: TypeError: Not an AudioNode.", nodeArray[i]);
+	                        }
+	                        if (nodeArray[i + 1].input) {
+	                            nodeArray[i].connect(nodeArray[i + 1].input);
+	                        } else {
+	                            nodeArray[i].connect(nodeArray[i + 1]);
+	                        }
+	                    }
+	                }
+	            },
+	            getDefaults: {
+	                value: function() {
+	                    var result = {};
+	                    for (var key in this.defaults) {
+	                        result[key] = this.defaults[key].value;
+	                    }
+	                    return result;
+	                }
+	            },
+	            automate: {
+	                value: function(property, value, duration, startTime) {
+	                    var start = startTime ? ~~(startTime / 1000) : userContext.currentTime,
+	                        dur = duration ? ~~(duration / 1000) : 0,
+	                        _is = this.defaults[property],
+	                        param = this[property],
+	                        method;
+
+	                    if (param) {
+	                        if (_is.automatable) {
+	                            if (!duration) {
+	                                method = "setValueAtTime";
+	                            } else {
+	                                method = "linearRampToValueAtTime";
+	                                param.cancelScheduledValues(start);
+	                                param.setValueAtTime(param.value, start);
+	                            }
+	                            param[method](value, dur + start);
+	                        } else {
+	                            param = value;
+	                        }
+	                    } else {
+	                        console.error("Invalid Property for " + this.name);
+	                    }
+	                }
+	            }
+	        }),
+	        FLOAT = "float",
+	        BOOLEAN = "boolean",
+	        STRING = "string",
+	        INT = "int";
+
+	    if (typeof module !== "undefined" && module.exports) {
+	        module.exports = Tuna;
+	    } else if (true) {
+	        window.define("Tuna", definition);
+	    } else {
+	        window.Tuna = Tuna;
+	    }
+
+	    function definition() {
+	        return Tuna;
+	    }
+
+	    function Tuna(context) {
+	        if (!(this instanceof Tuna)) {
+	            return new Tuna(context);
+	        }
+
+	        var _window = typeof window === 'undefined' ? {} : window;
+
+	        if (!_window.AudioContext) {
+	            _window.AudioContext = _window.webkitAudioContext;
+	        }
+	        if (!context) {
+	            console.log("tuna.js: Missing audio context! Creating a new context for you.");
+	            context = _window.AudioContext && (new _window.AudioContext());
+	        }
+	        if (!context) {
+	            throw new Error("Tuna cannot initialize because this environment does not support web audio.");
+	        }
+	        connectify(context);
+	        userContext = context;
+	        userInstance = this;
+	    }
+
+	    function connectify(context) {
+	        if (context.__connectified__ === true) return;
+
+	        var gain = context.createGain(),
+	            proto = Object.getPrototypeOf(Object.getPrototypeOf(gain)),
+	            oconnect = proto.connect;
+
+	        proto.connect = shimConnect;
+	        context.__connectified__ = true; // Prevent overriding connect more than once
+
+	        function shimConnect() {
+	            var node = arguments[0];
+	            arguments[0] = Super.isPrototypeOf ? (Super.isPrototypeOf(node) ? node.input : node) : (node.input || node);
+	            oconnect.apply(this, arguments);
+	            return node;
+	        }
+	    }
+
+	    function dbToWAVolume(db) {
+	        return Math.max(0, Math.round(100 * Math.pow(2, db / 6)) / 100);
+	    }
+
+	    function fmod(x, y) {
+	        // http://kevin.vanzonneveld.net
+	        // *     example 1: fmod(5.7, 1.3);
+	        // *     returns 1: 0.5
+	        var tmp, tmp2, p = 0,
+	            pY = 0,
+	            l = 0.0,
+	            l2 = 0.0;
+
+	        tmp = x.toExponential().match(/^.\.?(.*)e(.+)$/);
+	        p = parseInt(tmp[2], 10) - (tmp[1] + "").length;
+	        tmp = y.toExponential().match(/^.\.?(.*)e(.+)$/);
+	        pY = parseInt(tmp[2], 10) - (tmp[1] + "").length;
+
+	        if (pY > p) {
+	            p = pY;
+	        }
+
+	        tmp2 = (x % y);
+
+	        if (p < -100 || p > 20) {
+	            // toFixed will give an out of bound error so we fix it like this:
+	            l = Math.round(Math.log(tmp2) / Math.log(10));
+	            l2 = Math.pow(10, l);
+
+	            return (tmp2 / l2).toFixed(l - p) * l2;
+	        } else {
+	            return parseFloat(tmp2.toFixed(-p));
+	        }
+	    }
+
+	    function sign(x) {
+	        if (x === 0) {
+	            return 1;
+	        } else {
+	            return Math.abs(x) / x;
+	        }
+	    }
+
+	    function tanh(n) {
+	        return (Math.exp(n) - Math.exp(-n)) / (Math.exp(n) + Math.exp(-n));
+	    }
+
+	    function initValue(userVal, defaultVal) {
+	        return userVal === undefined ? defaultVal : userVal;
+	    }
+
+	    Tuna.prototype.Bitcrusher = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.bufferSize = properties.bufferSize || this.defaults.bufferSize.value;
+
+	        this.input = userContext.createGain();
+	        this.activateNode = userContext.createGain();
+	        this.processor = userContext.createScriptProcessor(this.bufferSize, 1, 1);
+	        this.output = userContext.createGain();
+
+	        this.activateNode.connect(this.processor);
+	        this.processor.connect(this.output);
+
+	        var phaser = 0,
+	            last = 0,
+	            input, output, step, i, length;
+	        this.processor.onaudioprocess = function(e) {
+	            input = e.inputBuffer.getChannelData(0),
+	            output = e.outputBuffer.getChannelData(0),
+	            step = Math.pow(1 / 2, this.bits);
+	            length = input.length;
+	            for (i = 0; i < length; i++) {
+	                phaser += this.normfreq;
+	                if (phaser >= 1.0) {
+	                    phaser -= 1.0;
+	                    last = step * Math.floor(input[i] / step + 0.5);
+	                }
+	                output[i] = last;
+	            }
+	        };
+
+	        this.bits = properties.bits || this.defaults.bits.value;
+	        this.normfreq = initValue(properties.normfreq, this.defaults.normfreq.value);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Bitcrusher.prototype = Object.create(Super, {
+	        name: {
+	            value: "Bitcrusher"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                bits: {
+	                    value: 4,
+	                    min: 1,
+	                    max: 16,
+	                    automatable: false,
+	                    type: INT
+	                },
+	                bufferSize: {
+	                    value: 4096,
+	                    min: 256,
+	                    max: 16384,
+	                    automatable: false,
+	                    type: INT
+	                },
+	                bypass: {
+	                    value: false,
+	                    automatable: false,
+	                    type: BOOLEAN
+	                },
+	                normfreq: {
+	                    value: 0.1,
+	                    min: 0.0001,
+	                    max: 1.0,
+	                    automatable: false,
+	                    type: FLOAT
+	                }
+	            }
+	        },
+	        bits: {
+	            enumerable: true,
+	            get: function() {
+	                return this.processor.bits;
+	            },
+	            set: function(value) {
+	                this.processor.bits = value;
+	            }
+	        },
+	        normfreq: {
+	            enumerable: true,
+	            get: function() {
+	                return this.processor.normfreq;
+	            },
+	            set: function(value) {
+	                this.processor.normfreq = value;
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.Cabinet = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.activateNode = userContext.createGain();
+	        this.convolver = this.newConvolver(properties.impulsePath || "../impulses/impulse_guitar.wav");
+	        this.makeupNode = userContext.createGain();
+	        this.output = userContext.createGain();
+
+	        this.activateNode.connect(this.convolver.input);
+	        this.convolver.output.connect(this.makeupNode);
+	        this.makeupNode.connect(this.output);
+
+	        this.makeupGain = initValue(properties.makeupGain, this.defaults.makeupGain);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Cabinet.prototype = Object.create(Super, {
+	        name: {
+	            value: "Cabinet"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                makeupGain: {
+	                    value: 1,
+	                    min: 0,
+	                    max: 20,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                bypass: {
+	                    value: false,
+	                    automatable: false,
+	                    type: BOOLEAN
+	                }
+	            }
+	        },
+	        makeupGain: {
+	            enumerable: true,
+	            get: function() {
+	                return this.makeupNode.gain;
+	            },
+	            set: function(value) {
+	                this.makeupNode.gain.value = value;
+	            }
+	        },
+	        newConvolver: {
+	            value: function(impulsePath) {
+	                return new userInstance.Convolver({
+	                    impulse: impulsePath,
+	                    dryLevel: 0,
+	                    wetLevel: 1
+	                });
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.Chorus = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.attenuator = this.activateNode = userContext.createGain();
+	        this.splitter = userContext.createChannelSplitter(2);
+	        this.delayL = userContext.createDelay();
+	        this.delayR = userContext.createDelay();
+	        this.feedbackGainNodeLR = userContext.createGain();
+	        this.feedbackGainNodeRL = userContext.createGain();
+	        this.merger = userContext.createChannelMerger(2);
+	        this.output = userContext.createGain();
+
+	        this.lfoL = new userInstance.LFO({
+	            target: this.delayL.delayTime,
+	            callback: pipe
+	        });
+	        this.lfoR = new userInstance.LFO({
+	            target: this.delayR.delayTime,
+	            callback: pipe
+	        });
+
+	        this.input.connect(this.attenuator);
+	        this.attenuator.connect(this.output);
+	        this.attenuator.connect(this.splitter);
+	        this.splitter.connect(this.delayL, 0);
+	        this.splitter.connect(this.delayR, 1);
+	        this.delayL.connect(this.feedbackGainNodeLR);
+	        this.delayR.connect(this.feedbackGainNodeRL);
+	        this.feedbackGainNodeLR.connect(this.delayR);
+	        this.feedbackGainNodeRL.connect(this.delayL);
+	        this.delayL.connect(this.merger, 0, 0);
+	        this.delayR.connect(this.merger, 0, 1);
+	        this.merger.connect(this.output);
+
+	        this.feedback = initValue(properties.feedback, this.defaults.feedback.value);
+	        this.rate = initValue(properties.rate, this.defaults.rate.value);
+	        this.delay = initValue(properties.delay, this.defaults.delay.value);
+	        this.depth = initValue(properties.depth, this.defaults.depth.value);
+	        this.lfoR.phase = Math.PI / 2;
+	        this.attenuator.gain.value = 0.6934; // 1 / (10 ^ (((20 * log10(3)) / 3) / 20))
+	        this.lfoL.activate(true);
+	        this.lfoR.activate(true);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Chorus.prototype = Object.create(Super, {
+	        name: {
+	            value: "Chorus"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                feedback: {
+	                    value: 0.4,
+	                    min: 0,
+	                    max: 0.95,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                delay: {
+	                    value: 0.0045,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                depth: {
+	                    value: 0.7,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                rate: {
+	                    value: 1.5,
+	                    min: 0,
+	                    max: 8,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                bypass: {
+	                    value: false,
+	                    automatable: false,
+	                    type: BOOLEAN
+	                }
+	            }
+	        },
+	        delay: {
+	            enumerable: true,
+	            get: function() {
+	                return this._delay;
+	            },
+	            set: function(value) {
+	                this._delay = 0.0002 * (Math.pow(10, value) * 2);
+	                this.lfoL.offset = this._delay;
+	                this.lfoR.offset = this._delay;
+	                this._depth = this._depth;
+	            }
+	        },
+	        depth: {
+	            enumerable: true,
+	            get: function() {
+	                return this._depth;
+	            },
+	            set: function(value) {
+	                this._depth = value;
+	                this.lfoL.oscillation = this._depth * this._delay;
+	                this.lfoR.oscillation = this._depth * this._delay;
+	            }
+	        },
+	        feedback: {
+	            enumerable: true,
+	            get: function() {
+	                return this._feedback;
+	            },
+	            set: function(value) {
+	                this._feedback = value;
+	                this.feedbackGainNodeLR.gain.value = this._feedback;
+	                this.feedbackGainNodeRL.gain.value = this._feedback;
+	            }
+	        },
+	        rate: {
+	            enumerable: true,
+	            get: function() {
+	                return this._rate;
+	            },
+	            set: function(value) {
+	                this._rate = value;
+	                this.lfoL.frequency = this._rate;
+	                this.lfoR.frequency = this._rate;
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.Compressor = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.compNode = this.activateNode = userContext.createDynamicsCompressor();
+	        this.makeupNode = userContext.createGain();
+	        this.output = userContext.createGain();
+
+	        this.compNode.connect(this.makeupNode);
+	        this.makeupNode.connect(this.output);
+
+	        this.automakeup = initValue(properties.automakeup, this.defaults.automakeup.value);
+	        this.makeupGain = initValue(properties.makeupGain, this.defaults.makeupGain.value);
+	        this.threshold = initValue(properties.threshold, this.defaults.threshold.value);
+	        this.release = initValue(properties.release, this.defaults.release.value);
+	        this.attack = initValue(properties.attack, this.defaults.attack.value);
+	        this.ratio = properties.ratio || this.defaults.ratio.value;
+	        this.knee = initValue(properties.knee, this.defaults.knee.value);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Compressor.prototype = Object.create(Super, {
+	        name: {
+	            value: "Compressor"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                threshold: {
+	                    value: -20,
+	                    min: -60,
+	                    max: 0,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                release: {
+	                    value: 250,
+	                    min: 10,
+	                    max: 2000,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                makeupGain: {
+	                    value: 1,
+	                    min: 1,
+	                    max: 100,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                attack: {
+	                    value: 1,
+	                    min: 0,
+	                    max: 1000,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                ratio: {
+	                    value: 4,
+	                    min: 1,
+	                    max: 50,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                knee: {
+	                    value: 5,
+	                    min: 0,
+	                    max: 40,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                automakeup: {
+	                    value: false,
+	                    automatable: false,
+	                    type: BOOLEAN
+	                },
+	                bypass: {
+	                    value: false,
+	                    automatable: false,
+	                    type: BOOLEAN
+	                }
+	            }
+	        },
+	        computeMakeup: {
+	            value: function() {
+	                var magicCoefficient = 4, // raise me if the output is too hot
+	                    c = this.compNode;
+	                return -(c.threshold.value - c.threshold.value / c.ratio.value) / magicCoefficient;
+	            }
+	        },
+	        automakeup: {
+	            enumerable: true,
+	            get: function() {
+	                return this._automakeup;
+	            },
+	            set: function(value) {
+	                this._automakeup = value;
+	                if (this._automakeup) this.makeupGain = this.computeMakeup();
+	            }
+	        },
+	        threshold: {
+	            enumerable: true,
+	            get: function() {
+	                return this.compNode.threshold;
+	            },
+	            set: function(value) {
+	                this.compNode.threshold.value = value;
+	                if (this._automakeup) this.makeupGain = this.computeMakeup();
+	            }
+	        },
+	        ratio: {
+	            enumerable: true,
+	            get: function() {
+	                return this.compNode.ratio;
+	            },
+	            set: function(value) {
+	                this.compNode.ratio.value = value;
+	                if (this._automakeup) this.makeupGain = this.computeMakeup();
+	            }
+	        },
+	        knee: {
+	            enumerable: true,
+	            get: function() {
+	                return this.compNode.knee;
+	            },
+	            set: function(value) {
+	                this.compNode.knee.value = value;
+	                if (this._automakeup) this.makeupGain = this.computeMakeup();
+	            }
+	        },
+	        attack: {
+	            enumerable: true,
+	            get: function() {
+	                return this.compNode.attack;
+	            },
+	            set: function(value) {
+	                this.compNode.attack.value = value / 1000;
+	            }
+	        },
+	        release: {
+	            enumerable: true,
+	            get: function() {
+	                return this.compNode.release;
+	            },
+	            set: function(value) {
+	                this.compNode.release.value = value / 1000;
+	            }
+	        },
+	        makeupGain: {
+	            enumerable: true,
+	            get: function() {
+	                return this.makeupNode.gain;
+	            },
+	            set: function(value) {
+	                this.makeupNode.gain.value = dbToWAVolume(value);
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.Convolver = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.activateNode = userContext.createGain();
+	        this.convolver = userContext.createConvolver();
+	        this.dry = userContext.createGain();
+	        this.filterLow = userContext.createBiquadFilter();
+	        this.filterHigh = userContext.createBiquadFilter();
+	        this.wet = userContext.createGain();
+	        this.output = userContext.createGain();
+
+	        this.activateNode.connect(this.filterLow);
+	        this.activateNode.connect(this.dry);
+	        this.filterLow.connect(this.filterHigh);
+	        this.filterHigh.connect(this.convolver);
+	        this.convolver.connect(this.wet);
+	        this.wet.connect(this.output);
+	        this.dry.connect(this.output);
+
+	        this.dryLevel = initValue(properties.dryLevel, this.defaults.dryLevel.value);
+	        this.wetLevel = initValue(properties.wetLevel, this.defaults.wetLevel.value);
+	        this.highCut = properties.highCut || this.defaults.highCut.value;
+	        this.buffer = properties.impulse || "../impulses/ir_rev_short.wav";
+	        this.lowCut = properties.lowCut || this.defaults.lowCut.value;
+	        this.level = initValue(properties.level, this.defaults.level.value);
+	        this.filterHigh.type = "lowpass";
+	        this.filterLow.type = "highpass";
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Convolver.prototype = Object.create(Super, {
+	        name: {
+	            value: "Convolver"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                highCut: {
+	                    value: 22050,
+	                    min: 20,
+	                    max: 22050,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                lowCut: {
+	                    value: 20,
+	                    min: 20,
+	                    max: 22050,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                dryLevel: {
+	                    value: 1,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                wetLevel: {
+	                    value: 1,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                level: {
+	                    value: 1,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: true,
+	                    type: FLOAT
+	                }
+	            }
+	        },
+	        lowCut: {
+	            get: function() {
+	                return this.filterLow.frequency;
+	            },
+	            set: function(value) {
+	                this.filterLow.frequency.value = value;
+	            }
+	        },
+	        highCut: {
+	            get: function() {
+	                return this.filterHigh.frequency;
+	            },
+	            set: function(value) {
+	                this.filterHigh.frequency.value = value;
+	            }
+	        },
+	        level: {
+	            get: function() {
+	                return this.output.gain;
+	            },
+	            set: function(value) {
+	                this.output.gain.value = value;
+	            }
+	        },
+	        dryLevel: {
+	            get: function() {
+	                return this.dry.gain;
+	            },
+	            set: function(value) {
+	                this.dry.gain.value = value;
+	            }
+	        },
+	        wetLevel: {
+	            get: function() {
+	                return this.wet.gain;
+	            },
+	            set: function(value) {
+	                this.wet.gain.value = value;
+	            }
+	        },
+	        buffer: {
+	            enumerable: false,
+	            get: function() {
+	                return this.convolver.buffer;
+	            },
+	            set: function(impulse) {
+	                var convolver = this.convolver,
+	                    xhr = new XMLHttpRequest();
+	                if (!impulse) {
+	                    console.log("Tuna.Convolver.setBuffer: Missing impulse path!");
+	                    return;
+	                }
+	                xhr.open("GET", impulse, true);
+	                xhr.responseType = "arraybuffer";
+	                xhr.onreadystatechange = function() {
+	                    if (xhr.readyState === 4) {
+	                        if (xhr.status < 300 && xhr.status > 199 || xhr.status === 302) {
+	                            userContext.decodeAudioData(xhr.response, function(buffer) {
+	                                convolver.buffer = buffer;
+	                            }, function(e) {
+	                                if (e) console.log("Tuna.Convolver.setBuffer: Error decoding data" + e);
+	                            });
+	                        }
+	                    }
+	                };
+	                xhr.send(null);
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.Delay = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.activateNode = userContext.createGain();
+	        this.dry = userContext.createGain();
+	        this.wet = userContext.createGain();
+	        this.filter = userContext.createBiquadFilter();
+	        this.delay = userContext.createDelay(10);
+	        this.feedbackNode = userContext.createGain();
+	        this.output = userContext.createGain();
+
+	        this.activateNode.connect(this.delay);
+	        this.activateNode.connect(this.dry);
+	        this.delay.connect(this.filter);
+	        this.filter.connect(this.feedbackNode);
+	        this.feedbackNode.connect(this.delay);
+	        this.feedbackNode.connect(this.wet);
+	        this.wet.connect(this.output);
+	        this.dry.connect(this.output);
+
+	        this.delayTime = properties.delayTime || this.defaults.delayTime.value;
+	        this.feedback = initValue(properties.feedback, this.defaults.feedback.value);
+	        this.wetLevel = initValue(properties.wetLevel, this.defaults.wetLevel.value);
+	        this.dryLevel = initValue(properties.dryLevel, this.defaults.dryLevel.value);
+	        this.cutoff = properties.cutoff || this.defaults.cutoff.value;
+	        this.filter.type = "lowpass";
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Delay.prototype = Object.create(Super, {
+	        name: {
+	            value: "Delay"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                delayTime: {
+	                    value: 100,
+	                    min: 20,
+	                    max: 1000,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                feedback: {
+	                    value: 0.45,
+	                    min: 0,
+	                    max: 0.9,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                cutoff: {
+	                    value: 20000,
+	                    min: 20,
+	                    max: 20000,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                wetLevel: {
+	                    value: 0.5,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                dryLevel: {
+	                    value: 1,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: true,
+	                    type: FLOAT
+	                }
+	            }
+	        },
+	        delayTime: {
+	            enumerable: true,
+	            get: function() {
+	                return this.delay.delayTime;
+	            },
+	            set: function(value) {
+	                this.delay.delayTime.value = value / 1000;
+	            }
+	        },
+	        wetLevel: {
+	            enumerable: true,
+	            get: function() {
+	                return this.wet.gain;
+	            },
+	            set: function(value) {
+	                this.wet.gain.value = value;
+	            }
+	        },
+	        dryLevel: {
+	            enumerable: true,
+	            get: function() {
+	                return this.dry.gain;
+	            },
+	            set: function(value) {
+	                this.dry.gain.value = value;
+	            }
+	        },
+	        feedback: {
+	            enumerable: true,
+	            get: function() {
+	                return this.feedbackNode.gain;
+	            },
+	            set: function(value) {
+	                this.feedbackNode.gain.value = value;
+	            }
+	        },
+	        cutoff: {
+	            enumerable: true,
+	            get: function() {
+	                return this.filter.frequency;
+	            },
+	            set: function(value) {
+	                this.filter.frequency.value = value;
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.Filter = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.activateNode = userContext.createGain();
+	        this.filter = userContext.createBiquadFilter();
+	        this.output = userContext.createGain();
+
+	        this.activateNode.connect(this.filter);
+	        this.filter.connect(this.output);
+
+	        this.frequency = properties.frequency || this.defaults.frequency.value;
+	        this.Q = properties.resonance || this.defaults.Q.value;
+	        this.filterType = initValue(properties.filterType, this.defaults.filterType.value);
+	        this.gain = initValue(properties.gain, this.defaults.gain.value);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Filter.prototype = Object.create(Super, {
+	        name: {
+	            value: "Filter"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                frequency: {
+	                    value: 800,
+	                    min: 20,
+	                    max: 22050,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                Q: {
+	                    value: 1,
+	                    min: 0.001,
+	                    max: 100,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                gain: {
+	                    value: 0,
+	                    min: -40,
+	                    max: 40,
+	                    automatable: true,
+	                    type: FLOAT
+	                },
+	                bypass: {
+	                    value: false,
+	                    automatable: false,
+	                    type: BOOLEAN
+	                },
+	                filterType: {
+	                    value: "lowpass",
+	                    automatable: false,
+	                    type: STRING
+	                }
+	            }
+	        },
+	        filterType: {
+	            enumerable: true,
+	            get: function() {
+	                return this.filter.type;
+	            },
+	            set: function(value) {
+	                this.filter.type = value;
+	            }
+	        },
+	        Q: {
+	            enumerable: true,
+	            get: function() {
+	                return this.filter.Q;
+	            },
+	            set: function(value) {
+	                this.filter.Q.value = value;
+	            }
+	        },
+	        gain: {
+	            enumerable: true,
+	            get: function() {
+	                return this.filter.gain;
+	            },
+	            set: function(value) {
+	                this.filter.gain.value = value;
+	            }
+	        },
+	        frequency: {
+	            enumerable: true,
+	            get: function() {
+	                return this.filter.frequency;
+	            },
+	            set: function(value) {
+	                this.filter.frequency.value = value;
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.MoogFilter = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.bufferSize = properties.bufferSize || this.defaults.bufferSize.value;
+
+	        this.input = userContext.createGain();
+	        this.activateNode = userContext.createGain();
+	        this.processor = userContext.createScriptProcessor(this.bufferSize, 1, 1);
+	        this.output = userContext.createGain();
+
+	        this.activateNode.connect(this.processor);
+	        this.processor.connect(this.output);
+
+	        var in1, in2, in3, in4, out1, out2, out3, out4;
+	        in1 = in2 = in3 = in4 = out1 = out2 = out3 = out4 = 0.0;
+	        var input, output, f, fb, i, length, inputFactor;
+	        this.processor.onaudioprocess = function(e) {
+	            input = e.inputBuffer.getChannelData(0),
+	                output = e.outputBuffer.getChannelData(0),
+	                f = this.cutoff * 1.16,
+	                inputFactor = 0.35013 * (f * f) * (f * f);
+	            fb = this.resonance * (1.0 - 0.15 * f * f);
+	            length = input.length;
+	            for (i = 0; i < length; i++) {
+	                input[i] -= out4 * fb;
+	                input[i] *= inputFactor;
+	                out1 = input[i] + 0.3 * in1 + (1 - f) * out1; // Pole 1
+	                in1 = input[i];
+	                out2 = out1 + 0.3 * in2 + (1 - f) * out2; // Pole 2
+	                in2 = out1;
+	                out3 = out2 + 0.3 * in3 + (1 - f) * out3; // Pole 3
+	                in3 = out2;
+	                out4 = out3 + 0.3 * in4 + (1 - f) * out4; // Pole 4
+	                in4 = out3;
+	                output[i] = out4;
+	            }
+	        };
+
+	        this.cutoff = initValue(properties.cutoff, this.defaults.cutoff.value);
+	        this.resonance = initValue(properties.resonance, this.defaults.resonance.value);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.MoogFilter.prototype = Object.create(Super, {
+	        name: {
+	            value: "MoogFilter"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                bufferSize: {
+	                    value: 4096,
+	                    min: 256,
+	                    max: 16384,
+	                    automatable: false,
+	                    type: INT
+	                },
+	                bypass: {
+	                    value: false,
+	                    automatable: false,
+	                    type: BOOLEAN
+	                },
+	                cutoff: {
+	                    value: 0.065,
+	                    min: 0.0001,
+	                    max: 1.0,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                resonance: {
+	                    value: 3.5,
+	                    min: 0.0,
+	                    max: 4.0,
+	                    automatable: false,
+	                    type: FLOAT
+	                }
+	            }
+	        },
+	        cutoff: {
+	            enumerable: true,
+	            get: function() {
+	                return this.processor.cutoff;
+	            },
+	            set: function(value) {
+	                this.processor.cutoff = value;
+	            }
+	        },
+	        resonance: {
+	            enumerable: true,
+	            get: function() {
+	                return this.processor.resonance;
+	            },
+	            set: function(value) {
+	                this.processor.resonance = value;
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.Overdrive = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.activateNode = userContext.createGain();
+	        this.inputDrive = userContext.createGain();
+	        this.waveshaper = userContext.createWaveShaper();
+	        this.outputDrive = userContext.createGain();
+	        this.output = userContext.createGain();
+
+	        this.activateNode.connect(this.inputDrive);
+	        this.inputDrive.connect(this.waveshaper);
+	        this.waveshaper.connect(this.outputDrive);
+	        this.outputDrive.connect(this.output);
+
+	        this.ws_table = new Float32Array(this.k_nSamples);
+	        this.drive = initValue(properties.drive, this.defaults.drive.value);
+	        this.outputGain = initValue(properties.outputGain, this.defaults.outputGain.value);
+	        this.curveAmount = initValue(properties.curveAmount, this.defaults.curveAmount.value);
+	        this.algorithmIndex = initValue(properties.algorithmIndex, this.defaults.algorithmIndex.value);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Overdrive.prototype = Object.create(Super, {
+	        name: {
+	            value: "Overdrive"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                drive: {
+	                    value: 1,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: true,
+	                    type: FLOAT,
+	                    scaled: true
+	                },
+	                outputGain: {
+	                    value: 1,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: true,
+	                    type: FLOAT,
+	                    scaled: true
+	                },
+	                curveAmount: {
+	                    value: 0.725,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                algorithmIndex: {
+	                    value: 0,
+	                    min: 0,
+	                    max: 5,
+	                    automatable: false,
+	                    type: INT
+	                }
+	            }
+	        },
+	        k_nSamples: {
+	            value: 8192
+	        },
+	        drive: {
+	            get: function() {
+	                return this.inputDrive.gain;
+	            },
+	            set: function(value) {
+	                this._drive = value;
+	            }
+	        },
+	        curveAmount: {
+	            get: function() {
+	                return this._curveAmount;
+	            },
+	            set: function(value) {
+	                this._curveAmount = value;
+	                if (this._algorithmIndex === undefined) {
+	                    this._algorithmIndex = 0;
+	                }
+	                this.waveshaperAlgorithms[this._algorithmIndex](this._curveAmount, this.k_nSamples, this.ws_table);
+	                this.waveshaper.curve = this.ws_table;
+	            }
+	        },
+	        outputGain: {
+	            get: function() {
+	                return this.outputDrive.gain;
+	            },
+	            set: function(value) {
+	                this._outputGain = dbToWAVolume(value);
+	            }
+	        },
+	        algorithmIndex: {
+	            get: function() {
+	                return this._algorithmIndex;
+	            },
+	            set: function(value) {
+	                this._algorithmIndex = value;
+	                this.curveAmount = this._curveAmount;
+	            }
+	        },
+	        waveshaperAlgorithms: {
+	            value: [
+	                function(amount, n_samples, ws_table) {
+	                    amount = Math.min(amount, 0.9999);
+	                    var k = 2 * amount / (1 - amount),
+	                        i, x;
+	                    for (i = 0; i < n_samples; i++) {
+	                        x = i * 2 / n_samples - 1;
+	                        ws_table[i] = (1 + k) * x / (1 + k * Math.abs(x));
+	                    }
+	                },
+	                function(amount, n_samples, ws_table) {
+	                    var i, x, y;
+	                    for (i = 0; i < n_samples; i++) {
+	                        x = i * 2 / n_samples - 1;
+	                        y = ((0.5 * Math.pow((x + 1.4), 2)) - 1) * y >= 0 ? 5.8 : 1.2;
+	                        ws_table[i] = tanh(y);
+	                    }
+	                },
+	                function(amount, n_samples, ws_table) {
+	                    var i, x, y, a = 1 - amount;
+	                    for (i = 0; i < n_samples; i++) {
+	                        x = i * 2 / n_samples - 1;
+	                        y = x < 0 ? -Math.pow(Math.abs(x), a + 0.04) : Math.pow(x, a);
+	                        ws_table[i] = tanh(y * 2);
+	                    }
+	                },
+	                function(amount, n_samples, ws_table) {
+	                    var i, x, y, abx, a = 1 - amount > 0.99 ? 0.99 : 1 - amount;
+	                    for (i = 0; i < n_samples; i++) {
+	                        x = i * 2 / n_samples - 1;
+	                        abx = Math.abs(x);
+	                        if (abx < a) y = abx;
+	                        else if (abx > a) y = a + (abx - a) / (1 + Math.pow((abx - a) / (1 - a), 2));
+	                        else if (abx > 1) y = abx;
+	                        ws_table[i] = sign(x) * y * (1 / ((a + 1) / 2));
+	                    }
+	                },
+	                function(amount, n_samples, ws_table) { // fixed curve, amount doesn't do anything, the distortion is just from the drive
+	                    var i, x;
+	                    for (i = 0; i < n_samples; i++) {
+	                        x = i * 2 / n_samples - 1;
+	                        if (x < -0.08905) {
+	                            ws_table[i] = (-3 / 4) * (1 - (Math.pow((1 - (Math.abs(x) - 0.032857)), 12)) + (1 / 3) * (Math.abs(x) - 0.032847)) + 0.01;
+	                        } else if (x >= -0.08905 && x < 0.320018) {
+	                            ws_table[i] = (-6.153 * (x * x)) + 3.9375 * x;
+	                        } else {
+	                            ws_table[i] = 0.630035;
+	                        }
+	                    }
+	                },
+	                function(amount, n_samples, ws_table) {
+	                    var a = 2 + Math.round(amount * 14),
+	                        // we go from 2 to 16 bits, keep in mind for the UI
+	                        bits = Math.round(Math.pow(2, a - 1)),
+	                        // real number of quantization steps divided by 2
+	                        i, x;
+	                    for (i = 0; i < n_samples; i++) {
+	                        x = i * 2 / n_samples - 1;
+	                        ws_table[i] = Math.round(x * bits) / bits;
+	                    }
+	                }
+	            ]
+	        }
+	    });
+
+	    Tuna.prototype.Phaser = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.splitter = this.activateNode = userContext.createChannelSplitter(2);
+	        this.filtersL = [];
+	        this.filtersR = [];
+	        this.feedbackGainNodeL = userContext.createGain();
+	        this.feedbackGainNodeR = userContext.createGain();
+	        this.merger = userContext.createChannelMerger(2);
+	        this.filteredSignal = userContext.createGain();
+	        this.output = userContext.createGain();
+	        this.lfoL = new userInstance.LFO({
+	            target: this.filtersL,
+	            callback: this.callback
+	        });
+	        this.lfoR = new userInstance.LFO({
+	            target: this.filtersR,
+	            callback: this.callback
+	        });
+
+	        var i = this.stage;
+	        while (i--) {
+	            this.filtersL[i] = userContext.createBiquadFilter();
+	            this.filtersR[i] = userContext.createBiquadFilter();
+	            this.filtersL[i].type = "allpass";
+	            this.filtersR[i].type = "allpass";
+	        }
+	        this.input.connect(this.splitter);
+	        this.input.connect(this.output);
+	        this.splitter.connect(this.filtersL[0], 0, 0);
+	        this.splitter.connect(this.filtersR[0], 1, 0);
+	        this.connectInOrder(this.filtersL);
+	        this.connectInOrder(this.filtersR);
+	        this.filtersL[this.stage - 1].connect(this.feedbackGainNodeL);
+	        this.filtersL[this.stage - 1].connect(this.merger, 0, 0);
+	        this.filtersR[this.stage - 1].connect(this.feedbackGainNodeR);
+	        this.filtersR[this.stage - 1].connect(this.merger, 0, 1);
+	        this.feedbackGainNodeL.connect(this.filtersL[0]);
+	        this.feedbackGainNodeR.connect(this.filtersR[0]);
+	        this.merger.connect(this.output);
+
+	        this.rate = initValue(properties.rate, this.defaults.rate.value);
+	        this.baseModulationFrequency = properties.baseModulationFrequency || this.defaults.baseModulationFrequency.value;
+	        this.depth = initValue(properties.depth, this.defaults.depth.value);
+	        this.feedback = initValue(properties.feedback, this.defaults.feedback.value);
+	        this.stereoPhase = initValue(properties.stereoPhase, this.defaults.stereoPhase.value);
+
+	        this.lfoL.activate(true);
+	        this.lfoR.activate(true);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Phaser.prototype = Object.create(Super, {
+	        name: {
+	            value: "Phaser"
+	        },
+	        stage: {
+	            value: 4
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                rate: {
+	                    value: 0.1,
+	                    min: 0,
+	                    max: 8,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                depth: {
+	                    value: 0.6,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                feedback: {
+	                    value: 0.7,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                stereoPhase: {
+	                    value: 40,
+	                    min: 0,
+	                    max: 180,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                baseModulationFrequency: {
+	                    value: 700,
+	                    min: 500,
+	                    max: 1500,
+	                    automatable: false,
+	                    type: FLOAT
+	                }
+	            }
+	        },
+	        callback: {
+	            value: function(filters, value) {
+	                for (var stage = 0; stage < 4; stage++) {
+	                    filters[stage].frequency.value = value;
+	                }
+	            }
+	        },
+	        depth: {
+	            get: function() {
+	                return this._depth;
+	            },
+	            set: function(value) {
+	                this._depth = value;
+	                this.lfoL.oscillation = this._baseModulationFrequency * this._depth;
+	                this.lfoR.oscillation = this._baseModulationFrequency * this._depth;
+	            }
+	        },
+	        rate: {
+	            get: function() {
+	                return this._rate;
+	            },
+	            set: function(value) {
+	                this._rate = value;
+	                this.lfoL.frequency = this._rate;
+	                this.lfoR.frequency = this._rate;
+	            }
+	        },
+	        baseModulationFrequency: {
+	            enumerable: true,
+	            get: function() {
+	                return this._baseModulationFrequency;
+	            },
+	            set: function(value) {
+	                this._baseModulationFrequency = value;
+	                this.lfoL.offset = this._baseModulationFrequency;
+	                this.lfoR.offset = this._baseModulationFrequency;
+	                this._depth = this._depth;
+	            }
+	        },
+	        feedback: {
+	            get: function() {
+	                return this._feedback;
+	            },
+	            set: function(value) {
+	                this._feedback = value;
+	                this.feedbackGainNodeL.gain.value = this._feedback;
+	                this.feedbackGainNodeR.gain.value = this._feedback;
+	            }
+	        },
+	        stereoPhase: {
+	            get: function() {
+	                return this._stereoPhase;
+	            },
+	            set: function(value) {
+	                this._stereoPhase = value;
+	                var newPhase = this.lfoL._phase + this._stereoPhase * Math.PI / 180;
+	                newPhase = fmod(newPhase, 2 * Math.PI);
+	                this.lfoR._phase = newPhase;
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.PingPongDelay = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.wetLevel = userContext.createGain();
+	        this.stereoToMonoMix = userContext.createGain();
+	        this.feedbackLevel = userContext.createGain();
+	        this.output = userContext.createGain();
+	        this.delayLeft = userContext.createDelay(10);
+	        this.delayRight = userContext.createDelay(10);
+
+	        this.activateNode = userContext.createGain();
+	        this.splitter = userContext.createChannelSplitter(2);
+	        this.merger = userContext.createChannelMerger(2);
+
+	        this.activateNode.connect(this.splitter);
+	        this.splitter.connect(this.stereoToMonoMix, 0, 0);
+	        this.splitter.connect(this.stereoToMonoMix, 1, 0);
+	        this.stereoToMonoMix.gain.value = .5;
+	        this.stereoToMonoMix.connect(this.wetLevel);
+	        this.wetLevel.connect(this.delayLeft);
+	        this.feedbackLevel.connect(this.delayLeft);
+	        this.delayLeft.connect(this.delayRight);
+	        this.delayRight.connect(this.feedbackLevel);
+	        this.delayLeft.connect(this.merger, 0, 0);
+	        this.delayRight.connect(this.merger, 0, 1);
+	        this.merger.connect(this.output);
+	        this.activateNode.connect(this.output);
+
+	        this.delayTimeLeft = properties.delayTimeLeft !== undefined ? properties.delayTimeLeft : this.defaults.delayTimeLeft.value;
+	        this.delayTimeRight = properties.delayTimeRight !== undefined ? properties.delayTimeRight : this.defaults.delayTimeRight.value;
+	        this.feedbackLevel.gain.value = properties.feedback !== undefined ? properties.feedback : this.defaults.feedback.value;
+	        this.wetLevel.gain.value = properties.wetLevel !== undefined ? properties.wetLevel : this.defaults.wetLevel.value;
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.PingPongDelay.prototype = Object.create(Super, {
+	        name: {
+	            value: "PingPongDelay"
+	        },
+	        delayTimeLeft: {
+	            enumerable: true,
+	            get: function() {
+	                return this._delayTimeLeft;
+	            },
+	            set: function(value) {
+	                this._delayTimeLeft = value;
+	                this.delayLeft.delayTime.value = value / 1000;
+	            }
+	        },
+	        delayTimeRight: {
+	            enumerable: true,
+	            get: function() {
+	                return this._delayTimeRight;
+	            },
+	            set: function(value) {
+	                this._delayTimeRight = value;
+	                this.delayRight.delayTime.value = value / 1000;
+	            }
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                delayTimeLeft: {
+	                    value: 200,
+	                    min: 1,
+	                    max: 10000,
+	                    automatable: false,
+	                    type: INT
+	                },
+	                delayTimeRight: {
+	                    value: 400,
+	                    min: 1,
+	                    max: 10000,
+	                    automatable: false,
+	                    type: INT
+	                },
+	                feedback: {
+	                    value: 0.3,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                wetLevel: {
+	                    value: 0.5,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                }
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.Tremolo = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.splitter = this.activateNode = userContext.createChannelSplitter(
+	                2),
+	            this.amplitudeL = userContext.createGain(),
+	            this.amplitudeR = userContext.createGain(),
+	            this.merger = userContext.createChannelMerger(2),
+	            this.output = userContext.createGain();
+	        this.lfoL = new userInstance.LFO({
+	            target: this.amplitudeL.gain,
+	            callback: pipe
+	        });
+	        this.lfoR = new userInstance.LFO({
+	            target: this.amplitudeR.gain,
+	            callback: pipe
+	        });
+
+	        this.input.connect(this.splitter);
+	        this.splitter.connect(this.amplitudeL, 0);
+	        this.splitter.connect(this.amplitudeR, 1);
+	        this.amplitudeL.connect(this.merger, 0, 0);
+	        this.amplitudeR.connect(this.merger, 0, 1);
+	        this.merger.connect(this.output);
+
+	        this.rate = properties.rate || this.defaults.rate.value;
+	        this.intensity = initValue(properties.intensity, this.defaults.intensity.value);
+	        this.stereoPhase = initValue(properties.stereoPhase, this.defaults.stereoPhase.value);
+
+	        this.lfoL.offset = 1 - (this.intensity / 2);
+	        this.lfoR.offset = 1 - (this.intensity / 2);
+	        this.lfoL.phase = this.stereoPhase * Math.PI / 180;
+
+	        this.lfoL.activate(true);
+	        this.lfoR.activate(true);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.Tremolo.prototype = Object.create(Super, {
+	        name: {
+	            value: "Tremolo"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                intensity: {
+	                    value: 0.3,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                stereoPhase: {
+	                    value: 0,
+	                    min: 0,
+	                    max: 180,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                rate: {
+	                    value: 5,
+	                    min: 0.1,
+	                    max: 11,
+	                    automatable: false,
+	                    type: FLOAT
+	                }
+	            }
+	        },
+	        intensity: {
+	            enumerable: true,
+	            get: function() {
+	                return this._intensity;
+	            },
+	            set: function(value) {
+	                this._intensity = value;
+	                this.lfoL.offset = 1 - this._intensity / 2;
+	                this.lfoR.offset = 1 - this._intensity / 2;
+	                this.lfoL.oscillation = this._intensity;
+	                this.lfoR.oscillation = this._intensity;
+	            }
+	        },
+	        rate: {
+	            enumerable: true,
+	            get: function() {
+	                return this._rate;
+	            },
+	            set: function(value) {
+	                this._rate = value;
+	                this.lfoL.frequency = this._rate;
+	                this.lfoR.frequency = this._rate;
+	            }
+	        },
+	        stereoPhase: {
+	            enumerable: true,
+	            get: function() {
+	                return this._stereoPhase;
+	            },
+	            set: function(value) {
+	                this._stereoPhase = value;
+	                var newPhase = this.lfoL._phase + this._stereoPhase * Math.PI / 180;
+	                newPhase = fmod(newPhase, 2 * Math.PI);
+	                this.lfoR.phase = newPhase;
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.WahWah = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.activateNode = userContext.createGain();
+	        this.envelopeFollower = new userInstance.EnvelopeFollower({
+	            target: this,
+	            callback: function(context, value) {
+	                context.sweep = value;
+	            }
+	        });
+	        this.filterBp = userContext.createBiquadFilter();
+	        this.filterPeaking = userContext.createBiquadFilter();
+	        this.output = userContext.createGain();
+
+	        //Connect AudioNodes
+	        this.activateNode.connect(this.filterBp);
+	        this.filterBp.connect(this.filterPeaking);
+	        this.filterPeaking.connect(this.output);
+
+	        //Set Properties
+	        this.init();
+	        this.automode = initValue(properties.enableAutoMode, this.defaults.automode.value);
+	        this.resonance = properties.resonance || this.defaults.resonance.value;
+	        this.sensitivity = initValue(properties.sensitivity, this.defaults.sensitivity.value);
+	        this.baseFrequency = initValue(properties.baseFrequency, this.defaults.baseFrequency.value);
+	        this.excursionOctaves = properties.excursionOctaves || this.defaults.excursionOctaves.value;
+	        this.sweep = initValue(properties.sweep, this.defaults.sweep.value);
+
+	        this.activateNode.gain.value = 2;
+	        this.envelopeFollower.activate(true);
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.WahWah.prototype = Object.create(Super, {
+	        name: {
+	            value: "WahWah"
+	        },
+	        defaults: {
+	            writable: true,
+	            value: {
+	                automode: {
+	                    value: true,
+	                    automatable: false,
+	                    type: BOOLEAN
+	                },
+	                baseFrequency: {
+	                    value: 0.5,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                excursionOctaves: {
+	                    value: 2,
+	                    min: 1,
+	                    max: 6,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                sweep: {
+	                    value: 0.2,
+	                    min: 0,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                resonance: {
+	                    value: 10,
+	                    min: 1,
+	                    max: 100,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                sensitivity: {
+	                    value: 0.5,
+	                    min: -1,
+	                    max: 1,
+	                    automatable: false,
+	                    type: FLOAT
+	                }
+	            }
+	        },
+	        activateCallback: {
+	            value: function(value) {
+	                this.automode = value;
+	            }
+	        },
+	        automode: {
+	            get: function() {
+	                return this._automode;
+	            },
+	            set: function(value) {
+	                this._automode = value;
+	                if (value) {
+	                    this.activateNode.connect(this.envelopeFollower.input);
+	                    this.envelopeFollower.activate(true);
+	                } else {
+	                    this.envelopeFollower.activate(false);
+	                    this.activateNode.disconnect();
+	                    this.activateNode.connect(this.filterBp);
+	                }
+	            }
+	        },
+	        filterFreqTimeout: {
+	            value: 0
+	        },
+	        setFilterFreq: {
+	            value: function() {
+	                try {
+	                    this.filterBp.frequency.value = Math.min(22050, this._baseFrequency + this._excursionFrequency * this._sweep);
+	                    this.filterPeaking.frequency.value = Math.min(22050, this._baseFrequency + this._excursionFrequency * this._sweep);
+	                } catch (e) {
+	                    clearTimeout(this.filterFreqTimeout);
+	                    //put on the next cycle to let all init properties be set
+	                    this.filterFreqTimeout = setTimeout(function() {
+	                        this.setFilterFreq();
+	                    }.bind(this), 0);
+	                }
+	            }
+	        },
+	        sweep: {
+	            enumerable: true,
+	            get: function() {
+	                return this._sweep.value;
+	            },
+	            set: function(value) {
+	                this._sweep = Math.pow(value > 1 ? 1 : value < 0 ? 0 : value, this._sensitivity);
+	                this.setFilterFreq();
+	            }
+	        },
+	        baseFrequency: {
+	            enumerable: true,
+	            get: function() {
+	                return this._baseFrequency;
+	            },
+	            set: function(value) {
+	                this._baseFrequency = 50 * Math.pow(10, value * 2);
+	                this._excursionFrequency = Math.min(userContext.sampleRate / 2, this.baseFrequency * Math.pow(2, this._excursionOctaves));
+	                this.setFilterFreq();
+	            }
+	        },
+	        excursionOctaves: {
+	            enumerable: true,
+	            get: function() {
+	                return this._excursionOctaves;
+	            },
+	            set: function(value) {
+	                this._excursionOctaves = value;
+	                this._excursionFrequency = Math.min(userContext.sampleRate / 2, this.baseFrequency * Math.pow(2, this._excursionOctaves));
+	                this.setFilterFreq();
+	            }
+	        },
+	        sensitivity: {
+	            enumerable: true,
+	            get: function() {
+	                return this._sensitivity;
+	            },
+	            set: function(value) {
+	                this._sensitivity = Math.pow(10, value);
+	            }
+	        },
+	        resonance: {
+	            enumerable: true,
+	            get: function() {
+	                return this._resonance;
+	            },
+	            set: function(value) {
+	                this._resonance = value;
+	                this.filterPeaking.Q = this._resonance;
+	            }
+	        },
+	        init: {
+	            value: function() {
+	                this.output.gain.value = 1;
+	                this.filterPeaking.type = "peaking";
+	                this.filterBp.type = "bandpass";
+	                this.filterPeaking.frequency.value = 100;
+	                this.filterPeaking.gain.value = 20;
+	                this.filterPeaking.Q.value = 5;
+	                this.filterBp.frequency.value = 100;
+	                this.filterBp.Q.value = 1;
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.EnvelopeFollower = function(properties) {
+	        if (!properties) {
+	            properties = this.getDefaults();
+	        }
+	        this.input = userContext.createGain();
+	        this.jsNode = this.output = userContext.createScriptProcessor(this.buffersize, 1, 1);
+
+	        this.input.connect(this.output);
+
+	        this.attackTime = initValue(properties.attackTime, this.defaults.attackTime.value);
+	        this.releaseTime = initValue(properties.releaseTime, this.defaults.releaseTime.value);
+	        this._envelope = 0;
+	        this.target = properties.target || {};
+	        this.callback = properties.callback || function() {};
+	    };
+	    Tuna.prototype.EnvelopeFollower.prototype = Object.create(Super, {
+	        name: {
+	            value: "EnvelopeFollower"
+	        },
+	        defaults: {
+	            value: {
+	                attackTime: {
+	                    value: 0.003,
+	                    min: 0,
+	                    max: 0.5,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                releaseTime: {
+	                    value: 0.5,
+	                    min: 0,
+	                    max: 0.5,
+	                    automatable: false,
+	                    type: FLOAT
+	                }
+	            }
+	        },
+	        buffersize: {
+	            value: 256
+	        },
+	        envelope: {
+	            value: 0
+	        },
+	        sampleRate: {
+	            value: 44100
+	        },
+	        attackTime: {
+	            enumerable: true,
+	            get: function() {
+	                return this._attackTime;
+	            },
+	            set: function(value) {
+	                this._attackTime = value;
+	                this._attackC = Math.exp(-1 / this._attackTime * this.sampleRate / this.buffersize);
+	            }
+	        },
+	        releaseTime: {
+	            enumerable: true,
+	            get: function() {
+	                return this._releaseTime;
+	            },
+	            set: function(value) {
+	                this._releaseTime = value;
+	                this._releaseC = Math.exp(-1 / this._releaseTime * this.sampleRate / this.buffersize);
+	            }
+	        },
+	        callback: {
+	            get: function() {
+	                return this._callback;
+	            },
+	            set: function(value) {
+	                if (typeof value === "function") {
+	                    this._callback = value;
+	                } else {
+	                    console.error("tuna.js: " + this.name + ": Callback must be a function!");
+	                }
+	            }
+	        },
+	        target: {
+	            get: function() {
+	                return this._target;
+	            },
+	            set: function(value) {
+	                this._target = value;
+	            }
+	        },
+	        activate: {
+	            value: function(doActivate) {
+	                this.activated = doActivate;
+	                if (doActivate) {
+	                    this.jsNode.connect(userContext.destination);
+	                    this.jsNode.onaudioprocess = this.returnCompute(this);
+	                } else {
+	                    this.jsNode.disconnect();
+	                    this.jsNode.onaudioprocess = null;
+	                }
+	            }
+	        },
+	        returnCompute: {
+	            value: function(instance) {
+	                return function(event) {
+	                    instance.compute(event);
+	                };
+	            }
+	        },
+	        compute: {
+	            value: function(event) {
+	                var count = event.inputBuffer.getChannelData(0).length,
+	                    channels = event.inputBuffer.numberOfChannels,
+	                    current, chan, rms, i;
+	                chan = rms = i = 0;
+	                if (channels > 1) { //need to mixdown
+	                    for (i = 0; i < count; ++i) {
+	                        for (; chan < channels; ++chan) {
+	                            current = event.inputBuffer.getChannelData(chan)[i];
+	                            rms += (current * current) / channels;
+	                        }
+	                    }
+	                } else {
+	                    for (i = 0; i < count; ++i) {
+	                        current = event.inputBuffer.getChannelData(0)[i];
+	                        rms += (current * current);
+	                    }
+	                }
+	                rms = Math.sqrt(rms);
+
+	                if (this._envelope < rms) {
+	                    this._envelope *= this._attackC;
+	                    this._envelope += (1 - this._attackC) * rms;
+	                } else {
+	                    this._envelope *= this._releaseC;
+	                    this._envelope += (1 - this._releaseC) * rms;
+	                }
+	                this._callback(this._target, this._envelope);
+	            }
+	        }
+	    });
+
+	    Tuna.prototype.LFO = function(properties) {
+	        //Instantiate AudioNode
+	        this.output = userContext.createScriptProcessor(256, 1, 1);
+	        this.activateNode = userContext.destination;
+
+	        //Set Properties
+	        this.frequency = initValue(properties.frequency, this.defaults.frequency.value);
+	        this.offset = initValue(properties.offset, this.defaults.offset.value);
+	        this.oscillation = initValue(properties.oscillation, this.defaults.oscillation.value);
+	        this.phase = initValue(properties.phase, this.defaults.phase.value);
+	        this.target = properties.target || {};
+	        this.output.onaudioprocess = this.callback(properties.callback || function() {});
+	        this.bypass = properties.bypass || false;
+	    };
+	    Tuna.prototype.LFO.prototype = Object.create(Super, {
+	        name: {
+	            value: "LFO"
+	        },
+	        bufferSize: {
+	            value: 256
+	        },
+	        sampleRate: {
+	            value: 44100
+	        },
+	        defaults: {
+	            value: {
+	                frequency: {
+	                    value: 1,
+	                    min: 0,
+	                    max: 20,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                offset: {
+	                    value: 0.85,
+	                    min: 0,
+	                    max: 22049,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                oscillation: {
+	                    value: 0.3,
+	                    min: -22050,
+	                    max: 22050,
+	                    automatable: false,
+	                    type: FLOAT
+	                },
+	                phase: {
+	                    value: 0,
+	                    min: 0,
+	                    max: 2 * Math.PI,
+	                    automatable: false,
+	                    type: FLOAT
+	                }
+	            }
+	        },
+	        frequency: {
+	            get: function() {
+	                return this._frequency;
+	            },
+	            set: function(value) {
+	                this._frequency = value;
+	                this._phaseInc = 2 * Math.PI * this._frequency * this.bufferSize / this.sampleRate;
+	            }
+	        },
+	        offset: {
+	            get: function() {
+	                return this._offset;
+	            },
+	            set: function(value) {
+	                this._offset = value;
+	            }
+	        },
+	        oscillation: {
+	            get: function() {
+	                return this._oscillation;
+	            },
+	            set: function(value) {
+	                this._oscillation = value;
+	            }
+	        },
+	        phase: {
+	            get: function() {
+	                return this._phase;
+	            },
+	            set: function(value) {
+	                this._phase = value;
+	            }
+	        },
+	        target: {
+	            get: function() {
+	                return this._target;
+	            },
+	            set: function(value) {
+	                this._target = value;
+	            }
+	        },
+	        activate: {
+	            value: function(doActivate) {
+	                if (!doActivate) {
+	                    this.output.disconnect(userContext.destination);
+	                } else {
+	                    this.output.connect(userContext.destination);
+	                }
+	            }
+	        },
+	        callback: {
+	            value: function(callback) {
+	                var that = this;
+	                return function() {
+	                    that._phase += that._phaseInc;
+	                    if (that._phase > 2 * Math.PI) {
+	                        that._phase = 0;
+	                    }
+	                    callback(that._target, that._offset + that._oscillation * Math.sin(that._phase));
+	                };
+	            }
+	        }
+	    });
+
+	    Tuna.toString = Tuna.prototype.toString = function() {
+	        return "Please visit https://github.com/Theodeus/tuna/wiki for instructions on how to use Tuna.js";
+	    };
+	})();
+
+
+/***/ },
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1824,11 +3943,11 @@
 
 	'use strict';
 
-	var DOMNamespaces = __webpack_require__(35);
-	var setInnerHTML = __webpack_require__(31);
+	var DOMNamespaces = __webpack_require__(37);
+	var setInnerHTML = __webpack_require__(32);
 
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(49);
-	var setTextContent = __webpack_require__(85);
+	var createMicrosoftUnsafeLocalFunction = __webpack_require__(51);
+	var setTextContent = __webpack_require__(91);
 
 	var ELEMENT_NODE_TYPE = 1;
 	var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
@@ -1931,7 +4050,7 @@
 	module.exports = DOMLazyTree;
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2142,7 +4261,7 @@
 	module.exports = DOMProperty;
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2158,8 +4277,8 @@
 
 	'use strict';
 
-	var ReactRef = __webpack_require__(148);
-	var ReactInstrumentation = __webpack_require__(8);
+	var ReactRef = __webpack_require__(171);
+	var ReactInstrumentation = __webpack_require__(9);
 
 	var warning = __webpack_require__(3);
 
@@ -2315,7 +4434,7 @@
 	module.exports = ReactReconciler;
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2339,7 +4458,7 @@
 	module.exports = emptyObject;
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2357,12 +4476,12 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var EventPluginRegistry = __webpack_require__(36);
-	var EventPluginUtils = __webpack_require__(37);
-	var ReactErrorUtils = __webpack_require__(43);
+	var EventPluginRegistry = __webpack_require__(38);
+	var EventPluginUtils = __webpack_require__(39);
+	var ReactErrorUtils = __webpack_require__(45);
 
-	var accumulateInto = __webpack_require__(77);
-	var forEachAccumulated = __webpack_require__(79);
+	var accumulateInto = __webpack_require__(83);
+	var forEachAccumulated = __webpack_require__(85);
 	var invariant = __webpack_require__(1);
 
 	/**
@@ -2595,7 +4714,7 @@
 	module.exports = EventPluginHub;
 
 /***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2611,12 +4730,12 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(11);
-	var EventPluginHub = __webpack_require__(20);
-	var EventPluginUtils = __webpack_require__(37);
+	var EventConstants = __webpack_require__(12);
+	var EventPluginHub = __webpack_require__(22);
+	var EventPluginUtils = __webpack_require__(39);
 
-	var accumulateInto = __webpack_require__(77);
-	var forEachAccumulated = __webpack_require__(79);
+	var accumulateInto = __webpack_require__(83);
+	var forEachAccumulated = __webpack_require__(85);
 	var warning = __webpack_require__(3);
 
 	var PropagationPhases = EventConstants.PropagationPhases;
@@ -2737,7 +4856,7 @@
 	module.exports = EventPropagators;
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports) {
 
 	/**
@@ -2790,7 +4909,7 @@
 	module.exports = ReactInstanceMap;
 
 /***/ },
-/* 23 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2806,9 +4925,9 @@
 
 	'use strict';
 
-	var SyntheticEvent = __webpack_require__(12);
+	var SyntheticEvent = __webpack_require__(13);
 
-	var getEventTarget = __webpack_require__(52);
+	var getEventTarget = __webpack_require__(54);
 
 	/**
 	 * @interface UIEvent
@@ -2854,7 +4973,7 @@
 	module.exports = SyntheticUIEvent;
 
 /***/ },
-/* 24 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3092,16 +5211,7 @@
 	module.exports = Transaction;
 
 /***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	module.exports = __webpack_require__(120);
-
-
-/***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3153,7 +5263,7 @@
 	module.exports = keyMirror;
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports) {
 
 	/**
@@ -3208,7 +5318,7 @@
 	module.exports = DisabledInputUtils;
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3226,13 +5336,13 @@
 
 	var _assign = __webpack_require__(4);
 
-	var EventConstants = __webpack_require__(11);
-	var EventPluginRegistry = __webpack_require__(36);
-	var ReactEventEmitterMixin = __webpack_require__(140);
-	var ViewportMetrics = __webpack_require__(76);
+	var EventConstants = __webpack_require__(12);
+	var EventPluginRegistry = __webpack_require__(38);
+	var ReactEventEmitterMixin = __webpack_require__(163);
+	var ViewportMetrics = __webpack_require__(82);
 
-	var getVendorPrefixedEventName = __webpack_require__(171);
-	var isEventSupported = __webpack_require__(53);
+	var getVendorPrefixedEventName = __webpack_require__(194);
+	var isEventSupported = __webpack_require__(55);
 
 	/**
 	 * Summary of `ReactBrowserEventEmitter` event handling:
@@ -3530,7 +5640,7 @@
 	module.exports = ReactBrowserEventEmitter;
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3546,10 +5656,10 @@
 
 	'use strict';
 
-	var SyntheticUIEvent = __webpack_require__(23);
-	var ViewportMetrics = __webpack_require__(76);
+	var SyntheticUIEvent = __webpack_require__(25);
+	var ViewportMetrics = __webpack_require__(82);
 
-	var getEventModifierState = __webpack_require__(51);
+	var getEventModifierState = __webpack_require__(53);
 
 	/**
 	 * @interface MouseEvent
@@ -3607,7 +5717,7 @@
 	module.exports = SyntheticMouseEvent;
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports) {
 
 	/**
@@ -3735,7 +5845,7 @@
 	module.exports = escapeTextContentForBrowser;
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3751,13 +5861,13 @@
 
 	'use strict';
 
-	var ExecutionEnvironment = __webpack_require__(6);
-	var DOMNamespaces = __webpack_require__(35);
+	var ExecutionEnvironment = __webpack_require__(7);
+	var DOMNamespaces = __webpack_require__(37);
 
 	var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 	var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(49);
+	var createMicrosoftUnsafeLocalFunction = __webpack_require__(51);
 
 	// SVG temp container for IE lacking innerHTML
 	var reusableSVGContainer;
@@ -3838,7 +5948,196 @@
 	module.exports = setInnerHTML;
 
 /***/ },
-/* 32 */
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	//     uuid.js
+	//
+	//     Copyright (c) 2010-2012 Robert Kieffer
+	//     MIT License - http://opensource.org/licenses/mit-license.php
+
+	// Unique ID creation requires a high quality random # generator.  We feature
+	// detect to determine the best RNG source, normalizing to a function that
+	// returns 128-bits of randomness, since that's what's usually required
+	var _rng = __webpack_require__(200);
+
+	// Maps for number <-> hex string conversion
+	var _byteToHex = [];
+	var _hexToByte = {};
+	for (var i = 0; i < 256; i++) {
+	  _byteToHex[i] = (i + 0x100).toString(16).substr(1);
+	  _hexToByte[_byteToHex[i]] = i;
+	}
+
+	// **`parse()` - Parse a UUID into it's component bytes**
+	function parse(s, buf, offset) {
+	  var i = (buf && offset) || 0, ii = 0;
+
+	  buf = buf || [];
+	  s.toLowerCase().replace(/[0-9a-f]{2}/g, function(oct) {
+	    if (ii < 16) { // Don't overflow!
+	      buf[i + ii++] = _hexToByte[oct];
+	    }
+	  });
+
+	  // Zero out remaining bytes if string was short
+	  while (ii < 16) {
+	    buf[i + ii++] = 0;
+	  }
+
+	  return buf;
+	}
+
+	// **`unparse()` - Convert UUID byte array (ala parse()) into a string**
+	function unparse(buf, offset) {
+	  var i = offset || 0, bth = _byteToHex;
+	  return  bth[buf[i++]] + bth[buf[i++]] +
+	          bth[buf[i++]] + bth[buf[i++]] + '-' +
+	          bth[buf[i++]] + bth[buf[i++]] + '-' +
+	          bth[buf[i++]] + bth[buf[i++]] + '-' +
+	          bth[buf[i++]] + bth[buf[i++]] + '-' +
+	          bth[buf[i++]] + bth[buf[i++]] +
+	          bth[buf[i++]] + bth[buf[i++]] +
+	          bth[buf[i++]] + bth[buf[i++]];
+	}
+
+	// **`v1()` - Generate time-based UUID**
+	//
+	// Inspired by https://github.com/LiosK/UUID.js
+	// and http://docs.python.org/library/uuid.html
+
+	// random #'s we need to init node and clockseq
+	var _seedBytes = _rng();
+
+	// Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+	var _nodeId = [
+	  _seedBytes[0] | 0x01,
+	  _seedBytes[1], _seedBytes[2], _seedBytes[3], _seedBytes[4], _seedBytes[5]
+	];
+
+	// Per 4.2.2, randomize (14 bit) clockseq
+	var _clockseq = (_seedBytes[6] << 8 | _seedBytes[7]) & 0x3fff;
+
+	// Previous uuid creation time
+	var _lastMSecs = 0, _lastNSecs = 0;
+
+	// See https://github.com/broofa/node-uuid for API details
+	function v1(options, buf, offset) {
+	  var i = buf && offset || 0;
+	  var b = buf || [];
+
+	  options = options || {};
+
+	  var clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq;
+
+	  // UUID timestamps are 100 nano-second units since the Gregorian epoch,
+	  // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
+	  // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
+	  // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
+	  var msecs = options.msecs !== undefined ? options.msecs : new Date().getTime();
+
+	  // Per 4.2.1.2, use count of uuid's generated during the current clock
+	  // cycle to simulate higher resolution clock
+	  var nsecs = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1;
+
+	  // Time since last uuid creation (in msecs)
+	  var dt = (msecs - _lastMSecs) + (nsecs - _lastNSecs)/10000;
+
+	  // Per 4.2.1.2, Bump clockseq on clock regression
+	  if (dt < 0 && options.clockseq === undefined) {
+	    clockseq = clockseq + 1 & 0x3fff;
+	  }
+
+	  // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
+	  // time interval
+	  if ((dt < 0 || msecs > _lastMSecs) && options.nsecs === undefined) {
+	    nsecs = 0;
+	  }
+
+	  // Per 4.2.1.2 Throw error if too many uuids are requested
+	  if (nsecs >= 10000) {
+	    throw new Error('uuid.v1(): Can\'t create more than 10M uuids/sec');
+	  }
+
+	  _lastMSecs = msecs;
+	  _lastNSecs = nsecs;
+	  _clockseq = clockseq;
+
+	  // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
+	  msecs += 12219292800000;
+
+	  // `time_low`
+	  var tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+	  b[i++] = tl >>> 24 & 0xff;
+	  b[i++] = tl >>> 16 & 0xff;
+	  b[i++] = tl >>> 8 & 0xff;
+	  b[i++] = tl & 0xff;
+
+	  // `time_mid`
+	  var tmh = (msecs / 0x100000000 * 10000) & 0xfffffff;
+	  b[i++] = tmh >>> 8 & 0xff;
+	  b[i++] = tmh & 0xff;
+
+	  // `time_high_and_version`
+	  b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
+	  b[i++] = tmh >>> 16 & 0xff;
+
+	  // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
+	  b[i++] = clockseq >>> 8 | 0x80;
+
+	  // `clock_seq_low`
+	  b[i++] = clockseq & 0xff;
+
+	  // `node`
+	  var node = options.node || _nodeId;
+	  for (var n = 0; n < 6; n++) {
+	    b[i + n] = node[n];
+	  }
+
+	  return buf ? buf : unparse(b);
+	}
+
+	// **`v4()` - Generate random UUID**
+
+	// See https://github.com/broofa/node-uuid for API details
+	function v4(options, buf, offset) {
+	  // Deprecated - 'format' argument, as supported in v1.2
+	  var i = buf && offset || 0;
+
+	  if (typeof(options) == 'string') {
+	    buf = options == 'binary' ? new Array(16) : null;
+	    options = null;
+	  }
+	  options = options || {};
+
+	  var rnds = options.random || (options.rng || _rng)();
+
+	  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+	  rnds[6] = (rnds[6] & 0x0f) | 0x40;
+	  rnds[8] = (rnds[8] & 0x3f) | 0x80;
+
+	  // Copy bytes to buffer, if provided
+	  if (buf) {
+	    for (var ii = 0; ii < 16; ii++) {
+	      buf[i + ii] = rnds[ii];
+	    }
+	  }
+
+	  return buf || unparse(rnds);
+	}
+
+	// Export public API
+	var uuid = v4;
+	uuid.v1 = v1;
+	uuid.v4 = v4;
+	uuid.parse = parse;
+	uuid.unparse = unparse;
+
+	module.exports = uuid;
+
+
+/***/ },
+/* 34 */
 /***/ function(module, exports) {
 
 	/**
@@ -3909,7 +6208,7 @@
 	module.exports = shallowEqual;
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -3923,25 +6222,40 @@
 	var cachedSetTimeout;
 	var cachedClearTimeout;
 
+	function defaultSetTimout() {
+	    throw new Error('setTimeout has not been defined');
+	}
+	function defaultClearTimeout () {
+	    throw new Error('clearTimeout has not been defined');
+	}
 	(function () {
 	    try {
-	        cachedSetTimeout = setTimeout;
-	    } catch (e) {
-	        cachedSetTimeout = function () {
-	            throw new Error('setTimeout is not defined');
+	        if (typeof setTimeout === 'function') {
+	            cachedSetTimeout = setTimeout;
+	        } else {
+	            cachedSetTimeout = defaultSetTimout;
 	        }
+	    } catch (e) {
+	        cachedSetTimeout = defaultSetTimout;
 	    }
 	    try {
-	        cachedClearTimeout = clearTimeout;
-	    } catch (e) {
-	        cachedClearTimeout = function () {
-	            throw new Error('clearTimeout is not defined');
+	        if (typeof clearTimeout === 'function') {
+	            cachedClearTimeout = clearTimeout;
+	        } else {
+	            cachedClearTimeout = defaultClearTimeout;
 	        }
+	    } catch (e) {
+	        cachedClearTimeout = defaultClearTimeout;
 	    }
 	} ())
 	function runTimeout(fun) {
 	    if (cachedSetTimeout === setTimeout) {
 	        //normal enviroments in sane situations
+	        return setTimeout(fun, 0);
+	    }
+	    // if setTimeout wasn't available but was latter defined
+	    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+	        cachedSetTimeout = setTimeout;
 	        return setTimeout(fun, 0);
 	    }
 	    try {
@@ -3962,6 +6276,11 @@
 	function runClearTimeout(marker) {
 	    if (cachedClearTimeout === clearTimeout) {
 	        //normal enviroments in sane situations
+	        return clearTimeout(marker);
+	    }
+	    // if clearTimeout wasn't available but was latter defined
+	    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+	        cachedClearTimeout = clearTimeout;
 	        return clearTimeout(marker);
 	    }
 	    try {
@@ -4075,7 +6394,7 @@
 
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4091,15 +6410,15 @@
 
 	'use strict';
 
-	var DOMLazyTree = __webpack_require__(16);
-	var Danger = __webpack_require__(115);
-	var ReactMultiChildUpdateTypes = __webpack_require__(72);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactInstrumentation = __webpack_require__(8);
+	var DOMLazyTree = __webpack_require__(18);
+	var Danger = __webpack_require__(138);
+	var ReactMultiChildUpdateTypes = __webpack_require__(78);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactInstrumentation = __webpack_require__(9);
 
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(49);
-	var setInnerHTML = __webpack_require__(31);
-	var setTextContent = __webpack_require__(85);
+	var createMicrosoftUnsafeLocalFunction = __webpack_require__(51);
+	var setInnerHTML = __webpack_require__(32);
+	var setTextContent = __webpack_require__(91);
 
 	function getNodeAfter(parentNode, node) {
 	  // Special case for text components, which return [open, close] comments
@@ -4274,7 +6593,7 @@
 	module.exports = DOMChildrenOperations;
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports) {
 
 	/**
@@ -4299,7 +6618,7 @@
 	module.exports = DOMNamespaces;
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4551,7 +6870,7 @@
 	module.exports = EventPluginRegistry;
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4569,8 +6888,8 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var EventConstants = __webpack_require__(11);
-	var ReactErrorUtils = __webpack_require__(43);
+	var EventConstants = __webpack_require__(12);
+	var ReactErrorUtils = __webpack_require__(45);
 
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
@@ -4785,7 +7104,7 @@
 	module.exports = EventPluginUtils;
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports) {
 
 	/**
@@ -4849,7 +7168,7 @@
 	module.exports = KeyEscapeUtils;
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4867,9 +7186,9 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactPropTypes = __webpack_require__(74);
-	var ReactPropTypeLocations = __webpack_require__(46);
-	var ReactPropTypesSecret = __webpack_require__(47);
+	var ReactPropTypes = __webpack_require__(80);
+	var ReactPropTypeLocations = __webpack_require__(48);
+	var ReactPropTypesSecret = __webpack_require__(49);
 
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
@@ -4990,7 +7309,7 @@
 	module.exports = LinkedValueUtils;
 
 /***/ },
-/* 40 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5008,10 +7327,10 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactNoopUpdateQueue = __webpack_require__(44);
+	var ReactNoopUpdateQueue = __webpack_require__(46);
 
-	var canDefineProperty = __webpack_require__(78);
-	var emptyObject = __webpack_require__(19);
+	var canDefineProperty = __webpack_require__(84);
+	var emptyObject = __webpack_require__(21);
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
 
@@ -5113,7 +7432,7 @@
 	module.exports = ReactComponent;
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5163,7 +7482,7 @@
 	module.exports = ReactComponentEnvironment;
 
 /***/ },
-/* 42 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5181,7 +7500,7 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactCurrentOwner = __webpack_require__(15);
+	var ReactCurrentOwner = __webpack_require__(16);
 
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
@@ -5510,7 +7829,7 @@
 	module.exports = ReactComponentTreeHook;
 
 /***/ },
-/* 43 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5591,7 +7910,7 @@
 	module.exports = ReactErrorUtils;
 
 /***/ },
-/* 44 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5692,7 +8011,7 @@
 	module.exports = ReactNoopUpdateQueue;
 
 /***/ },
-/* 45 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5721,7 +8040,7 @@
 	module.exports = ReactPropTypeLocationNames;
 
 /***/ },
-/* 46 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5737,7 +8056,7 @@
 
 	'use strict';
 
-	var keyMirror = __webpack_require__(26);
+	var keyMirror = __webpack_require__(27);
 
 	var ReactPropTypeLocations = keyMirror({
 	  prop: null,
@@ -5748,7 +8067,7 @@
 	module.exports = ReactPropTypeLocations;
 
 /***/ },
-/* 47 */
+/* 49 */
 /***/ function(module, exports) {
 
 	/**
@@ -5769,7 +8088,7 @@
 	module.exports = ReactPropTypesSecret;
 
 /***/ },
-/* 48 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5787,10 +8106,10 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactCurrentOwner = __webpack_require__(15);
-	var ReactInstanceMap = __webpack_require__(22);
-	var ReactInstrumentation = __webpack_require__(8);
-	var ReactUpdates = __webpack_require__(10);
+	var ReactCurrentOwner = __webpack_require__(16);
+	var ReactInstanceMap = __webpack_require__(24);
+	var ReactInstrumentation = __webpack_require__(9);
+	var ReactUpdates = __webpack_require__(11);
 
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
@@ -6000,7 +8319,7 @@
 	module.exports = ReactUpdateQueue;
 
 /***/ },
-/* 49 */
+/* 51 */
 /***/ function(module, exports) {
 
 	/**
@@ -6037,7 +8356,7 @@
 	module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ },
-/* 50 */
+/* 52 */
 /***/ function(module, exports) {
 
 	/**
@@ -6092,7 +8411,7 @@
 	module.exports = getEventCharCode;
 
 /***/ },
-/* 51 */
+/* 53 */
 /***/ function(module, exports) {
 
 	/**
@@ -6140,7 +8459,7 @@
 	module.exports = getEventModifierState;
 
 /***/ },
-/* 52 */
+/* 54 */
 /***/ function(module, exports) {
 
 	/**
@@ -6180,7 +8499,7 @@
 	module.exports = getEventTarget;
 
 /***/ },
-/* 53 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -6196,7 +8515,7 @@
 
 	'use strict';
 
-	var ExecutionEnvironment = __webpack_require__(6);
+	var ExecutionEnvironment = __webpack_require__(7);
 
 	var useHasFeature;
 	if (ExecutionEnvironment.canUseDOM) {
@@ -6245,7 +8564,7 @@
 	module.exports = isEventSupported;
 
 /***/ },
-/* 54 */
+/* 56 */
 /***/ function(module, exports) {
 
 	/**
@@ -6292,7 +8611,7 @@
 	module.exports = shouldUpdateReactComponent;
 
 /***/ },
-/* 55 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -6310,12 +8629,12 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactCurrentOwner = __webpack_require__(15);
-	var ReactElement = __webpack_require__(9);
+	var ReactCurrentOwner = __webpack_require__(16);
+	var ReactElement = __webpack_require__(10);
 
-	var getIteratorFn = __webpack_require__(81);
+	var getIteratorFn = __webpack_require__(87);
 	var invariant = __webpack_require__(1);
-	var KeyEscapeUtils = __webpack_require__(38);
+	var KeyEscapeUtils = __webpack_require__(40);
 	var warning = __webpack_require__(3);
 
 	var SEPARATOR = '.';
@@ -6464,7 +8783,7 @@
 	module.exports = traverseAllChildren;
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -6482,7 +8801,7 @@
 
 	var _assign = __webpack_require__(4);
 
-	var emptyFunction = __webpack_require__(7);
+	var emptyFunction = __webpack_require__(8);
 	var warning = __webpack_require__(3);
 
 	var validateDOMNesting = emptyFunction;
@@ -6838,7 +9157,336 @@
 	module.exports = validateDOMNesting;
 
 /***/ },
-/* 57 */
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	var Voltage = __webpack_require__(201)
+	var isNum = function (n) { return typeof n === 'number' }
+
+	var NUMS = ['duration', 't1', 't2', 't3', 't4', 'l1', 'l2', 'l3']
+	var DEFAULTS = {
+	  duration: Infinity, l1: 1, l2: 0.2, l3: 0.8,
+	  t1: 0.01, t2: 0.1, t3: 0, t4: 0.2
+	}
+
+	function rampFn (l) {
+	  return l ? 'linearRampToValueAtTime' : 'exponentialRampToValueAtTime'
+	}
+	function ramp (l, node, level, time) { node.gain[rampFn(l)](level, time) }
+
+	/**
+	 * Create an envelope generator.
+	 * @param {AudioContext} ac - the audio context
+	 * @param {Object} options - (Optional) the envelope options
+	 * @return {AudioNode} the envelope generator node
+	 */
+	function Contour (ac, options) {
+	  var env = ac.createGain()
+	  var opts = Contour.params(options, env)
+	  var isL = opts.ramp === 'linear'
+
+	  var tail = ac.createGain()
+	  tail.connect(env)
+	  var head = ac.createGain()
+	  head.connect(tail)
+	  var cv = Voltage(ac)
+	  cv.connect(head)
+
+	  env.start = function (time) {
+	    time = Math.max(time || 0, ac.currentTime)
+	    if (env.onstart) env.onstart(time)
+	    cv.start(time)
+	    head.gain.setValueAtTime(0, time)
+	    head.gain.setValueAtTime(0.01, time + 0.000001)
+	    ramp(isL, head, opts.l1, time + opts.t1)
+	    ramp(isL, head, opts.l2, time + opts.t1 + opts.t2)
+	    ramp(isL, head, opts.l3, time + opts.t1 + opts.t2 + opts.t3)
+	    if (isFinite(opts.duration)) env.stop(time + opts.duration)
+	  }
+
+	  env.stop = function (time) {
+	    time = Math.max(time || 0, ac.currentTime)
+	    tail.gain.cancelScheduledValues(time)
+	    tail.gain.setValueAtTime(env.gain.value, time)
+	    var endsAt = time + opts.t4
+	    ramp(isL, tail, 0.0001, endsAt)
+	    if (env.onended) {
+	      var s = Voltage(ac, 0)
+	      s.connect(ac.destination)
+	      s.onended = env.onended
+	      s.start(ac.currentTime)
+	      s.stop(endsAt)
+	    }
+	    return endsAt
+	  }
+	  return env
+	}
+
+	Contour.params = function (options, dest) {
+	  dest = dest || {}
+	  options = options || {}
+	  NUMS.forEach(function (name) {
+	    dest[name] = isNum(options[name]) ? options[name] : DEFAULTS[name]
+	  })
+	  if (isNum(options.attack)) dest.t1 = options.attack
+	  if (isNum(options.decay)) dest.t2 = options.decay
+	  if (isNum(options.sustain)) dest.l3 = options.sustain
+	  if (isNum(options.release)) dest.t4 = options.release
+	  dest.ramp = options.ramp === 'exponential' ? options.ramp : 'linear'
+	  return dest
+	}
+
+	module.exports = Contour
+
+
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _src = __webpack_require__(61);
+
+	var _polysynth = __webpack_require__(93);
+
+	var _polysynth2 = _interopRequireDefault(_polysynth);
+
+	var _visualization = __webpack_require__(94);
+
+	var _visualization2 = _interopRequireDefault(_visualization);
+
+	__webpack_require__(199);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Demo = function (_Component) {
+	  _inherits(Demo, _Component);
+
+	  function Demo(props) {
+	    _classCallCheck(this, Demo);
+
+	    var _this = _possibleConstructorReturn(this, (Demo.__proto__ || Object.getPrototypeOf(Demo)).call(this, props));
+
+	    _this.state = {
+	      playing: true
+	    };
+
+	    _this.handleAudioProcess = _this.handleAudioProcess.bind(_this);
+	    _this.handlePlayToggle = _this.handlePlayToggle.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(Demo, [{
+	    key: 'handleAudioProcess',
+	    value: function handleAudioProcess(analyser) {
+	      this.visualization.audioProcess(analyser);
+	    }
+	  }, {
+	    key: 'handlePlayToggle',
+	    value: function handlePlayToggle() {
+	      this.setState({
+	        playing: !this.state.playing
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          _src.Song,
+	          {
+	            playing: this.state.playing,
+	            tempo: 90
+	          },
+	          _react2.default.createElement(
+	            _src.Analyser,
+	            { onAudioProcess: this.handleAudioProcess },
+	            _react2.default.createElement(
+	              _src.Sequencer,
+	              {
+	                resolution: 16,
+	                bars: 1
+	              },
+	              _react2.default.createElement(_src.Sampler, {
+	                sample: 'samples/kick.wav',
+	                steps: [0, 2, 8, 10]
+	              }),
+	              _react2.default.createElement(_src.Sampler, {
+	                sample: 'samples/snare.wav',
+	                steps: [4, 12]
+	              })
+	            ),
+	            _react2.default.createElement(
+	              _src.Sequencer,
+	              {
+	                resolution: 16,
+	                bars: 2
+	              },
+	              _react2.default.createElement(_polysynth2.default, {
+	                steps: [[0, 1, ['c3', 'd#3', 'g3']], [2, 1, ['c4']], [8, 1, ['c3', 'd#3', 'g3']], [10, 1, ['c4']], [12, 1, ['c3', 'd#3', 'g3']], [14, 1, ['d#4']], [16, 1, ['f3', 'g#3', 'c4']], [18, 1, ['f3', 'g#3', 'c4']], [24, 1, ['f3', 'g#3', 'c4']], [26, 1, ['f3', 'g#3', 'c4']], [28, 1, ['f3', 'g#3', 'c4']], [30, 1, ['f3', 'g#3', 'c4']]]
+	              })
+	            ),
+	            _react2.default.createElement(
+	              _src.Sequencer,
+	              {
+	                resolution: 16,
+	                bars: 2
+	              },
+	              _react2.default.createElement(_src.Synth, {
+	                type: 'sine',
+	                steps: [[0, 8, 'c2'], [8, 4, 'c2'], [12, 4, 'd#2'], [16, 8, 'f2'], [24, 8, 'f1']]
+	              })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_visualization2.default, { ref: function ref(c) {
+	            _this2.visualization = c;
+	          } }),
+	        _react2.default.createElement(
+	          'button',
+	          {
+	            className: 'react-music-button',
+	            type: 'button',
+	            onClick: this.handlePlayToggle
+	          },
+	          this.state.playing ? 'Stop' : 'Play'
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Demo;
+	}(_react.Component);
+
+	exports.default = Demo;
+
+/***/ },
+/* 61 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Synth = exports.Song = exports.Sampler = exports.Sequencer = exports.Reverb = exports.PingPong = exports.Overdrive = exports.Monosynth = exports.MoogFilter = exports.LFO = exports.Gain = exports.Filter = exports.Delay = exports.Compressor = exports.Chorus = exports.Bitcrusher = exports.Bus = exports.Analyser = undefined;
+
+	var _analyser = __webpack_require__(95);
+
+	var _analyser2 = _interopRequireDefault(_analyser);
+
+	var _bitcrusher = __webpack_require__(96);
+
+	var _bitcrusher2 = _interopRequireDefault(_bitcrusher);
+
+	var _bus = __webpack_require__(97);
+
+	var _bus2 = _interopRequireDefault(_bus);
+
+	var _chorus = __webpack_require__(98);
+
+	var _chorus2 = _interopRequireDefault(_chorus);
+
+	var _compressor = __webpack_require__(99);
+
+	var _compressor2 = _interopRequireDefault(_compressor);
+
+	var _delay = __webpack_require__(100);
+
+	var _delay2 = _interopRequireDefault(_delay);
+
+	var _filter = __webpack_require__(101);
+
+	var _filter2 = _interopRequireDefault(_filter);
+
+	var _gain = __webpack_require__(102);
+
+	var _gain2 = _interopRequireDefault(_gain);
+
+	var _lfo = __webpack_require__(103);
+
+	var _lfo2 = _interopRequireDefault(_lfo);
+
+	var _monosynth = __webpack_require__(104);
+
+	var _monosynth2 = _interopRequireDefault(_monosynth);
+
+	var _moogFilter = __webpack_require__(105);
+
+	var _moogFilter2 = _interopRequireDefault(_moogFilter);
+
+	var _overdrive = __webpack_require__(106);
+
+	var _overdrive2 = _interopRequireDefault(_overdrive);
+
+	var _pingPong = __webpack_require__(107);
+
+	var _pingPong2 = _interopRequireDefault(_pingPong);
+
+	var _reverb = __webpack_require__(108);
+
+	var _reverb2 = _interopRequireDefault(_reverb);
+
+	var _sequencer = __webpack_require__(110);
+
+	var _sequencer2 = _interopRequireDefault(_sequencer);
+
+	var _sampler = __webpack_require__(109);
+
+	var _sampler2 = _interopRequireDefault(_sampler);
+
+	var _song = __webpack_require__(111);
+
+	var _song2 = _interopRequireDefault(_song);
+
+	var _synth = __webpack_require__(112);
+
+	var _synth2 = _interopRequireDefault(_synth);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.Analyser = _analyser2.default;
+	exports.Bus = _bus2.default;
+	exports.Bitcrusher = _bitcrusher2.default;
+	exports.Chorus = _chorus2.default;
+	exports.Compressor = _compressor2.default;
+	exports.Delay = _delay2.default;
+	exports.Filter = _filter2.default;
+	exports.Gain = _gain2.default;
+	exports.LFO = _lfo2.default;
+	exports.MoogFilter = _moogFilter2.default;
+	exports.Monosynth = _monosynth2.default;
+	exports.Overdrive = _overdrive2.default;
+	exports.PingPong = _pingPong2.default;
+	exports.Reverb = _reverb2.default;
+	exports.Sequencer = _sequencer2.default;
+	exports.Sampler = _sampler2.default;
+	exports.Song = _song2.default;
+	exports.Synth = _synth2.default;
+
+/***/ },
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6861,7 +9509,7 @@
 	 * @typechecks
 	 */
 
-	var emptyFunction = __webpack_require__(7);
+	var emptyFunction = __webpack_require__(8);
 
 	/**
 	 * Upstream version of event listener. Does not take into account specific
@@ -6926,7 +9574,7 @@
 	module.exports = EventListener;
 
 /***/ },
-/* 58 */
+/* 63 */
 /***/ function(module, exports) {
 
 	/**
@@ -6957,7 +9605,7 @@
 	module.exports = focusNode;
 
 /***/ },
-/* 59 */
+/* 64 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6996,7 +9644,210 @@
 	module.exports = getActiveElement;
 
 /***/ },
-/* 60 */
+/* 65 */
+/***/ function(module, exports) {
+
+	'use strict'
+
+	// util
+	function fillStr (s, num) { return Array(num + 1).join(s) }
+	function isNum (x) { return typeof x === 'number' }
+	function isStr (x) { return typeof x === 'string' }
+	function isDef (x) { return typeof x !== 'undefined' }
+	function midiToFreq (midi, tuning) {
+	  return Math.pow(2, (midi - 69) / 12) * (tuning || 440)
+	}
+
+	var REGEX = /^([a-gA-G])(#{1,}|b{1,}|x{1,}|)(-?\d*)\s*(.*)\s*$/
+	/**
+	 * A regex for matching note strings in scientific notation.
+	 *
+	 * @name regex
+	 * @function
+	 * @return {RegExp} the regexp used to parse the note name
+	 *
+	 * The note string should have the form `letter[accidentals][octave][element]`
+	 * where:
+	 *
+	 * - letter: (Required) is a letter from A to G either upper or lower case
+	 * - accidentals: (Optional) can be one or more `b` (flats), `#` (sharps) or `x` (double sharps).
+	 * They can NOT be mixed.
+	 * - octave: (Optional) a positive or negative integer
+	 * - element: (Optional) additionally anything after the duration is considered to
+	 * be the element name (for example: 'C2 dorian')
+	 *
+	 * The executed regex contains (by array index):
+	 *
+	 * - 0: the complete string
+	 * - 1: the note letter
+	 * - 2: the optional accidentals
+	 * - 3: the optional octave
+	 * - 4: the rest of the string (trimmed)
+	 *
+	 * @example
+	 * var parser = require('note-parser')
+	 * parser.regex.exec('c#4')
+	 * // => ['c#4', 'c', '#', '4', '']
+	 * parser.regex.exec('c#4 major')
+	 * // => ['c#4major', 'c', '#', '4', 'major']
+	 * parser.regex().exec('CMaj7')
+	 * // => ['CMaj7', 'C', '', '', 'Maj7']
+	 */
+	function regex () { return REGEX }
+
+	var SEMITONES = [0, 2, 4, 5, 7, 9, 11]
+	/**
+	 * Parse a note name in scientific notation an return it's components,
+	 * and some numeric properties including midi number and frequency.
+	 *
+	 * @name parse
+	 * @function
+	 * @param {String} note - the note string to be parsed
+	 * @param {Boolean} isTonic - true the strings it's supposed to contain a note number
+	 * and some category (for example an scale: 'C# major'). It's false by default,
+	 * but when true, en extra tonicOf property is returned with the category ('major')
+	 * @param {Float} tunning - The frequency of A4 note to calculate frequencies.
+	 * By default it 440.
+	 * @return {Object} the parsed note name or null if not a valid note
+	 *
+	 * The parsed note name object will ALWAYS contains:
+	 * - letter: the uppercase letter of the note
+	 * - acc: the accidentals of the note (only sharps or flats)
+	 * - pc: the pitch class (letter + acc)
+	 * - step: s a numeric representation of the letter. It's an integer from 0 to 6
+	 * where 0 = C, 1 = D ... 6 = B
+	 * - alt: a numeric representation of the accidentals. 0 means no alteration,
+	 * positive numbers are for sharps and negative for flats
+	 * - chroma: a numeric representation of the pitch class. It's like midi for
+	 * pitch classes. 0 = C, 1 = C#, 2 = D ... 11 = B. Can be used to find enharmonics
+	 * since, for example, chroma of 'Cb' and 'B' are both 11
+	 *
+	 * If the note has octave, the parser object will contain:
+	 * - oct: the octave number (as integer)
+	 * - midi: the midi number
+	 * - freq: the frequency (using tuning parameter as base)
+	 *
+	 * If the parameter `isTonic` is set to true, the parsed object will contain:
+	 * - tonicOf: the rest of the string that follows note name (left and right trimmed)
+	 *
+	 * @example
+	 * var parse = require('note-parser').parse
+	 * parse('Cb4')
+	 * // => { letter: 'C', acc: 'b', pc: 'Cb', step: 0, alt: -1, chroma: -1,
+	 *         oct: 4, midi: 59, freq: 246.94165062806206 }
+	 * // if no octave, no midi, no freq
+	 * parse('fx')
+	 * // => { letter: 'F', acc: '##', pc: 'F##', step: 3, alt: 2, chroma: 7 })
+	 */
+	function parse (str, isTonic, tuning) {
+	  if (typeof str !== 'string') return null
+	  var m = REGEX.exec(str)
+	  if (!m || !isTonic && m[4]) return null
+
+	  var p = { letter: m[1].toUpperCase(), acc: m[2].replace(/x/g, '##') }
+	  p.pc = p.letter + p.acc
+	  p.step = (p.letter.charCodeAt(0) + 3) % 7
+	  p.alt = p.acc[0] === 'b' ? -p.acc.length : p.acc.length
+	  var pos = SEMITONES[p.step] + p.alt
+	  p.chroma = pos < 0 ? 12 + pos : pos % 12
+	  if (m[3]) { // has octave
+	    p.oct = +m[3]
+	    p.midi = pos + 12 * (p.oct + 1)
+	    p.freq = midiToFreq(p.midi, tuning)
+	  }
+	  if (isTonic) p.tonicOf = m[4]
+	  return p
+	}
+
+	var LETTERS = 'CDEFGAB'
+	function acc (n) { return !isNum(n) ? '' : n < 0 ? fillStr('b', -n) : fillStr('#', n) }
+	function oct (n) { return !isNum(n) ? '' : '' + n }
+
+	/**
+	 * Create a string from a parsed object or `step, alteration, octave` parameters
+	 * @param {Object} obj - the parsed data object
+	 * @return {String} a note string or null if not valid parameters
+	 * @since 1.2
+	 * @example
+	 * parser.build(parser.parse('cb2')) // => 'Cb2'
+	 *
+	 * @example
+	 * // it accepts (step, alteration, octave) parameters:
+	 * parser.build(3) // => 'F'
+	 * parser.build(3, -1) // => 'Fb'
+	 * parser.build(3, -1, 4) // => 'Fb4'
+	 */
+	function build (s, a, o) {
+	  if (s === null || typeof s === 'undefined') return null
+	  if (s.step) return build(s.step, s.alt, s.oct)
+	  if (s < 0 || s > 6) return null
+	  return LETTERS.charAt(s) + acc(a) + oct(o)
+	}
+
+	/**
+	 * Get midi of a note
+	 *
+	 * @name midi
+	 * @function
+	 * @param {String|Integer} note - the note name or midi number
+	 * @return {Integer} the midi number of the note or null if not a valid note
+	 * or the note does NOT contains octave
+	 * @example
+	 * var parser = require('note-parser')
+	 * parser.midi('A4') // => 69
+	 * parser.midi('A') // => null
+	 * @example
+	 * // midi numbers are bypassed (even as strings)
+	 * parser.midi(60) // => 60
+	 * parser.midi('60') // => 60
+	 */
+	function midi (note) {
+	  if ((isNum(note) || isStr(note)) && note >= 0 && note < 128) return +note
+	  var p = parse(note)
+	  return p && isDef(p.midi) ? p.midi : null
+	}
+
+	/**
+	 * Get freq of a note in hertzs (in a well tempered 440Hz A4)
+	 *
+	 * @name freq
+	 * @function
+	 * @param {String} note - the note name or note midi number
+	 * @param {String} tuning - (Optional) the A4 frequency (440 by default)
+	 * @return {Float} the freq of the number if hertzs or null if not valid note
+	 * @example
+	 * var parser = require('note-parser')
+	 * parser.freq('A4') // => 440
+	 * parser.freq('A') // => null
+	 * @example
+	 * // can change tuning (440 by default)
+	 * parser.freq('A4', 444) // => 444
+	 * parser.freq('A3', 444) // => 222
+	 * @example
+	 * // it accepts midi numbers (as numbers and as strings)
+	 * parser.freq(69) // => 440
+	 * parser.freq('69', 442) // => 442
+	 */
+	function freq (note, tuning) {
+	  var m = midi(note)
+	  return m === null ? null : midiToFreq(m, tuning)
+	}
+
+	var parser = { parse: parse, build: build, regex: regex, midi: midi, freq: freq }
+	// add additional functions, one for each object property
+	var FNS = ['letter', 'acc', 'pc', 'step', 'alt', 'chroma', 'oct']
+	FNS.forEach(function (name) {
+	  parser[name] = function (src) {
+	    var p = parse(src)
+	    return p && isDef(p[name]) ? p[name] : null
+	  }
+	})
+
+	module.exports = parser
+
+
+/***/ },
+/* 66 */
 /***/ function(module, exports) {
 
 	/**
@@ -7149,7 +10000,7 @@
 	module.exports = CSSProperty;
 
 /***/ },
-/* 61 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7168,7 +10019,7 @@
 	var _prodInvariant = __webpack_require__(2),
 	    _assign = __webpack_require__(4);
 
-	var PooledClass = __webpack_require__(14);
+	var PooledClass = __webpack_require__(15);
 
 	var invariant = __webpack_require__(1);
 
@@ -7260,7 +10111,7 @@
 	module.exports = CallbackQueue;
 
 /***/ },
-/* 62 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7276,11 +10127,11 @@
 
 	'use strict';
 
-	var DOMProperty = __webpack_require__(17);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactInstrumentation = __webpack_require__(8);
+	var DOMProperty = __webpack_require__(19);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactInstrumentation = __webpack_require__(9);
 
-	var quoteAttributeValueForBrowser = __webpack_require__(173);
+	var quoteAttributeValueForBrowser = __webpack_require__(196);
 	var warning = __webpack_require__(3);
 
 	var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -7486,7 +10337,7 @@
 	module.exports = DOMPropertyOperations;
 
 /***/ },
-/* 63 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7502,11 +10353,11 @@
 
 	'use strict';
 
-	var PooledClass = __webpack_require__(14);
-	var ReactElement = __webpack_require__(9);
+	var PooledClass = __webpack_require__(15);
+	var ReactElement = __webpack_require__(10);
 
-	var emptyFunction = __webpack_require__(7);
-	var traverseAllChildren = __webpack_require__(55);
+	var emptyFunction = __webpack_require__(8);
+	var traverseAllChildren = __webpack_require__(57);
 
 	var twoArgumentPooler = PooledClass.twoArgumentPooler;
 	var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -7682,7 +10533,7 @@
 	module.exports = ReactChildren;
 
 /***/ },
-/* 64 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7701,16 +10552,16 @@
 	var _prodInvariant = __webpack_require__(2),
 	    _assign = __webpack_require__(4);
 
-	var ReactComponent = __webpack_require__(40);
-	var ReactElement = __webpack_require__(9);
-	var ReactPropTypeLocations = __webpack_require__(46);
-	var ReactPropTypeLocationNames = __webpack_require__(45);
-	var ReactNoopUpdateQueue = __webpack_require__(44);
+	var ReactComponent = __webpack_require__(42);
+	var ReactElement = __webpack_require__(10);
+	var ReactPropTypeLocations = __webpack_require__(48);
+	var ReactPropTypeLocationNames = __webpack_require__(47);
+	var ReactNoopUpdateQueue = __webpack_require__(46);
 
-	var emptyObject = __webpack_require__(19);
+	var emptyObject = __webpack_require__(21);
 	var invariant = __webpack_require__(1);
-	var keyMirror = __webpack_require__(26);
-	var keyOf = __webpack_require__(13);
+	var keyMirror = __webpack_require__(27);
+	var keyOf = __webpack_require__(14);
 	var warning = __webpack_require__(3);
 
 	var MIXINS_KEY = keyOf({ mixins: null });
@@ -8419,7 +11270,7 @@
 	module.exports = ReactClass;
 
 /***/ },
-/* 65 */
+/* 71 */
 /***/ function(module, exports) {
 
 	/**
@@ -8442,7 +11293,7 @@
 	module.exports = ReactDOMComponentFlags;
 
 /***/ },
-/* 66 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8460,10 +11311,10 @@
 
 	var _assign = __webpack_require__(4);
 
-	var DisabledInputUtils = __webpack_require__(27);
-	var LinkedValueUtils = __webpack_require__(39);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactUpdates = __webpack_require__(10);
+	var DisabledInputUtils = __webpack_require__(28);
+	var LinkedValueUtils = __webpack_require__(41);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactUpdates = __webpack_require__(11);
 
 	var warning = __webpack_require__(3);
 
@@ -8648,7 +11499,7 @@
 	module.exports = ReactDOMSelect;
 
 /***/ },
-/* 67 */
+/* 73 */
 /***/ function(module, exports) {
 
 	/**
@@ -8683,7 +11534,7 @@
 	module.exports = ReactEmptyComponent;
 
 /***/ },
-/* 68 */
+/* 74 */
 /***/ function(module, exports) {
 
 	/**
@@ -8710,7 +11561,7 @@
 	module.exports = ReactFeatureFlags;
 
 /***/ },
-/* 69 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8791,7 +11642,7 @@
 	module.exports = ReactHostComponent;
 
 /***/ },
-/* 70 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8807,11 +11658,11 @@
 
 	'use strict';
 
-	var ReactDOMSelection = __webpack_require__(134);
+	var ReactDOMSelection = __webpack_require__(157);
 
-	var containsNode = __webpack_require__(99);
-	var focusNode = __webpack_require__(58);
-	var getActiveElement = __webpack_require__(59);
+	var containsNode = __webpack_require__(119);
+	var focusNode = __webpack_require__(63);
+	var getActiveElement = __webpack_require__(64);
 
 	function isInDocument(node) {
 	  return containsNode(document.documentElement, node);
@@ -8920,7 +11771,7 @@
 	module.exports = ReactInputSelection;
 
 /***/ },
-/* 71 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8938,27 +11789,27 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var DOMLazyTree = __webpack_require__(16);
-	var DOMProperty = __webpack_require__(17);
-	var ReactBrowserEventEmitter = __webpack_require__(28);
-	var ReactCurrentOwner = __webpack_require__(15);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactDOMContainerInfo = __webpack_require__(127);
-	var ReactDOMFeatureFlags = __webpack_require__(130);
-	var ReactElement = __webpack_require__(9);
-	var ReactFeatureFlags = __webpack_require__(68);
-	var ReactInstanceMap = __webpack_require__(22);
-	var ReactInstrumentation = __webpack_require__(8);
-	var ReactMarkupChecksum = __webpack_require__(143);
-	var ReactReconciler = __webpack_require__(18);
-	var ReactUpdateQueue = __webpack_require__(48);
-	var ReactUpdates = __webpack_require__(10);
+	var DOMLazyTree = __webpack_require__(18);
+	var DOMProperty = __webpack_require__(19);
+	var ReactBrowserEventEmitter = __webpack_require__(29);
+	var ReactCurrentOwner = __webpack_require__(16);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactDOMContainerInfo = __webpack_require__(150);
+	var ReactDOMFeatureFlags = __webpack_require__(153);
+	var ReactElement = __webpack_require__(10);
+	var ReactFeatureFlags = __webpack_require__(74);
+	var ReactInstanceMap = __webpack_require__(24);
+	var ReactInstrumentation = __webpack_require__(9);
+	var ReactMarkupChecksum = __webpack_require__(166);
+	var ReactReconciler = __webpack_require__(20);
+	var ReactUpdateQueue = __webpack_require__(50);
+	var ReactUpdates = __webpack_require__(11);
 
-	var emptyObject = __webpack_require__(19);
-	var instantiateReactComponent = __webpack_require__(83);
+	var emptyObject = __webpack_require__(21);
+	var instantiateReactComponent = __webpack_require__(89);
 	var invariant = __webpack_require__(1);
-	var setInnerHTML = __webpack_require__(31);
-	var shouldUpdateReactComponent = __webpack_require__(54);
+	var setInnerHTML = __webpack_require__(32);
+	var shouldUpdateReactComponent = __webpack_require__(56);
 	var warning = __webpack_require__(3);
 
 	var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -9459,7 +12310,7 @@
 	module.exports = ReactMount;
 
 /***/ },
-/* 72 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9475,7 +12326,7 @@
 
 	'use strict';
 
-	var keyMirror = __webpack_require__(26);
+	var keyMirror = __webpack_require__(27);
 
 	/**
 	 * When a component's children are updated, a series of update configuration
@@ -9496,7 +12347,7 @@
 	module.exports = ReactMultiChildUpdateTypes;
 
 /***/ },
-/* 73 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9515,7 +12366,7 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactElement = __webpack_require__(9);
+	var ReactElement = __webpack_require__(10);
 
 	var invariant = __webpack_require__(1);
 
@@ -9541,7 +12392,7 @@
 	module.exports = ReactNodeTypes;
 
 /***/ },
-/* 74 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9557,12 +12408,12 @@
 
 	'use strict';
 
-	var ReactElement = __webpack_require__(9);
-	var ReactPropTypeLocationNames = __webpack_require__(45);
-	var ReactPropTypesSecret = __webpack_require__(47);
+	var ReactElement = __webpack_require__(10);
+	var ReactPropTypeLocationNames = __webpack_require__(47);
+	var ReactPropTypesSecret = __webpack_require__(49);
 
-	var emptyFunction = __webpack_require__(7);
-	var getIteratorFn = __webpack_require__(81);
+	var emptyFunction = __webpack_require__(8);
+	var getIteratorFn = __webpack_require__(87);
 	var warning = __webpack_require__(3);
 
 	/**
@@ -9977,7 +12828,7 @@
 	module.exports = ReactPropTypes;
 
 /***/ },
-/* 75 */
+/* 81 */
 /***/ function(module, exports) {
 
 	/**
@@ -9996,7 +12847,7 @@
 	module.exports = '15.3.1';
 
 /***/ },
-/* 76 */
+/* 82 */
 /***/ function(module, exports) {
 
 	/**
@@ -10028,7 +12879,7 @@
 	module.exports = ViewportMetrics;
 
 /***/ },
-/* 77 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10091,7 +12942,7 @@
 	module.exports = accumulateInto;
 
 /***/ },
-/* 78 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10120,7 +12971,7 @@
 	module.exports = canDefineProperty;
 
 /***/ },
-/* 79 */
+/* 85 */
 /***/ function(module, exports) {
 
 	/**
@@ -10156,7 +13007,7 @@
 	module.exports = forEachAccumulated;
 
 /***/ },
-/* 80 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10172,7 +13023,7 @@
 
 	'use strict';
 
-	var ReactNodeTypes = __webpack_require__(73);
+	var ReactNodeTypes = __webpack_require__(79);
 
 	function getHostComponentFromComposite(inst) {
 	  var type;
@@ -10191,7 +13042,7 @@
 	module.exports = getHostComponentFromComposite;
 
 /***/ },
-/* 81 */
+/* 87 */
 /***/ function(module, exports) {
 
 	/**
@@ -10237,7 +13088,7 @@
 	module.exports = getIteratorFn;
 
 /***/ },
-/* 82 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10253,7 +13104,7 @@
 
 	'use strict';
 
-	var ExecutionEnvironment = __webpack_require__(6);
+	var ExecutionEnvironment = __webpack_require__(7);
 
 	var contentKey = null;
 
@@ -10275,7 +13126,7 @@
 	module.exports = getTextContentAccessor;
 
 /***/ },
-/* 83 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10294,9 +13145,9 @@
 	var _prodInvariant = __webpack_require__(2),
 	    _assign = __webpack_require__(4);
 
-	var ReactCompositeComponent = __webpack_require__(123);
-	var ReactEmptyComponent = __webpack_require__(67);
-	var ReactHostComponent = __webpack_require__(69);
+	var ReactCompositeComponent = __webpack_require__(146);
+	var ReactEmptyComponent = __webpack_require__(73);
+	var ReactHostComponent = __webpack_require__(75);
 
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
@@ -10399,7 +13250,7 @@
 	module.exports = instantiateReactComponent;
 
 /***/ },
-/* 84 */
+/* 90 */
 /***/ function(module, exports) {
 
 	/**
@@ -10455,7 +13306,7 @@
 	module.exports = isTextInputElement;
 
 /***/ },
-/* 85 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10471,9 +13322,9 @@
 
 	'use strict';
 
-	var ExecutionEnvironment = __webpack_require__(6);
-	var escapeTextContentForBrowser = __webpack_require__(30);
-	var setInnerHTML = __webpack_require__(31);
+	var ExecutionEnvironment = __webpack_require__(7);
+	var escapeTextContentForBrowser = __webpack_require__(31);
+	var setInnerHTML = __webpack_require__(32);
 
 	/**
 	 * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -10508,81 +13359,95 @@
 	module.exports = setTextContent;
 
 /***/ },
-/* 86 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(5);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(110);
+	var _reactDom = __webpack_require__(129);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _src = __webpack_require__(91);
+	var _demo = __webpack_require__(60);
+
+	var _demo2 = _interopRequireDefault(_demo);
+
+	var _reactHotLoader = __webpack_require__(130);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_reactDom2.default.render(_react2.default.createElement(
-	  _src.Song,
-	  { tempo: 180 },
-	  _react2.default.createElement(
-	    _src.Sequencer,
-	    { resolution: 16, bars: 2 },
-	    _react2.default.createElement(_src.Sampler, {
-	      sample: 'samples/kick.wav',
-	      steps: [0, 4, 14]
-	    }),
-	    _react2.default.createElement(_src.Sampler, {
-	      sample: 'samples/snare.wav',
-	      steps: [8, 24]
-	    })
-	  ),
-	  _react2.default.createElement(
-	    _src.Sequencer,
-	    { resolution: 16, bars: 4 },
-	    _react2.default.createElement(_src.Sampler, {
-	      sample: 'samples/hihat.wav',
-	      steps: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60],
-	      volume: 80
-	    })
-	  ),
-	  _react2.default.createElement(
-	    _src.Sequencer,
-	    { resolution: 16, bars: 8 },
-	    _react2.default.createElement(_src.Synth, {
-	      type: 'sawtooth',
-	      volume: 15,
-	      envelope: {
-	        attack: 0.01,
-	        sustain: 0.2,
-	        decay: 0,
-	        release: 0.1
-	      },
-	      steps: [[0, 2, 'a#2'], [4, 2, 'a#2'], [8, 1, 'a#3'], [10, 1, 'a#3'], [12, 1, 'a#3'], [14, 1, 'a#3'], [16, 2, 'g#2'], [20, 2, 'g#2'], [24, 1, 'g#3'], [26, 1, 'g#3'], [28, 1, 'g#3'], [30, 1, 'g#3'], [32, 2, 'f#2'], [36, 2, 'f#2'], [40, 1, 'f#3'], [42, 1, 'f#3'], [44, 1, 'f#3'], [46, 1, 'f#3'], [48, 2, 'd#2'], [52, 2, 'd#2'], [56, 1, 'd#3'], [58, 1, 'd#3'], [60, 1, 'd#3'], [62, 1, 'd#3'], [64, 8, 'a#2'], [72, 8, 'a#3'], [80, 8, 'g#2'], [88, 8, 'g#3'], [96, 8, 'f#2'], [104, 8, 'f#3'], [112, 8, 'd#2'], [120, 8, 'd#3']]
-	    })
-	  ),
-	  _react2.default.createElement(
-	    _src.Sequencer,
-	    { resolution: 16, bars: 4 },
-	    _react2.default.createElement(_src.Synth, {
-	      type: 'sine',
-	      volume: 40,
-	      envelope: {
-	        attack: 0.1,
-	        sustain: 0.5,
-	        decay: 0,
-	        release: 1
-	      },
-	      steps: [[0, 1, 'a#1'], [16, 1, 'g#1'], [32, 1, 'f#1'], [48, 1, 'd#1']]
-	    })
-	  )
+	  _reactHotLoader.AppContainer,
+	  null,
+	  _react2.default.createElement(_demo2.default, null)
 	), document.getElementById('root'));
 
+	module.hot.accept('./demo', function () {
+	  var NextDemo = __webpack_require__(60).default;
+	  _reactDom2.default.render(_react2.default.createElement(
+	    _reactHotLoader.AppContainer,
+	    null,
+	    _react2.default.createElement(NextDemo, null)
+	  ), document.getElementById('root'));
+	});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(202)(module)))
+
 /***/ },
-/* 87 */
+/* 93 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _src = __webpack_require__(61);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Polysynth = function Polysynth(props) {
+	  return _react2.default.createElement(
+	    _src.Delay,
+	    null,
+	    _react2.default.createElement(
+	      _src.Reverb,
+	      null,
+	      _react2.default.createElement(_src.Synth, {
+	        type: 'sine',
+	        gain: 0.15,
+	        steps: props.steps
+	      }),
+	      _react2.default.createElement(
+	        _src.MoogFilter,
+	        { bufferSize: 4096 },
+	        _react2.default.createElement(_src.Synth, {
+	          type: 'square',
+	          gain: 0.15,
+	          transpose: 1,
+	          steps: props.steps
+	        })
+	      )
+	    )
+	  );
+	};
+
+	Polysynth.propTypes = {
+	  steps: _react.PropTypes.array
+	};
+
+	exports.default = Polysynth;
+
+/***/ },
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10593,7 +13458,1748 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Visualization = function (_Component) {
+	  _inherits(Visualization, _Component);
+
+	  function Visualization(props) {
+	    _classCallCheck(this, Visualization);
+
+	    var _this = _possibleConstructorReturn(this, (Visualization.__proto__ || Object.getPrototypeOf(Visualization)).call(this, props));
+
+	    _this.audioProcess = _this.audioProcess.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(Visualization, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.ctx = this.canvas.getContext('2d');
+	    }
+	  }, {
+	    key: 'componentDidReceiveProps',
+	    value: function componentDidReceiveProps() {}
+	  }, {
+	    key: 'audioProcess',
+	    value: function audioProcess(analyser) {
+	      if (this.ctx) {
+	        var gradient = this.ctx.createLinearGradient(0, 0, 0, 512);
+	        gradient.addColorStop(1, '#000000');
+	        gradient.addColorStop(0.75, '#2ecc71');
+	        gradient.addColorStop(0.25, '#f1c40f');
+	        gradient.addColorStop(0, '#e74c3c');
+
+	        var array = new Uint8Array(analyser.frequencyBinCount);
+	        analyser.getByteFrequencyData(array);
+	        this.ctx.clearRect(0, 0, 800, 512);
+	        this.ctx.fillStyle = gradient;
+
+	        for (var i = 0; i < array.length; i++) {
+	          var value = array[i];
+	          this.ctx.fillRect(i * 12, 512, 10, value * -2);
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement('canvas', {
+	        className: 'react-music-canvas',
+	        width: 800,
+	        height: 512,
+	        ref: function ref(c) {
+	          _this2.canvas = c;
+	        }
+	      });
+	    }
+	  }]);
+
+	  return Visualization;
+	}(_react.Component);
+
+	exports.default = Visualization;
+
+/***/ },
+/* 95 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var Analyser = function (_Component) {
+	  _inherits(Analyser, _Component);
+
+	  function Analyser(props, context) {
+	    _classCallCheck(this, Analyser);
+
+	    var _this = _possibleConstructorReturn(this, (Analyser.__proto__ || Object.getPrototypeOf(Analyser)).call(this, props));
+
+	    _this.visualization = context.audioContext.createScriptProcessor(2048, 1, 1);
+	    _this.visualization.connect(context.audioContext.destination);
+
+	    _this.connectNode = context.audioContext.createAnalyser();
+	    _this.connectNode.connect(context.connectNode);
+	    _this.applyProps = _this.applyProps.bind(_this);
+
+	    _this.visualization.onaudioprocess = function () {
+	      if (props.onAudioProcess) {
+	        props.onAudioProcess(_this.connectNode);
+	      }
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Analyser, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.applyProps(this.props);
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.applyProps(nextProps);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'applyProps',
+	    value: function applyProps(props) {
+	      for (var prop in props) {
+	        if (this.connectNode[prop]) {
+	          this.connectNode[prop] = props[prop];
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Analyser;
+	}(_react.Component);
+
+	Analyser.propTypes = {
+	  children: _react.PropTypes.node,
+	  fftSize: _react.PropTypes.number,
+	  onAudioProcess: _react.PropTypes.func,
+	  smoothingTimeConstant: _react.PropTypes.number
+	};
+	Analyser.defaultProps = {
+	  fftSize: 128,
+	  onAudioProcess: function onAudioProcess() {},
+	  smoothingTimeConstant: 0.3
+	};
+	Analyser.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	Analyser.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = Analyser;
+
+/***/ },
+/* 96 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _tunajs = __webpack_require__(17);
+
+	var _tunajs2 = _interopRequireDefault(_tunajs);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var Bitcrusher = function (_Component) {
+	  _inherits(Bitcrusher, _Component);
+
+	  function Bitcrusher(props, context) {
+	    _classCallCheck(this, Bitcrusher);
+
+	    var _this = _possibleConstructorReturn(this, (Bitcrusher.__proto__ || Object.getPrototypeOf(Bitcrusher)).call(this, props));
+
+	    var tuna = new _tunajs2.default(context.audioContext);
+
+	    _this.connectNode = new tuna.Bitcrusher({
+	      bits: props.bits,
+	      normfreq: props.normfreq,
+	      bufferSize: props.bufferSize
+	    });
+
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(Bitcrusher, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      for (var prop in nextProps) {
+	        if (this.connectNode[prop]) {
+	          this.connectNode[prop] = nextProps[prop];
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Bitcrusher;
+	}(_react.Component);
+
+	Bitcrusher.propTypes = {
+	  bits: _react.PropTypes.number,
+	  bufferSize: _react.PropTypes.number,
+	  children: _react.PropTypes.node,
+	  normfreq: _react.PropTypes.number
+	};
+	Bitcrusher.defaultProps = {
+	  bits: 8,
+	  bufferSize: 256,
+	  normfreq: 0.1
+	};
+	Bitcrusher.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	Bitcrusher.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = Bitcrusher;
+
+/***/ },
+/* 97 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Bus = function (_Component) {
+	  _inherits(Bus, _Component);
+
+	  function Bus(props, context) {
+	    _classCallCheck(this, Bus);
+
+	    var _this = _possibleConstructorReturn(this, (Bus.__proto__ || Object.getPrototypeOf(Bus)).call(this, props));
+
+	    _this.connectNode = context.audioContext.createGain();
+	    _this.connectNode.gain.value = props.gain;
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(Bus, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var master = this.context.getMaster();
+	      master.busses[this.props.id] = this.connectNode;
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      var master = this.context.getMaster();
+	      delete master.busses[this.props.id];
+
+	      this.connectNode.gain.value = nextProps.gain;
+	      master.busses[nextProps.id] = this.connectNode;
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	      delete this.context.getMaster().busses[this.props.id];
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Bus;
+	}(_react.Component);
+
+	Bus.propTypes = {
+	  children: _react.PropTypes.node,
+	  gain: _react.PropTypes.number,
+	  id: _react.PropTypes.string.isRequired
+	};
+	Bus.defaultProps = {
+	  gain: 0.5
+	};
+	Bus.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object,
+	  getMaster: _react.PropTypes.func
+	};
+	Bus.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object,
+	  getMaster: _react.PropTypes.func
+	};
+	exports.default = Bus;
+
+/***/ },
+/* 98 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _tunajs = __webpack_require__(17);
+
+	var _tunajs2 = _interopRequireDefault(_tunajs);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var Chorus = function (_Component) {
+	  _inherits(Chorus, _Component);
+
+	  function Chorus(props, context) {
+	    _classCallCheck(this, Chorus);
+
+	    var _this = _possibleConstructorReturn(this, (Chorus.__proto__ || Object.getPrototypeOf(Chorus)).call(this, props));
+
+	    var tuna = new _tunajs2.default(context.audioContext);
+
+	    _this.connectNode = new tuna.Chorus({
+	      feedback: props.feedback,
+	      rate: props.rate,
+	      delay: props.delay,
+	      bypass: props.bypass
+	    });
+
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(Chorus, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      for (var prop in nextProps) {
+	        if (this.connectNode[prop]) {
+	          this.connectNode[prop] = nextProps[prop];
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Chorus;
+	}(_react.Component);
+
+	Chorus.propTypes = {
+	  bypass: _react.PropTypes.number,
+	  children: _react.PropTypes.node,
+	  delay: _react.PropTypes.number,
+	  feedback: _react.PropTypes.number,
+	  rate: _react.PropTypes.number
+	};
+	Chorus.defaultProps = {
+	  bypass: 0,
+	  delay: 0.0045,
+	  feedback: 0.2,
+	  rate: 1.5
+	};
+	Chorus.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	Chorus.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = Chorus;
+
+/***/ },
+/* 99 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var Compressor = function (_Component) {
+	  _inherits(Compressor, _Component);
+
+	  function Compressor(props, context) {
+	    _classCallCheck(this, Compressor);
+
+	    var _this = _possibleConstructorReturn(this, (Compressor.__proto__ || Object.getPrototypeOf(Compressor)).call(this, props));
+
+	    _this.connectNode = context.audioContext.createDynamicsCompressor();
+	    _this.connectNode.connect(context.connectNode);
+
+	    _this.applyProps = _this.applyProps.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(Compressor, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.applyProps(this.props);
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.applyProps(nextProps);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'applyProps',
+	    value: function applyProps(props) {
+	      for (var prop in props) {
+	        if (this.connectNode[prop]) {
+	          this.connectNode[prop].value = props[prop];
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Compressor;
+	}(_react.Component);
+
+	Compressor.propTypes = {
+	  attack: _react.PropTypes.number,
+	  children: _react.PropTypes.node,
+	  knee: _react.PropTypes.number,
+	  ratio: _react.PropTypes.number,
+	  release: _react.PropTypes.number,
+	  threshold: _react.PropTypes.number
+	};
+	Compressor.defaultProps = {
+	  attack: 0.003,
+	  knee: 32,
+	  ratio: 12,
+	  release: 0.25,
+	  threshold: -24
+	};
+	Compressor.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	Compressor.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = Compressor;
+
+/***/ },
+/* 100 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _tunajs = __webpack_require__(17);
+
+	var _tunajs2 = _interopRequireDefault(_tunajs);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var Delay = function (_Component) {
+	  _inherits(Delay, _Component);
+
+	  function Delay(props, context) {
+	    _classCallCheck(this, Delay);
+
+	    var _this = _possibleConstructorReturn(this, (Delay.__proto__ || Object.getPrototypeOf(Delay)).call(this, props));
+
+	    var tuna = new _tunajs2.default(context.audioContext);
+
+	    _this.connectNode = new tuna.Delay({
+	      feedback: props.feedback,
+	      delayTime: props.delayTime,
+	      wetLevel: props.wetLevel,
+	      dryLevel: props.dryLevel,
+	      cutoff: props.cutoff,
+	      bypass: props.bypass
+	    });
+
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(Delay, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      for (var prop in nextProps) {
+	        if (this.connectNode[prop]) {
+	          this.connectNode[prop] = nextProps[prop];
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Delay;
+	}(_react.Component);
+
+	Delay.propTypes = {
+	  bypass: _react.PropTypes.number,
+	  children: _react.PropTypes.node,
+	  cutoff: _react.PropTypes.number,
+	  delayTime: _react.PropTypes.number,
+	  dryLevel: _react.PropTypes.number,
+	  feedback: _react.PropTypes.number,
+	  wetLevel: _react.PropTypes.number
+	};
+	Delay.defaultProps = {
+	  bypass: 0,
+	  cutoff: 2000,
+	  delayTime: 150,
+	  dryLevel: 1,
+	  feedback: 0.45,
+	  wetLevel: 0.25
+	};
+	Delay.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	Delay.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = Delay;
+
+/***/ },
+/* 101 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var Filter = function (_Component) {
+	  _inherits(Filter, _Component);
+
+	  function Filter(props, context) {
+	    _classCallCheck(this, Filter);
+
+	    var _this = _possibleConstructorReturn(this, (Filter.__proto__ || Object.getPrototypeOf(Filter)).call(this, props));
+
+	    _this.connectNode = context.audioContext.createBiquadFilter();
+	    _this.connectNode.connect(context.connectNode);
+
+	    _this.applyProps = _this.applyProps.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(Filter, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.applyProps(this.props);
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.applyProps(nextProps);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'applyProps',
+	    value: function applyProps(props) {
+	      for (var prop in props) {
+	        if (this.connectNode[prop]) {
+	          if (_typeof(this.connectNode[prop]) === 'object') {
+	            this.connectNode[prop].value = props[prop];
+	          } else {
+	            this.connectNode[prop] = props[prop];
+	          }
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Filter;
+	}(_react.Component);
+
+	Filter.propTypes = {
+	  children: _react.PropTypes.node,
+	  frequency: _react.PropTypes.number,
+	  gain: _react.PropTypes.number,
+	  type: _react.PropTypes.oneOf(['lowpass', 'highpass', 'bandpass', 'lowshelf', 'highshelf', 'peaking', 'notch', 'allpass'])
+	};
+	Filter.defaultProps = {
+	  frequency: 2000,
+	  gain: 0,
+	  type: 'lowpass'
+	};
+	Filter.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	Filter.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = Filter;
+
+/***/ },
+/* 102 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Gain = function (_Component) {
+	  _inherits(Gain, _Component);
+
+	  function Gain(props, context) {
+	    _classCallCheck(this, Gain);
+
+	    var _this = _possibleConstructorReturn(this, (Gain.__proto__ || Object.getPrototypeOf(Gain)).call(this, props));
+
+	    _this.connectNode = context.audioContext.createGain();
+	    _this.connectNode.gain.value = props.amount;
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(Gain, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.connectNode.gain.value = nextProps.amount;
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Gain;
+	}(_react.Component);
+
+	Gain.propTypes = {
+	  amount: _react.PropTypes.number,
+	  children: _react.PropTypes.node
+	};
+	Gain.defaultProps = {
+	  amount: 1.0
+	};
+	Gain.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	Gain.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = Gain;
+
+/***/ },
+/* 103 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var LFO = function (_Component) {
+	  _inherits(LFO, _Component);
+
+	  function LFO() {
+	    _classCallCheck(this, LFO);
+
+	    return _possibleConstructorReturn(this, (LFO.__proto__ || Object.getPrototypeOf(LFO)).apply(this, arguments));
+	  }
+
+	  _createClass(LFO, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var volumeGain = this.context.audioContext.createGain();
+	      volumeGain.gain.value = this.props.gain;
+	      this.osc = this.context.audioContext.createOscillator();
+	      this.osc.frequency.value = this.props.frequency;
+	      this.osc.type = this.props.type;
+	      this.osc.connect(volumeGain);
+	      volumeGain.connect(this.props.connect(this.context.connectNode));
+
+	      this.osc.start(this.context.audioContext.currentTime);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.osc.stop();
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return LFO;
+	}(_react.Component);
+
+	LFO.displayName = 'Synth';
+	LFO.propTypes = {
+	  children: _react.PropTypes.node,
+	  connect: _react.PropTypes.func,
+	  frequency: _react.PropTypes.number,
+	  gain: _react.PropTypes.number,
+	  type: _react.PropTypes.oneOf(['sine', 'square', 'sawtooth', 'triangle'])
+	};
+	LFO.defaultProps = {
+	  connect: function connect(node) {
+	    return node.gain;
+	  },
+	  frequency: 1,
+	  gain: 0.5,
+	  type: 'sine'
+	};
+	LFO.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = LFO;
+
+/***/ },
+/* 104 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _noteParser = __webpack_require__(65);
+
+	var _noteParser2 = _interopRequireDefault(_noteParser);
+
+	var _audioContour = __webpack_require__(59);
+
+	var _audioContour2 = _interopRequireDefault(_audioContour);
+
+	var _uuid = __webpack_require__(33);
+
+	var _uuid2 = _interopRequireDefault(_uuid);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Monosynth = function (_Component) {
+	  _inherits(Monosynth, _Component);
+
+	  function Monosynth(props, context) {
+	    _classCallCheck(this, Monosynth);
+
+	    var _this = _possibleConstructorReturn(this, (Monosynth.__proto__ || Object.getPrototypeOf(Monosynth)).call(this, props));
+
+	    _this.getSteps = _this.getSteps.bind(_this);
+	    _this.playStep = _this.playStep.bind(_this);
+
+	    _this.connectNode = context.audioContext.createGain();
+	    _this.connectNode.gain.value = props.gain;
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(Monosynth, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+
+	      this.id = _uuid2.default.v1();
+	      var master = this.context.getMaster();
+	      master.instruments[this.id] = this.getSteps;
+
+	      this.amplitudeGain = this.context.audioContext.createGain();
+	      this.amplitudeGain.gain.value = 0;
+	      this.amplitudeGain.connect(this.connectNode);
+
+	      this.osc = this.context.audioContext.createOscillator();
+	      this.osc.type = this.props.type;
+	      this.osc.connect(this.amplitudeGain);
+
+	      if (this.props.busses) {
+	        this.props.busses.forEach(function (bus) {
+	          if (master.busses[bus]) {
+	            _this2.osc.connect(master.busses[bus]);
+	          }
+	        });
+	      }
+
+	      this.osc.start(this.context.audioContext.currentTime);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      var master = this.context.getMaster();
+	      delete master.instruments[this.id];
+	      this.osc.stop();
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'getSteps',
+	    value: function getSteps(playbackTime) {
+	      var _this3 = this;
+
+	      var totalBars = this.context.getMaster().getMaxBars();
+	      var loopCount = totalBars / this.context.bars;
+
+	      var _loop = function _loop(i) {
+	        var barOffset = _this3.context.barInterval * _this3.context.bars * i / 1000;
+	        var stepInterval = _this3.context.barInterval / _this3.context.resolution;
+	        _this3.props.steps.forEach(function (step, index) {
+	          var time = barOffset + step[0] * stepInterval / 1000;
+	          var glide = false;
+
+	          if (index !== 0) {
+	            var lastTime = barOffset + _this3.props.steps[index - 1][0] * stepInterval / 1000;
+	            var lastDuration = _this3.props.steps[index - 1][1] * stepInterval / 1000;
+	            glide = lastTime + lastDuration > time;
+	          }
+
+	          _this3.context.scheduler.insert(playbackTime + time, _this3.playStep, {
+	            time: playbackTime,
+	            step: step,
+	            glide: glide
+	          });
+	        });
+	      };
+
+	      for (var i = 0; i < loopCount; i++) {
+	        _loop(i);
+	      }
+	    }
+	  }, {
+	    key: 'createOscillator',
+	    value: function createOscillator() {
+	      var _arguments = Array.prototype.slice.call(arguments);
+
+	      var time = _arguments[0];
+	      var note = _arguments[1];
+	      var duration = _arguments[2];
+	      var glide = _arguments[3];
+
+	      var transposed = note.slice(0, -1) + (parseInt(note[note.length - 1], 0) + parseInt(this.props.transpose, 0));
+
+	      var env = (0, _audioContour2.default)(this.context.audioContext, {
+	        attack: this.props.envelope.attack,
+	        decay: this.props.envelope.decay,
+	        sustain: this.props.envelope.sustain,
+	        release: this.props.envelope.release
+	      });
+
+	      env.connect(this.amplitudeGain.gain);
+	      this.osc.frequency.setTargetAtTime(_noteParser2.default.freq(transposed), time, glide ? this.props.glide : 0.001);
+
+	      env.start(time);
+	      env.stop(this.context.audioContext.currentTime + duration);
+	    }
+	  }, {
+	    key: 'playStep',
+	    value: function playStep(e) {
+	      var _e$args = e.args;
+	      var step = _e$args.step;
+	      var glide = _e$args.glide;
+	      var time = _e$args.time;
+
+	      var note = step[2];
+	      var stepInterval = this.context.barInterval / this.context.resolution;
+	      var duration = step[1] * stepInterval / 1000;
+	      this.createOscillator(time, note, duration, glide);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Monosynth;
+	}(_react.Component);
+
+	Monosynth.displayName = 'Synth';
+	Monosynth.propTypes = {
+	  busses: _react.PropTypes.array,
+	  children: _react.PropTypes.node,
+	  envelope: _react.PropTypes.shape({
+	    attack: _react.PropTypes.number,
+	    decay: _react.PropTypes.number,
+	    sustain: _react.PropTypes.number,
+	    release: _react.PropTypes.number
+	  }),
+	  gain: _react.PropTypes.number,
+	  glide: _react.PropTypes.number,
+	  steps: _react.PropTypes.array.isRequired,
+	  transpose: _react.PropTypes.number,
+	  type: _react.PropTypes.oneOf(['sine', 'square', 'sawtooth', 'triangle']).isRequired
+	};
+	Monosynth.defaultProps = {
+	  envelope: {
+	    attack: 0.01,
+	    decay: 0.2,
+	    sustain: 0.2,
+	    release: 0.2
+	  },
+	  gain: 0.5,
+	  glide: 0.1,
+	  transpose: 0
+	};
+	Monosynth.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  bars: _react.PropTypes.number,
+	  barInterval: _react.PropTypes.number,
+	  connectNode: _react.PropTypes.object,
+	  getMaster: _react.PropTypes.func,
+	  resolution: _react.PropTypes.number,
+	  scheduler: _react.PropTypes.object,
+	  tempo: _react.PropTypes.number
+	};
+	Monosynth.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  bars: _react.PropTypes.number,
+	  barInterval: _react.PropTypes.number,
+	  connectNode: _react.PropTypes.object,
+	  getMaster: _react.PropTypes.func,
+	  resolution: _react.PropTypes.number,
+	  scheduler: _react.PropTypes.object,
+	  tempo: _react.PropTypes.number
+	};
+	exports.default = Monosynth;
+
+/***/ },
+/* 105 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _tunajs = __webpack_require__(17);
+
+	var _tunajs2 = _interopRequireDefault(_tunajs);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var MoogFilter = function (_Component) {
+	  _inherits(MoogFilter, _Component);
+
+	  function MoogFilter(props, context) {
+	    _classCallCheck(this, MoogFilter);
+
+	    var _this = _possibleConstructorReturn(this, (MoogFilter.__proto__ || Object.getPrototypeOf(MoogFilter)).call(this, props));
+
+	    var tuna = new _tunajs2.default(context.audioContext);
+
+	    _this.connectNode = new tuna.MoogFilter({
+	      cutoff: props.cutoff,
+	      resonance: props.resonance,
+	      bufferSize: props.bufferSize
+	    });
+
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(MoogFilter, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      for (var prop in nextProps) {
+	        if (this.connectNode[prop]) {
+	          this.connectNode[prop] = nextProps[prop];
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return MoogFilter;
+	}(_react.Component);
+
+	MoogFilter.propTypes = {
+	  bufferSize: _react.PropTypes.number,
+	  children: _react.PropTypes.node,
+	  cutoff: _react.PropTypes.number,
+	  resonance: _react.PropTypes.number
+	};
+	MoogFilter.defaultProps = {
+	  bufferSize: 256,
+	  cutoff: 0.065,
+	  resonance: 3.5
+	};
+	MoogFilter.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	MoogFilter.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = MoogFilter;
+
+/***/ },
+/* 106 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _tunajs = __webpack_require__(17);
+
+	var _tunajs2 = _interopRequireDefault(_tunajs);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var Overdrive = function (_Component) {
+	  _inherits(Overdrive, _Component);
+
+	  function Overdrive(props, context) {
+	    _classCallCheck(this, Overdrive);
+
+	    var _this = _possibleConstructorReturn(this, (Overdrive.__proto__ || Object.getPrototypeOf(Overdrive)).call(this, props));
+
+	    var tuna = new _tunajs2.default(context.audioContext);
+
+	    _this.connectNode = new tuna.Overdrive({
+	      outputGain: props.outputGain,
+	      drive: props.drive,
+	      curveAmount: props.curveAmount,
+	      algorithmIndex: props.algorithmIndex,
+	      bypass: props.bypass
+	    });
+
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(Overdrive, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      for (var prop in nextProps) {
+	        if (this.connectNode[prop]) {
+	          this.connectNode[prop] = nextProps[prop];
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Overdrive;
+	}(_react.Component);
+
+	Overdrive.propTypes = {
+	  algorithmIndex: _react.PropTypes.number,
+	  bypass: _react.PropTypes.number,
+	  children: _react.PropTypes.node,
+	  curveAmount: _react.PropTypes.number,
+	  drive: _react.PropTypes.number,
+	  outputGain: _react.PropTypes.number
+	};
+	Overdrive.defaultProps = {
+	  algorithmIndex: 0,
+	  bypass: 0,
+	  curveAmount: 1,
+	  drive: 0.7,
+	  outputGain: 0.5
+	};
+	Overdrive.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	Overdrive.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = Overdrive;
+
+/***/ },
+/* 107 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _tunajs = __webpack_require__(17);
+
+	var _tunajs2 = _interopRequireDefault(_tunajs);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var PingPong = function (_Component) {
+	  _inherits(PingPong, _Component);
+
+	  function PingPong(props, context) {
+	    _classCallCheck(this, PingPong);
+
+	    var _this = _possibleConstructorReturn(this, (PingPong.__proto__ || Object.getPrototypeOf(PingPong)).call(this, props));
+
+	    var tuna = new _tunajs2.default(context.audioContext);
+
+	    _this.connectNode = new tuna.PingPongDelay({
+	      wetLevel: props.wetLevel,
+	      feedback: props.feedback,
+	      delayTimeLeft: props.delayTimeLeft,
+	      delayTimeRight: props.delayTimeRight
+	    });
+
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(PingPong, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      for (var prop in nextProps) {
+	        if (this.connectNode[prop]) {
+	          this.connectNode[prop] = nextProps[prop];
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return PingPong;
+	}(_react.Component);
+
+	PingPong.propTypes = {
+	  children: _react.PropTypes.node,
+	  delayTimeLeft: _react.PropTypes.number,
+	  delayTimeRight: _react.PropTypes.number,
+	  feedback: _react.PropTypes.number,
+	  wetLevel: _react.PropTypes.number
+	};
+	PingPong.defaultProps = {
+	  delayTimeLeft: 150,
+	  delayTimeRight: 200,
+	  feedback: 0.3,
+	  wetLevel: 0.5
+	};
+	PingPong.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	PingPong.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = PingPong;
+
+/***/ },
+/* 108 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _tunajs = __webpack_require__(17);
+
+	var _tunajs2 = _interopRequireDefault(_tunajs);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-restricted-syntax */
+
+
+	var Reverb = function (_Component) {
+	  _inherits(Reverb, _Component);
+
+	  function Reverb(props, context) {
+	    _classCallCheck(this, Reverb);
+
+	    var _this = _possibleConstructorReturn(this, (Reverb.__proto__ || Object.getPrototypeOf(Reverb)).call(this, props));
+
+	    var tuna = new _tunajs2.default(context.audioContext);
+
+	    _this.connectNode = new tuna.Convolver({
+	      highCut: props.highCut,
+	      lowCut: props.lowCut,
+	      dryLevel: props.dryLevel,
+	      wetLevel: props.wetLevel,
+	      level: props.level,
+	      impulse: props.impulse,
+	      bypass: props.bypass
+	    });
+
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
+	  }
+
+	  _createClass(Reverb, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      for (var prop in nextProps) {
+	        if (this.connectNode[prop]) {
+	          this.connectNode[prop] = nextProps[prop];
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Reverb;
+	}(_react.Component);
+
+	Reverb.propTypes = {
+	  bypass: _react.PropTypes.number,
+	  children: _react.PropTypes.node,
+	  dryLevel: _react.PropTypes.number,
+	  highCut: _react.PropTypes.number,
+	  impulse: _react.PropTypes.string,
+	  level: _react.PropTypes.number,
+	  lowCut: _react.PropTypes.number,
+	  wetLevel: _react.PropTypes.number
+	};
+	Reverb.defaultProps = {
+	  bypass: 0,
+	  dryLevel: 0.5,
+	  highCut: 22050,
+	  impulse: 'reverb/room.wav',
+	  level: 1,
+	  lowCut: 20,
+	  wetLevel: 1
+	};
+	Reverb.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	Reverb.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  connectNode: _react.PropTypes.object
+	};
+	exports.default = Reverb;
+
+/***/ },
+/* 109 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _uuid = __webpack_require__(33);
+
+	var _uuid2 = _interopRequireDefault(_uuid);
+
+	var _bufferLoader = __webpack_require__(113);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -10604,55 +15210,186 @@
 	var Sampler = function (_Component) {
 	  _inherits(Sampler, _Component);
 
-	  function Sampler() {
+	  function Sampler(props, context) {
 	    _classCallCheck(this, Sampler);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Sampler).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Sampler.__proto__ || Object.getPrototypeOf(Sampler)).call(this, props));
+
+	    _this.bufferLoaded = _this.bufferLoaded.bind(_this);
+	    _this.getSteps = _this.getSteps.bind(_this);
+	    _this.playStep = _this.playStep.bind(_this);
+
+	    _this.connectNode = context.audioContext.createGain();
+	    _this.connectNode.gain.value = props.gain;
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
 	  }
 
 	  _createClass(Sampler, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.id = _uuid2.default.v1();
+
+	      var master = this.context.getMaster();
+	      master.instruments[this.id] = this.getSteps;
+	      master.buffers[this.id] = 1;
+
+	      var bufferLoader = new _bufferLoader.BufferLoader(this.context.audioContext, [this.props.sample], this.bufferLoaded);
+
+	      bufferLoader.load();
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.connectNode.gain.value = nextProps.gain;
+	      if (this.props.sample !== nextProps.sample) {
+	        var master = this.context.getMaster();
+	        delete master.buffers[this.id];
+
+	        this.id = _uuid2.default.v1();
+	        master.buffers[this.id] = 1;
+
+	        var bufferLoader = new _bufferLoader.BufferLoader(this.context.audioContext, [nextProps.sample], this.bufferLoaded);
+
+	        bufferLoader.load();
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      var master = this.context.getMaster();
+
+	      delete master.buffers[this.id];
+	      delete master.instruments[this.id];
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'getSteps',
+	    value: function getSteps(playbackTime) {
+	      var _this2 = this;
+
+	      var totalBars = this.context.getMaster().getMaxBars();
+	      var loopCount = totalBars / this.context.bars;
+
+	      var _loop = function _loop(i) {
+	        var barOffset = _this2.context.barInterval * _this2.context.bars * i / 1000;
+	        var stepInterval = _this2.context.barInterval / _this2.context.resolution;
+
+	        _this2.props.steps.forEach(function (step) {
+	          var stepValue = Array.isArray(step) ? step[0] : step;
+	          var time = barOffset + stepValue * stepInterval / 1000;
+
+	          _this2.context.scheduler.insert(playbackTime + time, _this2.playStep, {
+	            time: playbackTime,
+	            step: step
+	          });
+	        });
+	      };
+
+	      for (var i = 0; i < loopCount; i++) {
+	        _loop(i);
+	      }
+	    }
+	  }, {
+	    key: 'playStep',
+	    value: function playStep(e) {
+	      var _this3 = this;
+
+	      var source = this.context.audioContext.createBufferSource();
+	      source.buffer = this.buffer;
+	      if (source.detune) {
+	        if (Array.isArray(e.args.step)) {
+	          source.detune.value = (this.props.detune + e.args.step[1]) * 100;
+	        } else {
+	          source.detune.value = this.props.detune;
+	        }
+	      }
+	      source.connect(this.connectNode);
+
+	      if (this.props.busses) {
+	        (function () {
+	          var master = _this3.context.getMaster();
+	          _this3.props.busses.forEach(function (bus) {
+	            if (master.busses[bus]) {
+	              source.connect(master.busses[bus]);
+	            }
+	          });
+	        })();
+	      }
+
+	      source.start(e.args.playbackTime);
+	      this.context.scheduler.nextTick(e.args.playbackTime + this.buffer.duration, function () {
+	        source.disconnect();
+	      });
+	    }
+	  }, {
+	    key: 'bufferLoaded',
+	    value: function bufferLoaded(buffers) {
+	      this.buffer = buffers[0];
+	      var master = this.context.getMaster();
+	      delete master.buffers[this.id];
+	      this.context.bufferLoaded();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return null;
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
 	    }
 	  }]);
 
 	  return Sampler;
 	}(_react.Component);
 
+	Sampler.displayName = 'Sampler';
+	Sampler.propTypes = {
+	  busses: _react.PropTypes.array,
+	  children: _react.PropTypes.node,
+	  detune: _react.PropTypes.number,
+	  gain: _react.PropTypes.number,
+	  sample: _react.PropTypes.string.isRequired,
+	  steps: _react.PropTypes.array.isRequired
+	};
+	Sampler.defaultProps = {
+	  detune: 0,
+	  gain: 0.5
+	};
+	Sampler.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  bars: _react.PropTypes.number,
+	  barInterval: _react.PropTypes.number,
+	  bufferLoaded: _react.PropTypes.func,
+	  connectNode: _react.PropTypes.object,
+	  getMaster: _react.PropTypes.func,
+	  resolution: _react.PropTypes.number,
+	  scheduler: _react.PropTypes.object,
+	  tempo: _react.PropTypes.number
+	};
+	Sampler.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  bars: _react.PropTypes.number,
+	  barInterval: _react.PropTypes.number,
+	  bufferLoaded: _react.PropTypes.func,
+	  connectNode: _react.PropTypes.object,
+	  getMaster: _react.PropTypes.func,
+	  resolution: _react.PropTypes.number,
+	  scheduler: _react.PropTypes.object,
+	  tempo: _react.PropTypes.number
+	};
 	exports.default = Sampler;
 
-
-	Sampler.propTypes = {
-	  sample: _react.PropTypes.string.isRequired,
-	  steps: _react.PropTypes.array.isRequired,
-	  volume: _react.PropTypes.number,
-	  detune: _react.PropTypes.number,
-	  compressor: _react.PropTypes.shape({
-	    threshold: _react.PropTypes.number,
-	    knee: _react.PropTypes.number,
-	    ratio: _react.PropTypes.number,
-	    attack: _react.PropTypes.number,
-	    release: _react.PropTypes.number
-	  })
-	};
-
-	Sampler.defaultProps = {
-	  volume: 100,
-	  detune: 0,
-	  compressor: {
-	    threshold: -24,
-	    knee: 30,
-	    ratio: 12,
-	    attack: 0.003,
-	    release: 0.25
-	  }
-	};
-
-	Sampler.displayName = 'Sampler';
-
 /***/ },
-/* 88 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10661,9 +15398,19 @@
 	  value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _uuid = __webpack_require__(33);
+
+	var _uuid2 = _interopRequireDefault(_uuid);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -10677,34 +15424,70 @@
 	  function Sequencer() {
 	    _classCallCheck(this, Sequencer);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Sequencer).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Sequencer.__proto__ || Object.getPrototypeOf(Sequencer)).apply(this, arguments));
 	  }
 
 	  _createClass(Sequencer, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        bars: this.props.bars,
+	        resolution: this.props.resolution
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.id = _uuid2.default.v1();
+	      var master = this.context.getMaster();
+	      master.bars[this.id] = this.props.bars;
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      var master = this.context.getMaster();
+	      master.bars[this.id] = nextProps.bars;
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      delete this.context.getMaster().bars[this.id];
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return null;
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
 	    }
 	  }]);
 
 	  return Sequencer;
 	}(_react.Component);
 
+	Sequencer.propTypes = {
+	  bars: _react.PropTypes.number,
+	  children: _react.PropTypes.node,
+	  resolution: _react.PropTypes.number
+	};
+	Sequencer.defaultProps = {
+	  bars: 1,
+	  resolution: 16
+	};
+	Sequencer.contextTypes = {
+	  getMaster: _react.PropTypes.func
+	};
+	Sequencer.childContextTypes = {
+	  bars: _react.PropTypes.number,
+	  getMaster: _react.PropTypes.func,
+	  resolution: _react.PropTypes.number
+	};
 	exports.default = Sequencer;
 
-
-	Sequencer.propTypes = {
-	  resolution: _react.PropTypes.number,
-	  bars: _react.PropTypes.number
-	};
-
-	Sequencer.defaultProps = {
-	  resolution: 16,
-	  bars: 1
-	};
-
 /***/ },
-/* 89 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10715,33 +15498,24 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(5);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _bufferLoader = __webpack_require__(92);
+	var _scheduler = __webpack_require__(114);
 
-	var _webAudioScheduler = __webpack_require__(177);
-
-	var _webAudioScheduler2 = _interopRequireDefault(_webAudioScheduler);
-
-	var _noteParser = __webpack_require__(109);
-
-	var _noteParser2 = _interopRequireDefault(_noteParser);
-
-	var _envelopeGenerator = __webpack_require__(95);
-
-	var _envelopeGenerator2 = _interopRequireDefault(_envelopeGenerator);
-
-	__webpack_require__(176);
+	var _scheduler2 = _interopRequireDefault(_scheduler);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint-disable no-loop-func */
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable no-loop-func, react/no-did-mount-set-state */
 
 
 	var Song = function (_Component) {
@@ -10750,362 +15524,121 @@
 	  function Song(props) {
 	    _classCallCheck(this, Song);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Song).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (Song.__proto__ || Object.getPrototypeOf(Song)).call(this, props));
 
-	    _this.init = _this.init.bind(_this);
-	    _this.buffersLoaded = _this.buffersLoaded.bind(_this);
-	    _this.loop = _this.loop.bind(_this);
-	    _this.playSample = _this.playSample.bind(_this);
-	    _this.playSynth = _this.playSynth.bind(_this);
-	    _this.setupVisualization = _this.setupVisualization.bind(_this);
-	    _this.createOscillator = _this.createOscillator.bind(_this);
-	    _this.playToggle = _this.playToggle.bind(_this);
 	    _this.state = {
-	      playing: _this.props.autoplay === true
+	      buffersLoaded: false
 	    };
+
+	    _this.barInterval = 60000 / props.tempo * 4;
+	    _this.bars = {};
+	    _this.buffers = {};
+	    _this.instruments = {};
+	    _this.busses = {};
+
+	    _this.loop = _this.loop.bind(_this);
+	    _this.bufferLoaded = _this.bufferLoaded.bind(_this);
+	    _this.getMaster = _this.getMaster.bind(_this);
+	    _this.getMaxBars = _this.getMaxBars.bind(_this);
+
+	    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+	    _this.audioContext = new AudioContext();
+
+	    _this.scheduler = new _scheduler2.default({
+	      context: _this.audioContext
+	    });
 	    return _this;
 	  }
 
 	  _createClass(Song, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var _this2 = this;
-
-	      window.AudioContext = window.AudioContext || window.webkitAudioContext;
-
-	      this.context = new AudioContext();
-
-	      this.ctx = this.canvas.getContext('2d');
-
-	      this.setupVisualization();
-
-	      var _props = this.props;
-	      var tempo = _props.tempo;
-	      var seqChildren = _props.children;
-
-
-	      var beatInterval = 60000 / tempo;
-
-	      this.barInterval = beatInterval * 4;
-
-	      var sequencers = _react2.default.Children.toArray(seqChildren);
-
-	      this.sequencers = [];
-
-	      this.maxBars = 1;
-
-	      sequencers.forEach(function (seq) {
-	        var _seq$props = seq.props;
-	        var bars = _seq$props.bars;
-	        var resolution = _seq$props.resolution;
-	        var children = _seq$props.children;
-
-
-	        if (bars > _this2.maxBars) {
-	          _this2.maxBars = bars;
-	        }
-
-	        var stepInterval = _this2.barInterval / resolution;
-	        var instruments = _react2.default.Children.toArray(children);
-	        _this2.sequencers.push({
-	          bars: bars,
-	          stepInterval: stepInterval,
-	          instruments: instruments
-	        });
-	      });
-
-	      this.init();
-	    }
-	  }, {
-	    key: 'setupVisualization',
-	    value: function setupVisualization() {
-	      var _this3 = this;
-
-	      this.visualization = this.context.createScriptProcessor(2048, 1, 1);
-	      this.visualization.connect(this.context.destination);
-
-	      this.analyser = this.context.createAnalyser();
-	      this.analyser.smoothingTimeConstant = 0.3;
-	      this.analyser.fftSize = 128;
-	      this.analyser.connect(this.context.destination);
-
-	      var gradient = this.ctx.createLinearGradient(0, 0, 0, 512);
-	      gradient.addColorStop(1, '#000000');
-	      gradient.addColorStop(0.75, '#2ecc71');
-	      gradient.addColorStop(0.25, '#f1c40f');
-	      gradient.addColorStop(0, '#e74c3c');
-
-	      this.visualization.onaudioprocess = function () {
-	        var array = new Uint8Array(_this3.analyser.frequencyBinCount);
-	        _this3.analyser.getByteFrequencyData(array);
-	        _this3.ctx.clearRect(0, 0, 800, 512);
-	        _this3.ctx.fillStyle = gradient;
-	        _this3.drawSpectrum(array);
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return {
+	        tempo: this.props.tempo,
+	        audioContext: this.audioContext,
+	        barInterval: this.barInterval,
+	        bufferLoaded: this.bufferLoaded,
+	        connectNode: this.audioContext.destination,
+	        getMaster: this.getMaster,
+	        scheduler: this.scheduler
 	      };
 	    }
 	  }, {
-	    key: 'drawSpectrum',
-	    value: function drawSpectrum(array) {
-	      for (var i = 0; i < array.length; i++) {
-	        var value = array[i];
-	        this.ctx.fillRect(i * 12, 512, 10, value * -2);
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      if (Object.keys(this.buffers).length === 0) {
+	        this.setState({
+	          buffersLoaded: true
+	        });
 	      }
 	    }
 	  }, {
-	    key: 'init',
-	    value: function init() {
-	      this.scheduler = new _webAudioScheduler2.default({
-	        context: this.context
-	      });
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.barInterval = 60000 / nextProps.tempo * 4;
+	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate(prevProps, prevState) {
+	      var _this2 = this;
 
-	      var sounds = [];
-
-	      this.sequencers.forEach(function (seq) {
-	        seq.instruments.forEach(function (inst) {
-	          if (inst.type.displayName === 'Sampler') {
-	            sounds.push(inst.props.sample);
-	          }
-	        });
-	      });
-
-	      if (sounds.length) {
-	        var bufferLoader = new _bufferLoader.BufferLoader(this.context, sounds, this.buffersLoaded);
-
-	        bufferLoader.load();
-	      } else {
-	        if (this.props.autoplay) {
-	          this.scheduler.start(this.loop);
+	      if (prevState.buffersLoaded !== this.state.buffersLoaded || prevProps.playing !== this.props.playing) {
+	        if (this.state.buffersLoaded === true && this.props.playing === true) {
+	          setTimeout(function () {
+	            _this2.scheduler.start(_this2.loop);
+	          }, 0);
+	        } else {
+	          this.scheduler.stop(true);
 	        }
 	      }
 	    }
 	  }, {
-	    key: 'buffersLoaded',
-	    value: function buffersLoaded(bufferList) {
-	      this.bufferList = bufferList;
-	      if (this.props.autoplay) {
-	        this.scheduler.start(this.loop);
-	      }
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.audioContext.close();
 	    }
 	  }, {
-	    key: 'playSample',
-	    value: function playSample(e) {
-	      var source = this.context.createBufferSource();
-	      source.buffer = e.args.buffer;
-	      source.detune.value = e.args.detune;
-	      source.connect(e.args.connectNode);
-	      source.start(e.playbackTime);
-	      this.scheduler.nextTick(e.playbackTime + e.args.buffer.duration, function () {
-	        source.disconnect();
-	        e.args.connectNode.disconnect();
-	        e.args.gainNode.disconnect();
-	      });
+	    key: 'getMaster',
+	    value: function getMaster() {
+	      return this;
 	    }
 	  }, {
-	    key: 'playSynth',
-	    value: function playSynth(e) {
-	      var _this4 = this;
+	    key: 'getMaxBars',
+	    value: function getMaxBars() {
+	      var _this3 = this;
 
-	      var _e$args = e.args;
-	      var props = _e$args.props;
-	      var note = _e$args.note;
-	      var duration = _e$args.duration;
-
-	      if (Array.isArray(note)) {
-	        note.forEach(function (n) {
-	          _this4.createOscillator({
-	            note: n,
-	            type: props.type,
-	            connectNode: e.args.connectNode,
-	            gainNode: e.args.gainNode,
-	            envelope: props.envelope,
-	            playbackTime: e.playbackTime,
-	            duration: duration,
-	            stepInterval: e.args.stepInterval
-	          });
-	        });
-	      } else {
-	        this.createOscillator({
-	          note: note,
-	          type: props.type,
-	          connectNode: e.args.connectNode,
-	          gainNode: e.args.gainNode,
-	          envelope: props.envelope,
-	          playbackTime: e.playbackTime,
-	          duration: duration,
-	          stepInterval: e.args.stepInterval
+	      return Math.max.apply(Math, _toConsumableArray(Object.keys(this.bars).map(function (b) {
+	        return _this3.bars[b];
+	      })));
+	    }
+	  }, {
+	    key: 'bufferLoaded',
+	    value: function bufferLoaded() {
+	      if (Object.keys(this.buffers).length === 0) {
+	        this.setState({
+	          buffersLoaded: true
 	        });
 	      }
-	    }
-	  }, {
-	    key: 'createOscillator',
-	    value: function createOscillator(options) {
-	      var note = options.note;
-	      var type = options.type;
-	      var connectNode = options.connectNode;
-	      var gainNode = options.gainNode;
-	      var envelope = options.envelope;
-	      var playbackTime = options.playbackTime;
-	      var duration = options.duration;
-
-
-	      var env = new _envelopeGenerator2.default(this.context, {
-	        curve: 'exponential',
-	        attackCurve: 'exponential',
-	        decayCurve: 'exponential',
-	        releaseCurve: 'exponential',
-	        attackTime: envelope.attack,
-	        decayTime: envelope.decay,
-	        sustainLevel: envelope.sustain,
-	        releaseTime: envelope.release
-	      });
-	      env.connect(gainNode);
-
-	      var oscillator = this.context.createOscillator();
-	      oscillator.frequency.value = _noteParser2.default.freq(note);
-	      oscillator.type = type;
-	      oscillator.connect(connectNode);
-
-	      oscillator.start(playbackTime);
-	      env.start(playbackTime);
-
-	      env.release(this.context.currentTime + duration);
-	      var stopAt = env.getReleaseCompleteTime();
-
-	      env.stop(stopAt);
-	      oscillator.stop(stopAt);
-
-	      this.scheduler.nextTick(stopAt, function () {
-	        oscillator.disconnect();
-	        gainNode.disconnect();
-	        connectNode.disconnect();
-	      });
 	    }
 	  }, {
 	    key: 'loop',
 	    value: function loop(e) {
-	      var _this5 = this;
+	      var _this4 = this;
 
-	      var sampleIndex = 0;
-	      this.sequencers.forEach(function (seq) {
-	        var loopCount = _this5.maxBars / seq.bars;
-	        seq.instruments.forEach(function (inst) {
-	          var _loop = function _loop(i) {
-	            var barOffset = _this5.barInterval * seq.bars * i / 1000;
-	            inst.props.steps.forEach(function (step, stepIndex) {
-	              var gainNode = void 0;
-
-	              var compressorNode = _this5.context.createDynamicsCompressor();
-	              var _iteratorNormalCompletion = true;
-	              var _didIteratorError = false;
-	              var _iteratorError = undefined;
-
-	              try {
-	                for (var _iterator = Object.keys(inst.props.compressor)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	                  var param = _step.value;
-
-	                  compressorNode[param].value = inst.props.compressor[param];
-	                }
-	              } catch (err) {
-	                _didIteratorError = true;
-	                _iteratorError = err;
-	              } finally {
-	                try {
-	                  if (!_iteratorNormalCompletion && _iterator.return) {
-	                    _iterator.return();
-	                  }
-	                } finally {
-	                  if (_didIteratorError) {
-	                    throw _iteratorError;
-	                  }
-	                }
-	              }
-
-	              if (Array.isArray(inst.props.volume)) {
-	                gainNode = _this5.context.createGain();
-	                gainNode.gain.value = inst.props.volume[stepIndex] / 100;
-	                gainNode.connect(_this5.analyser);
-	                compressorNode.connect(gainNode);
-	              } else {
-	                gainNode = _this5.context.createGain();
-	                gainNode.gain.value = inst.props.volume / 100;
-	                gainNode.connect(_this5.analyser);
-	                compressorNode.connect(gainNode);
-	              }
-
-	              if (inst.type.displayName === 'Sampler') {
-	                var time = barOffset + step * seq.stepInterval / 1000;
-	                _this5.scheduler.insert(e.playbackTime + time, _this5.playSample, {
-	                  buffer: _this5.bufferList[sampleIndex],
-	                  connectNode: compressorNode,
-	                  gainNode: gainNode,
-	                  envelope: inst.props.envelope,
-	                  detune: inst.props.detune,
-	                  stepInterval: seq.stepInterval
-	                });
-	              } else {
-	                var _time = barOffset + step[0] * seq.stepInterval / 1000;
-	                _this5.scheduler.insert(e.playbackTime + _time, _this5.playSynth, {
-	                  connectNode: compressorNode,
-	                  gainNode: gainNode,
-	                  props: inst.props,
-	                  duration: step[1] * seq.stepInterval / 1000,
-	                  note: step[2],
-	                  stepInterval: seq.stepInterval
-	                });
-	              }
-	            });
-	          };
-
-	          for (var i = 0; i < loopCount; i++) {
-	            _loop(i);
-	          }
-
-	          if (inst.type.displayName === 'Sampler') {
-	            sampleIndex++;
-	          }
-	        });
+	      var maxBars = Object.keys(this.bars).length ? this.getMaxBars() : 1;
+	      Object.keys(this.instruments).forEach(function (id) {
+	        var callback = _this4.instruments[id];
+	        callback(e.playbackTime);
 	      });
-
-	      this.scheduler.insert(e.playbackTime + this.barInterval * this.maxBars / 1000, this.loop);
-	    }
-	  }, {
-	    key: 'playToggle',
-	    value: function playToggle() {
-	      if (this.state.playing) {
-	        this.scheduler.stop(true);
-	      } else {
-	        this.scheduler.start(this.loop);
-	      }
-	      this.setState({
-	        playing: this.state.playing !== true
-	      });
+	      this.scheduler.insert(e.playbackTime + this.barInterval * maxBars / 1000, this.loop);
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _this6 = this;
-
 	      return _react2.default.createElement(
-	        'div',
+	        'span',
 	        null,
-	        _react2.default.createElement('canvas', {
-	          className: 'react-music-canvas',
-	          width: 800,
-	          height: 512,
-	          ref: function ref(c) {
-	            _this6.canvas = c;
-	          }
-	        }),
-	        ';',
-	        _react2.default.createElement(
-	          'button',
-	          {
-	            className: 'react-music-button',
-	            type: 'button',
-	            onClick: this.playToggle
-	          },
-	          this.state.playing ? 'Stop' : 'Play'
-	        )
+	        this.props.children
 	      );
 	    }
 	  }]);
@@ -11113,22 +15646,28 @@
 	  return Song;
 	}(_react.Component);
 
+	Song.propTypes = {
+	  children: _react.PropTypes.node,
+	  playing: _react.PropTypes.bool,
+	  tempo: _react.PropTypes.number
+	};
+	Song.defaultProps = {
+	  playing: false,
+	  tempo: 90
+	};
+	Song.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  barInterval: _react.PropTypes.number,
+	  bufferLoaded: _react.PropTypes.func,
+	  connectNode: _react.PropTypes.object,
+	  getMaster: _react.PropTypes.func,
+	  scheduler: _react.PropTypes.object,
+	  tempo: _react.PropTypes.number
+	};
 	exports.default = Song;
 
-
-	Song.propTypes = {
-	  tempo: _react.PropTypes.number,
-	  autoplay: _react.PropTypes.bool,
-	  children: _react.PropTypes.node
-	};
-
-	Song.defaultProps = {
-	  tempo: 90,
-	  autoplay: true
-	};
-
 /***/ },
-/* 90 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11137,112 +15676,230 @@
 	  value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _noteParser = __webpack_require__(65);
+
+	var _noteParser2 = _interopRequireDefault(_noteParser);
+
+	var _audioContour = __webpack_require__(59);
+
+	var _audioContour2 = _interopRequireDefault(_audioContour);
+
+	var _uuid = __webpack_require__(33);
+
+	var _uuid2 = _interopRequireDefault(_uuid);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/* eslint-disable max-statements */
+
 
 	var Synth = function (_Component) {
 	  _inherits(Synth, _Component);
 
-	  function Synth() {
+	  function Synth(props, context) {
 	    _classCallCheck(this, Synth);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Synth).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Synth.__proto__ || Object.getPrototypeOf(Synth)).call(this, props));
+
+	    _this.getSteps = _this.getSteps.bind(_this);
+	    _this.playStep = _this.playStep.bind(_this);
+
+	    _this.connectNode = context.audioContext.createGain();
+	    _this.connectNode.gain.value = props.gain;
+	    _this.connectNode.connect(context.connectNode);
+	    return _this;
 	  }
 
 	  _createClass(Synth, [{
+	    key: 'getChildContext',
+	    value: function getChildContext() {
+	      return _extends({}, this.context, {
+	        connectNode: this.connectNode
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.id = _uuid2.default.v1();
+	      var master = this.context.getMaster();
+	      master.instruments[this.id] = this.getSteps;
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.connectNode.gain.value = nextProps.gain;
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      var master = this.context.getMaster();
+	      delete master.instruments[this.id];
+	      this.connectNode.disconnect();
+	    }
+	  }, {
+	    key: 'getSteps',
+	    value: function getSteps(playbackTime) {
+	      var _this2 = this;
+
+	      var totalBars = this.context.getMaster().getMaxBars();
+	      var loopCount = totalBars / this.context.bars;
+
+	      var _loop = function _loop(i) {
+	        var barOffset = _this2.context.barInterval * _this2.context.bars * i / 1000;
+	        var stepInterval = _this2.context.barInterval / _this2.context.resolution;
+	        _this2.props.steps.forEach(function (step) {
+	          var time = barOffset + step[0] * stepInterval / 1000;
+
+	          _this2.context.scheduler.insert(playbackTime + time, _this2.playStep, {
+	            time: playbackTime,
+	            step: step
+	          });
+	        });
+	      };
+
+	      for (var i = 0; i < loopCount; i++) {
+	        _loop(i);
+	      }
+	    }
+	  }, {
+	    key: 'createOscillator',
+	    value: function createOscillator(time, note, duration) {
+	      var _this3 = this;
+
+	      var amplitudeGain = this.context.audioContext.createGain();
+	      amplitudeGain.gain.value = 0;
+	      amplitudeGain.connect(this.connectNode);
+
+	      var env = (0, _audioContour2.default)(this.context.audioContext, {
+	        attack: this.props.envelope.attack,
+	        decay: this.props.envelope.decay,
+	        sustain: this.props.envelope.sustain,
+	        release: this.props.envelope.release
+	      });
+
+	      env.connect(amplitudeGain.gain);
+
+	      var osc = this.context.audioContext.createOscillator();
+	      var transposed = note.slice(0, -1) + (parseInt(note[note.length - 1], 0) + parseInt(this.props.transpose, 0));
+
+	      osc.frequency.value = _noteParser2.default.freq(transposed);
+	      osc.type = this.props.type;
+	      osc.connect(amplitudeGain);
+
+	      if (this.props.busses) {
+	        (function () {
+	          var master = _this3.context.getMaster();
+	          _this3.props.busses.forEach(function (bus) {
+	            if (master.busses[bus]) {
+	              osc.connect(master.busses[bus]);
+	            }
+	          });
+	        })();
+	      }
+
+	      osc.start(time);
+	      env.start(time);
+
+	      var finish = env.stop(this.context.audioContext.currentTime + duration);
+	      osc.stop(finish);
+	    }
+	  }, {
+	    key: 'playStep',
+	    value: function playStep(e) {
+	      var _this4 = this;
+
+	      var _e$args = e.args;
+	      var step = _e$args.step;
+	      var time = _e$args.time;
+
+	      var notes = step[2];
+	      var stepInterval = this.context.barInterval / this.context.resolution;
+	      var duration = step[1] * stepInterval / 1000;
+
+	      if (Array.isArray(notes)) {
+	        notes.forEach(function (n) {
+	          _this4.createOscillator(time, n, duration);
+	        });
+	      } else {
+	        this.createOscillator(time, notes, duration);
+	      }
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return null;
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.children
+	      );
 	    }
 	  }]);
 
 	  return Synth;
 	}(_react.Component);
 
-	exports.default = Synth;
-
-
+	Synth.displayName = 'Synth';
 	Synth.propTypes = {
-	  type: _react.PropTypes.string.isRequired,
-	  steps: _react.PropTypes.array.isRequired,
-	  volume: _react.PropTypes.number,
-	  compressor: _react.PropTypes.shape({
-	    threshold: _react.PropTypes.number,
-	    knee: _react.PropTypes.number,
-	    ratio: _react.PropTypes.number,
-	    attack: _react.PropTypes.number,
-	    release: _react.PropTypes.number
-	  }),
+	  busses: _react.PropTypes.array,
+	  children: _react.PropTypes.node,
 	  envelope: _react.PropTypes.shape({
 	    attack: _react.PropTypes.number,
 	    decay: _react.PropTypes.number,
 	    sustain: _react.PropTypes.number,
 	    release: _react.PropTypes.number
-	  })
+	  }),
+	  gain: _react.PropTypes.number,
+	  steps: _react.PropTypes.array.isRequired,
+	  transpose: _react.PropTypes.number,
+	  type: _react.PropTypes.oneOf(['sine', 'square', 'sawtooth', 'triangle']).isRequired
 	};
-
 	Synth.defaultProps = {
-	  volume: 100,
-	  compressor: {
-	    threshold: -24,
-	    knee: 30,
-	    ratio: 12,
-	    attack: 0.003,
-	    release: 0.25
-	  },
 	  envelope: {
-	    attack: 0.1,
-	    decay: 0,
-	    sustain: 0.1,
-	    release: 0.1
-	  }
+	    attack: 0.01,
+	    decay: 0.2,
+	    sustain: 0.2,
+	    release: 0.2
+	  },
+	  gain: 0.5,
+	  transpose: 0
 	};
-
-	Synth.displayName = 'Synth';
-
-/***/ },
-/* 91 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.Synth = exports.Sampler = exports.Sequencer = exports.Song = undefined;
-
-	var _song = __webpack_require__(89);
-
-	var _song2 = _interopRequireDefault(_song);
-
-	var _sequencer = __webpack_require__(88);
-
-	var _sequencer2 = _interopRequireDefault(_sequencer);
-
-	var _sampler = __webpack_require__(87);
-
-	var _sampler2 = _interopRequireDefault(_sampler);
-
-	var _synth = __webpack_require__(90);
-
-	var _synth2 = _interopRequireDefault(_synth);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.Song = _song2.default;
-	exports.Sequencer = _sequencer2.default;
-	exports.Sampler = _sampler2.default;
-	exports.Synth = _synth2.default;
+	Synth.contextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  bars: _react.PropTypes.number,
+	  barInterval: _react.PropTypes.number,
+	  connectNode: _react.PropTypes.object,
+	  getMaster: _react.PropTypes.func,
+	  resolution: _react.PropTypes.number,
+	  scheduler: _react.PropTypes.object,
+	  tempo: _react.PropTypes.number
+	};
+	Synth.childContextTypes = {
+	  audioContext: _react.PropTypes.object,
+	  bars: _react.PropTypes.number,
+	  barInterval: _react.PropTypes.number,
+	  connectNode: _react.PropTypes.object,
+	  getMaster: _react.PropTypes.func,
+	  resolution: _react.PropTypes.number,
+	  scheduler: _react.PropTypes.object,
+	  tempo: _react.PropTypes.number
+	};
+	exports.default = Synth;
 
 /***/ },
-/* 92 */
+/* 113 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11250,32 +15907,32 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.BufferLoader = BufferLoader;
+
 	/* eslint-disable no-console */
-	function BufferLoader(context, urlList, callback) {
+	var BufferLoader = exports.BufferLoader = function BufferLoader(context, urlList, callback) {
 	  this.context = context;
 	  this.urlList = urlList;
 	  this.onload = callback;
 	  this.bufferList = [];
 	  this.loadCount = 0;
-	}
+	};
 
 	BufferLoader.prototype.loadBuffer = function loadBuffer(url, index) {
 	  var request = new XMLHttpRequest();
 	  request.open('GET', url, true);
 	  request.responseType = 'arraybuffer';
 
-	  var loader = this;
+	  var self = this;
 
 	  request.onload = function onload() {
-	    loader.context.decodeAudioData(request.response, function (buffer) {
+	    self.context.decodeAudioData(request.response, function (buffer) {
 	      if (!buffer) {
 	        console.error('error decoding file data: ' + url);
 	        return;
 	      }
-	      loader.bufferList[index] = buffer;
-	      if (++loader.loadCount === loader.urlList.length) {
-	        loader.onload(loader.bufferList);
+	      self.bufferList[index] = buffer;
+	      if (++self.loadCount === self.urlList.length) {
+	        self.onload(self.bufferList);
 	      }
 	    }, function (error) {
 	      console.error('decodeAudioData error', error);
@@ -11296,10 +15953,144 @@
 	};
 
 /***/ },
-/* 93 */
+/* 114 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Scheduler = function () {
+	  function Scheduler(opts) {
+	    _classCallCheck(this, Scheduler);
+
+	    this.context = opts.context;
+	    this.interval = 0.025;
+	    this.aheadTime = 0.0;
+	    this.playbackTime = this.context.currentTime;
+
+	    this.timerID = 0;
+	    this.scheduleID = 0;
+	    this.schedules = [];
+	  }
+
+	  _createClass(Scheduler, [{
+	    key: 'start',
+	    value: function start(callback, args) {
+	      var _this = this;
+
+	      var loop = function loop() {
+	        var t0 = _this.context.currentTime;
+	        var t1 = t0 + _this.aheadTime;
+
+	        _this.process(t0, t1);
+	      };
+
+	      if (this.timerID === 0) {
+	        this.timerID = setInterval(loop, this.interval * 1000);
+
+	        if (callback) {
+	          this.insert(this.context.currentTime, callback, args);
+	          loop();
+	        }
+	      } else {
+	        this.insert(this.context.currentTime, callback, args);
+	      }
+
+	      return this;
+	    }
+	  }, {
+	    key: 'stop',
+	    value: function stop(reset) {
+	      if (this.timerID !== 0) {
+	        clearInterval(this.timerID);
+	        this.timerID = 0;
+	      }
+
+	      if (reset) {
+	        this.schedules.splice(0);
+	      }
+
+	      return this;
+	    }
+	  }, {
+	    key: 'insert',
+	    value: function insert(time, callback, args) {
+	      var id = ++this.scheduleID;
+	      var event = { id: id, time: time, callback: callback, args: args };
+
+	      if (this.schedules.length === 0 || this.schedules[this.schedules.length - 1].time <= time) {
+	        this.schedules.push(event);
+	      } else {
+	        for (var i = 0, imax = this.schedules.length; i < imax; i++) {
+	          if (time < this.schedules[i].time) {
+	            this.schedules.splice(i, 0, event);
+	            break;
+	          }
+	        }
+	      }
+
+	      return id;
+	    }
+	  }, {
+	    key: 'nextTick',
+	    value: function nextTick(time, callback, args) {
+	      return this.insert(time + this.aheadTime, callback, args);
+	    }
+	  }, {
+	    key: 'remove',
+	    value: function remove(scheduleID) {
+	      if (typeof scheduleID === 'number') {
+	        for (var i = 0, imax = this.schedules.length; i < imax; i++) {
+	          if (scheduleID === this.schedules[i].id) {
+	            this.schedules.splice(i, 1);
+	            break;
+	          }
+	        }
+	      }
+
+	      return scheduleID;
+	    }
+	  }, {
+	    key: 'removeAll',
+	    value: function removeAll() {
+	      this.schedules.splice(0);
+	    }
+	  }, {
+	    key: 'process',
+	    value: function process(t0, t1) {
+	      this.playbackTime = t0;
+
+	      while (this.schedules.length && this.schedules[0].time < t1) {
+	        var event = this.schedules.shift();
+	        var playbackTime = event.time;
+	        var args = event.args;
+
+	        this.playbackTime = playbackTime;
+
+	        event.callback({ playbackTime: playbackTime, args: args });
+	      }
+
+	      this.playbackTime = t0;
+	    }
+	  }]);
+
+	  return Scheduler;
+	}();
+
+	exports.default = Scheduler;
+
+/***/ },
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(94)();
+	exports = module.exports = __webpack_require__(116)();
 	// imports
 
 
@@ -11310,7 +16101,7 @@
 
 
 /***/ },
-/* 94 */
+/* 116 */
 /***/ function(module, exports) {
 
 	/*
@@ -11366,634 +16157,7 @@
 
 
 /***/ },
-/* 95 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	/**
-	 * Create an envelope generator that
-	 * can be attached to an AudioParam
-	 */
-
-	var Envelope = function () {
-	  function Envelope(context, settings) {
-	    _classCallCheck(this, Envelope);
-
-	    // Hold on to these
-	    this.context = context;
-	    this.settings = settings;
-
-	    this._setDefaults();
-
-	    // Create nodes
-	    this.source = this._getOnesBufferSource();
-	    this.attackDecayNode = context.createGain();
-	    this.releaseNode = context.createGain();
-	    this.ampNode = context.createGain();
-	    this.outputNode = context.createGain();
-
-	    this.outputNode.gain.value = this.settings.startLevel;
-	    this.ampNode.gain.value = this.settings.maxLevel - this.settings.startLevel;
-
-	    // Set up graph
-	    this.source.connect(this.attackDecayNode);
-	    this.source.connect(this.outputNode);
-	    this.attackDecayNode.connect(this.releaseNode);
-	    this.releaseNode.connect(this.ampNode);
-	    this.ampNode.connect(this.outputNode.gain);
-	  }
-
-	  /**
-	   * Deal w/ settings object
-	   */
-
-
-	  _createClass(Envelope, [{
-	    key: '_setDefaults',
-	    value: function _setDefaults() {
-
-	      // curve
-	      if (typeof this.settings.curve !== 'string') {
-	        this.settings.curve = 'linear';
-	      }
-
-	      // delayTime
-	      if (typeof this.settings.delayTime !== 'number') {
-	        this.settings.delayTime = 0;
-	      }
-
-	      // startLevel
-	      if (typeof this.settings.startLevel !== 'number') {
-	        this.settings.startLevel = 0;
-	      }
-	      // maxLevel
-	      if (typeof this.settings.maxLevel !== 'number') {
-	        this.settings.maxLevel = 1;
-	      }
-
-	      // sustainLevel
-	      if (typeof this.settings.sustainLevel !== 'number') {
-	        this.settings.sustainLevel = 1;
-	      }
-
-	      // attackTime
-	      if (typeof this.settings.attackTime !== 'number') {
-	        this.settings.attackTime = 0;
-	      }
-
-	      // holdTime
-	      if (typeof this.settings.holdTime !== 'number') {
-	        this.settings.holdTime = 0;
-	      }
-
-	      // decayTime
-	      if (typeof this.settings.decayTime !== 'number') {
-	        this.settings.decayTime = 0;
-	      }
-
-	      // releaseTime
-	      if (typeof this.settings.releaseTime !== 'number') {
-	        this.settings.releaseTime = 0;
-	      }
-
-	      // startLevel must not be zero if attack curve is exponential
-	      if (this.settings.startLevel === 0 && this._getRampMethodName('attack') === 'exponentialRampToValueAtTime') {
-	        if (this.settings.maxLevel < 0) {
-	          this.settings.startLevel = -0.001;
-	        } else {
-	          this.settings.startLevel = 0.001;
-	        }
-	      }
-
-	      // maxLevel must not be zero if attack, decay, or release curve is exponential
-	      if (this.settings.maxLevel === 0 && (this._getRampMethodName('attack') === 'exponentialRampToValueAtTime' || this._getRampMethodName('decay') === 'exponentialRampToValueAtTime' || this._getRampMethodName('release') === 'exponentialRampToValueAtTime')) {
-	        if (this.settings.startLevel < 0) {
-	          this.settings.maxLevel = -0.001;
-	        } else {
-	          this.settings.maxLevel = 0.001;
-	        }
-	      }
-
-	      // sustainLevel must not be zero if decay or release curve is exponential
-	      if (this.settings.sustainLevel === 0 && (this._getRampMethodName('decay') === 'exponentialRampToValueAtTime' || this._getRampMethodName('release') === 'exponentialRampToValueAtTime')) {
-	        // No need to be negative here as it's a multiplier
-	        this.settings.sustainLevel = 0.001;
-	      }
-
-	      // decayTime must not be zero to avoid colliding with attack curve events
-	      if (this.settings.decayTime === 0) {
-
-	        this.settings.decayTime = 0.001;
-	      }
-	    }
-
-	    /**
-	     * Get an audio source that will be pegged at 1,
-	     * providing a signal through our path that can
-	     * drive the AudioParam this is attached to.
-	     * TODO: Can we always cache this?
-	     */
-
-	  }, {
-	    key: '_getOnesBufferSource',
-	    value: function _getOnesBufferSource() {
-	      var context = this.context;
-
-	      // Generate buffer, setting its samples to 1
-	      // Needs to be 2 for safari!
-	      // Hat tip to https://github.com/mmckegg/adsr
-	      var onesBuffer = context.createBuffer(1, 2, context.sampleRate);
-	      var data = onesBuffer.getChannelData(0);
-	      data[0] = 1;
-	      data[1] = 1;
-
-	      // Create a source for the buffer, looping it
-	      var source = context.createBufferSource();
-	      source.buffer = onesBuffer;
-	      source.loop = true;
-
-	      return source;
-	    }
-
-	    /**
-	     * Connect the end of the path to the
-	     * targetParam.
-	     *
-	     * TODO: Throw error when not an AudioParam target?
-	     */
-
-	  }, {
-	    key: 'connect',
-	    value: function connect(targetParam) {
-	      this.outputNode.connect(targetParam);
-	    }
-
-	    /**
-	     * Begin the envelope, scheduling everything we know
-	     * (attack time, decay time, sustain level).
-	     */
-
-	  }, {
-	    key: 'start',
-	    value: function start(when) {
-	      if (this.settings.initialValueCurve) {
-	        var initial = this.settings.initialValueCurve;
-	        var duration = initial.length * this.settings.sampleRate;
-	        this.attackDecayNode.gain.setValueCurveAtTime(initial, when, initial.length / this.settings.sampleRate);
-	      } else {
-	        var attackRampMethodName = this._getRampMethodName('attack');
-	        var decayRampMethodName = this._getRampMethodName('decay');
-
-	        var attackStartsAt = when + this.settings.delayTime;
-	        var attackEndsAt = attackStartsAt + this.settings.attackTime;
-	        var decayStartsAt = attackEndsAt + this.settings.holdTime;
-	        var decayEndsAt = decayStartsAt + this.settings.decayTime;
-
-	        var attackStartLevel = 0;
-	        if (attackRampMethodName === "exponentialRampToValueAtTime") {
-	          attackStartLevel = 0.001;
-	        }
-
-	        this.attackDecayNode.gain.setValueAtTime(attackStartLevel, when);
-	        this.attackDecayNode.gain.setValueAtTime(attackStartLevel, attackStartsAt);
-	        this.attackDecayNode.gain[attackRampMethodName](1, attackEndsAt);
-	        this.attackDecayNode.gain.setValueAtTime(1, decayStartsAt);
-	        this.attackDecayNode.gain[decayRampMethodName](this.settings.sustainLevel, decayEndsAt);
-	      }
-
-	      this.source.start(when);
-	    }
-
-	    /**
-	     * Return  either linear or exponential
-	     * ramp method names based on a general
-	     * 'curve' setting, which is overridden
-	     * on a per-stage basis by 'attackCurve',
-	     * 'decayCurve', and 'releaseCurve',
-	     * all of which can be set to values of
-	     * either 'linear' or 'exponential'.
-	     */
-
-	  }, {
-	    key: '_getRampMethodName',
-	    value: function _getRampMethodName(stage) {
-	      var exponential = 'exponentialRampToValueAtTime';
-	      var linear = 'linearRampToValueAtTime';
-
-	      // Handle general case
-	      var generalRampMethodName = linear;
-	      if (this.settings.curve === 'exponential') {
-	        generalRampMethodName = exponential;
-	      }
-
-	      switch (stage) {
-	        case 'attack':
-	          if (this.settings.attackCurve) {
-	            if (this.settings.attackCurve === 'exponential') {
-	              return exponential;
-	            } else if (this.settings.attackCurve === 'linear') {
-	              return linear;
-	            }
-	          }
-	          break;
-	        case 'decay':
-	          if (this.settings.decayCurve) {
-	            if (this.settings.decayCurve === 'exponential') {
-	              return exponential;
-	            } else if (this.settings.decayCurve === 'linear') {
-	              return linear;
-	            }
-	          }
-	          break;
-	        case 'release':
-	          if (this.settings.releaseCurve) {
-	            if (this.settings.releaseCurve === 'exponential') {
-	              return exponential;
-	            } else if (this.settings.releaseCurve === 'linear') {
-	              return linear;
-	            }
-	          }
-	          break;
-	        default:
-	          break;
-	      }
-	      return generalRampMethodName;
-	    }
-
-	    /**
-	     * End the envelope, scheduling what we didn't know before
-	     * (release time)
-	     */
-
-	  }, {
-	    key: 'release',
-	    value: function release(when) {
-	      this.releasedAt = when;
-
-	      if (this.settings.releaseValueCurve) {
-	        var release = this.settings.releaseValueCurve;
-	        var duration = release.length / this.settings.sampleRate;
-	        this.releaseNode.gain.setValueCurveAtTime(release, when, duration);
-	        this.settings.releaseTime = duration;
-	      } else {
-	        var releaseEndsAt = this.releasedAt + this.settings.releaseTime;
-
-	        var rampMethodName = this._getRampMethodName('release');
-
-	        var releaseTargetLevel = 0;
-
-	        if (rampMethodName === "exponentialRampToValueAtTime") {
-	          releaseTargetLevel = 0.001;
-	        }
-
-	        this.releaseNode.gain.setValueAtTime(1, when);
-	        this.releaseNode.gain[rampMethodName](releaseTargetLevel, releaseEndsAt);
-	      }
-	    }
-	  }, {
-	    key: 'stop',
-	    value: function stop(when) {
-	      this.source.stop(when);
-	    }
-
-	    /**
-	     * Provide a helper for consumers to
-	     * know when the release is finished,
-	     * so that a source can be stopped.
-	     */
-
-	  }, {
-	    key: 'getReleaseCompleteTime',
-	    value: function getReleaseCompleteTime() {
-	      if (typeof this.releasedAt !== 'number') {
-	        throw new Error("Release has not been called.");
-	      }
-	      return this.releasedAt + this.settings.releaseTime;
-	    }
-	  }]);
-
-	  return Envelope;
-	}();
-
-	module.exports = Envelope;
-
-
-
-/***/ },
-/* 96 */
-/***/ function(module, exports) {
-
-	// Copyright Joyent, Inc. and other Node contributors.
-	//
-	// Permission is hereby granted, free of charge, to any person obtaining a
-	// copy of this software and associated documentation files (the
-	// "Software"), to deal in the Software without restriction, including
-	// without limitation the rights to use, copy, modify, merge, publish,
-	// distribute, sublicense, and/or sell copies of the Software, and to permit
-	// persons to whom the Software is furnished to do so, subject to the
-	// following conditions:
-	//
-	// The above copyright notice and this permission notice shall be included
-	// in all copies or substantial portions of the Software.
-	//
-	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-	// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-	function EventEmitter() {
-	  this._events = this._events || {};
-	  this._maxListeners = this._maxListeners || undefined;
-	}
-	module.exports = EventEmitter;
-
-	// Backwards-compat with node 0.10.x
-	EventEmitter.EventEmitter = EventEmitter;
-
-	EventEmitter.prototype._events = undefined;
-	EventEmitter.prototype._maxListeners = undefined;
-
-	// By default EventEmitters will print a warning if more than 10 listeners are
-	// added to it. This is a useful default which helps finding memory leaks.
-	EventEmitter.defaultMaxListeners = 10;
-
-	// Obviously not all Emitters should be limited to 10. This function allows
-	// that to be increased. Set to zero for unlimited.
-	EventEmitter.prototype.setMaxListeners = function(n) {
-	  if (!isNumber(n) || n < 0 || isNaN(n))
-	    throw TypeError('n must be a positive number');
-	  this._maxListeners = n;
-	  return this;
-	};
-
-	EventEmitter.prototype.emit = function(type) {
-	  var er, handler, len, args, i, listeners;
-
-	  if (!this._events)
-	    this._events = {};
-
-	  // If there is no 'error' event listener then throw.
-	  if (type === 'error') {
-	    if (!this._events.error ||
-	        (isObject(this._events.error) && !this._events.error.length)) {
-	      er = arguments[1];
-	      if (er instanceof Error) {
-	        throw er; // Unhandled 'error' event
-	      } else {
-	        // At least give some kind of context to the user
-	        var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
-	        err.context = er;
-	        throw err;
-	      }
-	    }
-	  }
-
-	  handler = this._events[type];
-
-	  if (isUndefined(handler))
-	    return false;
-
-	  if (isFunction(handler)) {
-	    switch (arguments.length) {
-	      // fast cases
-	      case 1:
-	        handler.call(this);
-	        break;
-	      case 2:
-	        handler.call(this, arguments[1]);
-	        break;
-	      case 3:
-	        handler.call(this, arguments[1], arguments[2]);
-	        break;
-	      // slower
-	      default:
-	        args = Array.prototype.slice.call(arguments, 1);
-	        handler.apply(this, args);
-	    }
-	  } else if (isObject(handler)) {
-	    args = Array.prototype.slice.call(arguments, 1);
-	    listeners = handler.slice();
-	    len = listeners.length;
-	    for (i = 0; i < len; i++)
-	      listeners[i].apply(this, args);
-	  }
-
-	  return true;
-	};
-
-	EventEmitter.prototype.addListener = function(type, listener) {
-	  var m;
-
-	  if (!isFunction(listener))
-	    throw TypeError('listener must be a function');
-
-	  if (!this._events)
-	    this._events = {};
-
-	  // To avoid recursion in the case that type === "newListener"! Before
-	  // adding it to the listeners, first emit "newListener".
-	  if (this._events.newListener)
-	    this.emit('newListener', type,
-	              isFunction(listener.listener) ?
-	              listener.listener : listener);
-
-	  if (!this._events[type])
-	    // Optimize the case of one listener. Don't need the extra array object.
-	    this._events[type] = listener;
-	  else if (isObject(this._events[type]))
-	    // If we've already got an array, just append.
-	    this._events[type].push(listener);
-	  else
-	    // Adding the second element, need to change to array.
-	    this._events[type] = [this._events[type], listener];
-
-	  // Check for listener leak
-	  if (isObject(this._events[type]) && !this._events[type].warned) {
-	    if (!isUndefined(this._maxListeners)) {
-	      m = this._maxListeners;
-	    } else {
-	      m = EventEmitter.defaultMaxListeners;
-	    }
-
-	    if (m && m > 0 && this._events[type].length > m) {
-	      this._events[type].warned = true;
-	      console.error('(node) warning: possible EventEmitter memory ' +
-	                    'leak detected. %d listeners added. ' +
-	                    'Use emitter.setMaxListeners() to increase limit.',
-	                    this._events[type].length);
-	      if (typeof console.trace === 'function') {
-	        // not supported in IE 10
-	        console.trace();
-	      }
-	    }
-	  }
-
-	  return this;
-	};
-
-	EventEmitter.prototype.on = EventEmitter.prototype.addListener;
-
-	EventEmitter.prototype.once = function(type, listener) {
-	  if (!isFunction(listener))
-	    throw TypeError('listener must be a function');
-
-	  var fired = false;
-
-	  function g() {
-	    this.removeListener(type, g);
-
-	    if (!fired) {
-	      fired = true;
-	      listener.apply(this, arguments);
-	    }
-	  }
-
-	  g.listener = listener;
-	  this.on(type, g);
-
-	  return this;
-	};
-
-	// emits a 'removeListener' event iff the listener was removed
-	EventEmitter.prototype.removeListener = function(type, listener) {
-	  var list, position, length, i;
-
-	  if (!isFunction(listener))
-	    throw TypeError('listener must be a function');
-
-	  if (!this._events || !this._events[type])
-	    return this;
-
-	  list = this._events[type];
-	  length = list.length;
-	  position = -1;
-
-	  if (list === listener ||
-	      (isFunction(list.listener) && list.listener === listener)) {
-	    delete this._events[type];
-	    if (this._events.removeListener)
-	      this.emit('removeListener', type, listener);
-
-	  } else if (isObject(list)) {
-	    for (i = length; i-- > 0;) {
-	      if (list[i] === listener ||
-	          (list[i].listener && list[i].listener === listener)) {
-	        position = i;
-	        break;
-	      }
-	    }
-
-	    if (position < 0)
-	      return this;
-
-	    if (list.length === 1) {
-	      list.length = 0;
-	      delete this._events[type];
-	    } else {
-	      list.splice(position, 1);
-	    }
-
-	    if (this._events.removeListener)
-	      this.emit('removeListener', type, listener);
-	  }
-
-	  return this;
-	};
-
-	EventEmitter.prototype.removeAllListeners = function(type) {
-	  var key, listeners;
-
-	  if (!this._events)
-	    return this;
-
-	  // not listening for removeListener, no need to emit
-	  if (!this._events.removeListener) {
-	    if (arguments.length === 0)
-	      this._events = {};
-	    else if (this._events[type])
-	      delete this._events[type];
-	    return this;
-	  }
-
-	  // emit removeListener for all listeners on all events
-	  if (arguments.length === 0) {
-	    for (key in this._events) {
-	      if (key === 'removeListener') continue;
-	      this.removeAllListeners(key);
-	    }
-	    this.removeAllListeners('removeListener');
-	    this._events = {};
-	    return this;
-	  }
-
-	  listeners = this._events[type];
-
-	  if (isFunction(listeners)) {
-	    this.removeListener(type, listeners);
-	  } else if (listeners) {
-	    // LIFO order
-	    while (listeners.length)
-	      this.removeListener(type, listeners[listeners.length - 1]);
-	  }
-	  delete this._events[type];
-
-	  return this;
-	};
-
-	EventEmitter.prototype.listeners = function(type) {
-	  var ret;
-	  if (!this._events || !this._events[type])
-	    ret = [];
-	  else if (isFunction(this._events[type]))
-	    ret = [this._events[type]];
-	  else
-	    ret = this._events[type].slice();
-	  return ret;
-	};
-
-	EventEmitter.prototype.listenerCount = function(type) {
-	  if (this._events) {
-	    var evlistener = this._events[type];
-
-	    if (isFunction(evlistener))
-	      return 1;
-	    else if (evlistener)
-	      return evlistener.length;
-	  }
-	  return 0;
-	};
-
-	EventEmitter.listenerCount = function(emitter, type) {
-	  return emitter.listenerCount(type);
-	};
-
-	function isFunction(arg) {
-	  return typeof arg === 'function';
-	}
-
-	function isNumber(arg) {
-	  return typeof arg === 'number';
-	}
-
-	function isObject(arg) {
-	  return typeof arg === 'object' && arg !== null;
-	}
-
-	function isUndefined(arg) {
-	  return arg === void 0;
-	}
-
-
-/***/ },
-/* 97 */
+/* 117 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -12029,7 +16193,7 @@
 	module.exports = camelize;
 
 /***/ },
-/* 98 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12045,7 +16209,7 @@
 
 	'use strict';
 
-	var camelize = __webpack_require__(97);
+	var camelize = __webpack_require__(117);
 
 	var msPattern = /^-ms-/;
 
@@ -12073,7 +16237,7 @@
 	module.exports = camelizeStyleName;
 
 /***/ },
-/* 99 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12089,7 +16253,7 @@
 	 * 
 	 */
 
-	var isTextNode = __webpack_require__(107);
+	var isTextNode = __webpack_require__(127);
 
 	/*eslint-disable no-bitwise */
 
@@ -12117,7 +16281,7 @@
 	module.exports = containsNode;
 
 /***/ },
-/* 100 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12248,7 +16412,7 @@
 	module.exports = createArrayFromMixed;
 
 /***/ },
-/* 101 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12266,10 +16430,10 @@
 
 	/*eslint-disable fb-www/unsafe-html*/
 
-	var ExecutionEnvironment = __webpack_require__(6);
+	var ExecutionEnvironment = __webpack_require__(7);
 
-	var createArrayFromMixed = __webpack_require__(100);
-	var getMarkupWrap = __webpack_require__(102);
+	var createArrayFromMixed = __webpack_require__(120);
+	var getMarkupWrap = __webpack_require__(122);
 	var invariant = __webpack_require__(1);
 
 	/**
@@ -12336,7 +16500,7 @@
 	module.exports = createNodesFromMarkup;
 
 /***/ },
-/* 102 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12353,7 +16517,7 @@
 
 	/*eslint-disable fb-www/unsafe-html */
 
-	var ExecutionEnvironment = __webpack_require__(6);
+	var ExecutionEnvironment = __webpack_require__(7);
 
 	var invariant = __webpack_require__(1);
 
@@ -12435,7 +16599,7 @@
 	module.exports = getMarkupWrap;
 
 /***/ },
-/* 103 */
+/* 123 */
 /***/ function(module, exports) {
 
 	/**
@@ -12478,7 +16642,7 @@
 	module.exports = getUnboundedScrollPosition;
 
 /***/ },
-/* 104 */
+/* 124 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12515,7 +16679,7 @@
 	module.exports = hyphenate;
 
 /***/ },
-/* 105 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12531,7 +16695,7 @@
 
 	'use strict';
 
-	var hyphenate = __webpack_require__(104);
+	var hyphenate = __webpack_require__(124);
 
 	var msPattern = /^ms-/;
 
@@ -12558,7 +16722,7 @@
 	module.exports = hyphenateStyleName;
 
 /***/ },
-/* 106 */
+/* 126 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12585,7 +16749,7 @@
 	module.exports = isNode;
 
 /***/ },
-/* 107 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12601,7 +16765,7 @@
 	 * @typechecks
 	 */
 
-	var isNode = __webpack_require__(106);
+	var isNode = __webpack_require__(126);
 
 	/**
 	 * @param {*} object The object to check.
@@ -12614,7 +16778,7 @@
 	module.exports = isTextNode;
 
 /***/ },
-/* 108 */
+/* 128 */
 /***/ function(module, exports) {
 
 	/**
@@ -12648,219 +16812,101 @@
 	module.exports = memoizeStringOnly;
 
 /***/ },
-/* 109 */
-/***/ function(module, exports) {
-
-	'use strict'
-
-	// util
-	function fillStr (s, num) { return Array(num + 1).join(s) }
-	function isNum (x) { return typeof x === 'number' }
-	function isStr (x) { return typeof x === 'string' }
-	function isDef (x) { return typeof x !== 'undefined' }
-	function midiToFreq (midi, tuning) {
-	  return Math.pow(2, (midi - 69) / 12) * (tuning || 440)
-	}
-
-	var REGEX = /^([a-gA-G])(#{1,}|b{1,}|x{1,}|)(-?\d*)\s*(.*)\s*$/
-	/**
-	 * A regex for matching note strings in scientific notation.
-	 *
-	 * @name regex
-	 * @function
-	 * @return {RegExp} the regexp used to parse the note name
-	 *
-	 * The note string should have the form `letter[accidentals][octave][element]`
-	 * where:
-	 *
-	 * - letter: (Required) is a letter from A to G either upper or lower case
-	 * - accidentals: (Optional) can be one or more `b` (flats), `#` (sharps) or `x` (double sharps).
-	 * They can NOT be mixed.
-	 * - octave: (Optional) a positive or negative integer
-	 * - element: (Optional) additionally anything after the duration is considered to
-	 * be the element name (for example: 'C2 dorian')
-	 *
-	 * The executed regex contains (by array index):
-	 *
-	 * - 0: the complete string
-	 * - 1: the note letter
-	 * - 2: the optional accidentals
-	 * - 3: the optional octave
-	 * - 4: the rest of the string (trimmed)
-	 *
-	 * @example
-	 * var parser = require('note-parser')
-	 * parser.regex.exec('c#4')
-	 * // => ['c#4', 'c', '#', '4', '']
-	 * parser.regex.exec('c#4 major')
-	 * // => ['c#4major', 'c', '#', '4', 'major']
-	 * parser.regex().exec('CMaj7')
-	 * // => ['CMaj7', 'C', '', '', 'Maj7']
-	 */
-	function regex () { return REGEX }
-
-	var SEMITONES = [0, 2, 4, 5, 7, 9, 11]
-	/**
-	 * Parse a note name in scientific notation an return it's components,
-	 * and some numeric properties including midi number and frequency.
-	 *
-	 * @name parse
-	 * @function
-	 * @param {String} note - the note string to be parsed
-	 * @param {Boolean} isTonic - true the strings it's supposed to contain a note number
-	 * and some category (for example an scale: 'C# major'). It's false by default,
-	 * but when true, en extra tonicOf property is returned with the category ('major')
-	 * @param {Float} tunning - The frequency of A4 note to calculate frequencies.
-	 * By default it 440.
-	 * @return {Object} the parsed note name or null if not a valid note
-	 *
-	 * The parsed note name object will ALWAYS contains:
-	 * - letter: the uppercase letter of the note
-	 * - acc: the accidentals of the note (only sharps or flats)
-	 * - pc: the pitch class (letter + acc)
-	 * - step: s a numeric representation of the letter. It's an integer from 0 to 6
-	 * where 0 = C, 1 = D ... 6 = B
-	 * - alt: a numeric representation of the accidentals. 0 means no alteration,
-	 * positive numbers are for sharps and negative for flats
-	 * - chroma: a numeric representation of the pitch class. It's like midi for
-	 * pitch classes. 0 = C, 1 = C#, 2 = D ... 11 = B. Can be used to find enharmonics
-	 * since, for example, chroma of 'Cb' and 'B' are both 11
-	 *
-	 * If the note has octave, the parser object will contain:
-	 * - oct: the octave number (as integer)
-	 * - midi: the midi number
-	 * - freq: the frequency (using tuning parameter as base)
-	 *
-	 * If the parameter `isTonic` is set to true, the parsed object will contain:
-	 * - tonicOf: the rest of the string that follows note name (left and right trimmed)
-	 *
-	 * @example
-	 * var parse = require('note-parser').parse
-	 * parse('Cb4')
-	 * // => { letter: 'C', acc: 'b', pc: 'Cb', step: 0, alt: -1, chroma: -1,
-	 *         oct: 4, midi: 59, freq: 246.94165062806206 }
-	 * // if no octave, no midi, no freq
-	 * parse('fx')
-	 * // => { letter: 'F', acc: '##', pc: 'F##', step: 3, alt: 2, chroma: 7 })
-	 */
-	function parse (str, isTonic, tuning) {
-	  if (typeof str !== 'string') return null
-	  var m = REGEX.exec(str)
-	  if (!m || !isTonic && m[4]) return null
-
-	  var p = { letter: m[1].toUpperCase(), acc: m[2].replace(/x/g, '##') }
-	  p.pc = p.letter + p.acc
-	  p.step = (p.letter.charCodeAt(0) + 3) % 7
-	  p.alt = p.acc[0] === 'b' ? -p.acc.length : p.acc.length
-	  var pos = SEMITONES[p.step] + p.alt
-	  p.chroma = pos < 0 ? 12 + pos : pos % 12
-	  if (m[3]) { // has octave
-	    p.oct = +m[3]
-	    p.midi = pos + 12 * (p.oct + 1)
-	    p.freq = midiToFreq(p.midi, tuning)
-	  }
-	  if (isTonic) p.tonicOf = m[4]
-	  return p
-	}
-
-	var LETTERS = 'CDEFGAB'
-	function acc (n) { return !isNum(n) ? '' : n < 0 ? fillStr('b', -n) : fillStr('#', n) }
-	function oct (n) { return !isNum(n) ? '' : '' + n }
-
-	/**
-	 * Create a string from a parsed object or `step, alteration, octave` parameters
-	 * @param {Object} obj - the parsed data object
-	 * @return {String} a note string or null if not valid parameters
-	 * @since 1.2
-	 * @example
-	 * parser.build(parser.parse('cb2')) // => 'Cb2'
-	 *
-	 * @example
-	 * // it accepts (step, alteration, octave) parameters:
-	 * parser.build(3) // => 'F'
-	 * parser.build(3, -1) // => 'Fb'
-	 * parser.build(3, -1, 4) // => 'Fb4'
-	 */
-	function build (s, a, o) {
-	  if (s === null || typeof s === 'undefined') return null
-	  if (s.step) return build(s.step, s.alt, s.oct)
-	  if (s < 0 || s > 6) return null
-	  return LETTERS.charAt(s) + acc(a) + oct(o)
-	}
-
-	/**
-	 * Get midi of a note
-	 *
-	 * @name midi
-	 * @function
-	 * @param {String|Integer} note - the note name or midi number
-	 * @return {Integer} the midi number of the note or null if not a valid note
-	 * or the note does NOT contains octave
-	 * @example
-	 * var parser = require('note-parser')
-	 * parser.midi('A4') // => 69
-	 * parser.midi('A') // => null
-	 * @example
-	 * // midi numbers are bypassed (even as strings)
-	 * parser.midi(60) // => 60
-	 * parser.midi('60') // => 60
-	 */
-	function midi (note) {
-	  if ((isNum(note) || isStr(note)) && note >= 0 && note < 128) return +note
-	  var p = parse(note)
-	  return p && isDef(p.midi) ? p.midi : null
-	}
-
-	/**
-	 * Get freq of a note in hertzs (in a well tempered 440Hz A4)
-	 *
-	 * @name freq
-	 * @function
-	 * @param {String} note - the note name or note midi number
-	 * @param {String} tuning - (Optional) the A4 frequency (440 by default)
-	 * @return {Float} the freq of the number if hertzs or null if not valid note
-	 * @example
-	 * var parser = require('note-parser')
-	 * parser.freq('A4') // => 440
-	 * parser.freq('A') // => null
-	 * @example
-	 * // can change tuning (440 by default)
-	 * parser.freq('A4', 444) // => 444
-	 * parser.freq('A3', 444) // => 222
-	 * @example
-	 * // it accepts midi numbers (as numbers and as strings)
-	 * parser.freq(69) // => 440
-	 * parser.freq('69', 442) // => 442
-	 */
-	function freq (note, tuning) {
-	  var m = midi(note)
-	  return m === null ? null : midiToFreq(m, tuning)
-	}
-
-	var parser = { parse: parse, build: build, regex: regex, midi: midi, freq: freq }
-	// add additional functions, one for each object property
-	var FNS = ['letter', 'acc', 'pc', 'step', 'alt', 'chroma', 'oct']
-	FNS.forEach(function (name) {
-	  parser[name] = function (src) {
-	    var p = parse(src)
-	    return p && isDef(p[name]) ? p[name] : null
-	  }
-	})
-
-	module.exports = parser
-
-
-/***/ },
-/* 110 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	module.exports = __webpack_require__(124);
+	module.exports = __webpack_require__(147);
 
 
 /***/ },
-/* 111 */
+/* 130 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(133);
+
+
+/***/ },
+/* 131 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* eslint-disable global-require */
+
+	'use strict';
+
+	if (true) {
+	  module.exports = __webpack_require__(132);
+	} else {
+	  module.exports = require('./AppContainer.dev');
+	}
+
+/***/ },
+/* 132 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* eslint-disable react/prop-types */
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(5);
+	var Component = React.Component;
+
+	var AppContainer = function (_Component) {
+	  _inherits(AppContainer, _Component);
+
+	  function AppContainer() {
+	    _classCallCheck(this, AppContainer);
+
+	    return _possibleConstructorReturn(this, (AppContainer.__proto__ || Object.getPrototypeOf(AppContainer)).apply(this, arguments));
+	  }
+
+	  _createClass(AppContainer, [{
+	    key: 'render',
+	    value: function render() {
+	      if (this.props.component) {
+	        return React.createElement(this.props.component, this.props.props);
+	      }
+
+	      return React.Children.only(this.props.children);
+	    }
+	  }]);
+
+	  return AppContainer;
+	}(Component);
+
+	module.exports = AppContainer;
+
+/***/ },
+/* 133 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var AppContainer = __webpack_require__(131);
+
+	module.exports = function warnAboutIncorrectUsage(arg) {
+	  if (this && this.callback) {
+	    throw new Error('React Hot Loader: The Webpack loader is now exported separately. ' + 'If you use Babel, we recommend that you remove "react-hot-loader" ' + 'from the "loaders" section of your Webpack configuration altogether, ' + 'and instead add "react-hot-loader/babel" to the "plugins" section ' + 'of your .babelrc file. ' + 'If you prefer not to use Babel, replace "react-hot-loader" or ' + '"react-hot" with "react-hot-loader/webpack" in the "loaders" section ' + 'of your Webpack configuration.');
+	  } else if (arg && arg.types && arg.types.IfStatement) {
+	    throw new Error('React Hot Loader: The Babel plugin is exported separately. ' + 'Replace "react-hot-loader" with "react-hot-loader/babel" ' + 'in the "plugins" section of your .babelrc file. ' + 'While we recommend the above, if you prefer not to use Babel, ' + 'you may remove "react-hot-loader" from the "plugins" section of ' + 'your .babelrc file altogether, and instead add ' + '"react-hot-loader/webpack" to the "loaders" section of your Webpack ' + 'configuration.');
+	  } else {
+	    throw new Error('React Hot Loader does not have a default export. ' + 'If you use the import statement, make sure to include the ' + 'curly braces: import { AppContainer } from "react-hot-loader". ' + 'If you use CommonJS, make sure to read the named export: ' + 'require("react-hot-loader").AppContainer.');
+	  }
+	};
+
+	module.exports.AppContainer = AppContainer;
+
+/***/ },
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12876,9 +16922,9 @@
 
 	'use strict';
 
-	var ReactDOMComponentTree = __webpack_require__(5);
+	var ReactDOMComponentTree = __webpack_require__(6);
 
-	var focusNode = __webpack_require__(58);
+	var focusNode = __webpack_require__(63);
 
 	var AutoFocusUtils = {
 	  focusDOMComponent: function () {
@@ -12889,7 +16935,7 @@
 	module.exports = AutoFocusUtils;
 
 /***/ },
-/* 112 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12905,14 +16951,14 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(11);
-	var EventPropagators = __webpack_require__(21);
-	var ExecutionEnvironment = __webpack_require__(6);
-	var FallbackCompositionState = __webpack_require__(118);
-	var SyntheticCompositionEvent = __webpack_require__(156);
-	var SyntheticInputEvent = __webpack_require__(159);
+	var EventConstants = __webpack_require__(12);
+	var EventPropagators = __webpack_require__(23);
+	var ExecutionEnvironment = __webpack_require__(7);
+	var FallbackCompositionState = __webpack_require__(141);
+	var SyntheticCompositionEvent = __webpack_require__(179);
+	var SyntheticInputEvent = __webpack_require__(182);
 
-	var keyOf = __webpack_require__(13);
+	var keyOf = __webpack_require__(14);
 
 	var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 	var START_KEYCODE = 229;
@@ -13282,7 +17328,7 @@
 	module.exports = BeforeInputEventPlugin;
 
 /***/ },
-/* 113 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13298,14 +17344,14 @@
 
 	'use strict';
 
-	var CSSProperty = __webpack_require__(60);
-	var ExecutionEnvironment = __webpack_require__(6);
-	var ReactInstrumentation = __webpack_require__(8);
+	var CSSProperty = __webpack_require__(66);
+	var ExecutionEnvironment = __webpack_require__(7);
+	var ReactInstrumentation = __webpack_require__(9);
 
-	var camelizeStyleName = __webpack_require__(98);
-	var dangerousStyleValue = __webpack_require__(166);
-	var hyphenateStyleName = __webpack_require__(105);
-	var memoizeStringOnly = __webpack_require__(108);
+	var camelizeStyleName = __webpack_require__(118);
+	var dangerousStyleValue = __webpack_require__(189);
+	var hyphenateStyleName = __webpack_require__(125);
+	var memoizeStringOnly = __webpack_require__(128);
 	var warning = __webpack_require__(3);
 
 	var processStyleName = memoizeStringOnly(function (styleName) {
@@ -13492,7 +17538,7 @@
 	module.exports = CSSPropertyOperations;
 
 /***/ },
-/* 114 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13508,18 +17554,18 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(11);
-	var EventPluginHub = __webpack_require__(20);
-	var EventPropagators = __webpack_require__(21);
-	var ExecutionEnvironment = __webpack_require__(6);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactUpdates = __webpack_require__(10);
-	var SyntheticEvent = __webpack_require__(12);
+	var EventConstants = __webpack_require__(12);
+	var EventPluginHub = __webpack_require__(22);
+	var EventPropagators = __webpack_require__(23);
+	var ExecutionEnvironment = __webpack_require__(7);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactUpdates = __webpack_require__(11);
+	var SyntheticEvent = __webpack_require__(13);
 
-	var getEventTarget = __webpack_require__(52);
-	var isEventSupported = __webpack_require__(53);
-	var isTextInputElement = __webpack_require__(84);
-	var keyOf = __webpack_require__(13);
+	var getEventTarget = __webpack_require__(54);
+	var isEventSupported = __webpack_require__(55);
+	var isTextInputElement = __webpack_require__(90);
+	var keyOf = __webpack_require__(14);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -13822,7 +17868,7 @@
 	module.exports = ChangeEventPlugin;
 
 /***/ },
-/* 115 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13840,11 +17886,11 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var DOMLazyTree = __webpack_require__(16);
-	var ExecutionEnvironment = __webpack_require__(6);
+	var DOMLazyTree = __webpack_require__(18);
+	var ExecutionEnvironment = __webpack_require__(7);
 
-	var createNodesFromMarkup = __webpack_require__(101);
-	var emptyFunction = __webpack_require__(7);
+	var createNodesFromMarkup = __webpack_require__(121);
+	var emptyFunction = __webpack_require__(8);
 	var invariant = __webpack_require__(1);
 
 	var Danger = {
@@ -13875,7 +17921,7 @@
 	module.exports = Danger;
 
 /***/ },
-/* 116 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13891,7 +17937,7 @@
 
 	'use strict';
 
-	var keyOf = __webpack_require__(13);
+	var keyOf = __webpack_require__(14);
 
 	/**
 	 * Module that is injectable into `EventPluginHub`, that specifies a
@@ -13907,7 +17953,7 @@
 	module.exports = DefaultEventPluginOrder;
 
 /***/ },
-/* 117 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13923,12 +17969,12 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(11);
-	var EventPropagators = __webpack_require__(21);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var SyntheticMouseEvent = __webpack_require__(29);
+	var EventConstants = __webpack_require__(12);
+	var EventPropagators = __webpack_require__(23);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var SyntheticMouseEvent = __webpack_require__(30);
 
-	var keyOf = __webpack_require__(13);
+	var keyOf = __webpack_require__(14);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -14017,7 +18063,7 @@
 	module.exports = EnterLeaveEventPlugin;
 
 /***/ },
-/* 118 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14035,9 +18081,9 @@
 
 	var _assign = __webpack_require__(4);
 
-	var PooledClass = __webpack_require__(14);
+	var PooledClass = __webpack_require__(15);
 
-	var getTextContentAccessor = __webpack_require__(82);
+	var getTextContentAccessor = __webpack_require__(88);
 
 	/**
 	 * This helper class stores information about text content of a target node,
@@ -14117,7 +18163,7 @@
 	module.exports = FallbackCompositionState;
 
 /***/ },
-/* 119 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14133,7 +18179,7 @@
 
 	'use strict';
 
-	var DOMProperty = __webpack_require__(17);
+	var DOMProperty = __webpack_require__(19);
 
 	var MUST_USE_PROPERTY = DOMProperty.injection.MUST_USE_PROPERTY;
 	var HAS_BOOLEAN_VALUE = DOMProperty.injection.HAS_BOOLEAN_VALUE;
@@ -14331,7 +18377,7 @@
 	module.exports = HTMLDOMPropertyConfig;
 
 /***/ },
-/* 120 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14349,16 +18395,16 @@
 
 	var _assign = __webpack_require__(4);
 
-	var ReactChildren = __webpack_require__(63);
-	var ReactComponent = __webpack_require__(40);
-	var ReactPureComponent = __webpack_require__(146);
-	var ReactClass = __webpack_require__(64);
-	var ReactDOMFactories = __webpack_require__(129);
-	var ReactElement = __webpack_require__(9);
-	var ReactPropTypes = __webpack_require__(74);
-	var ReactVersion = __webpack_require__(75);
+	var ReactChildren = __webpack_require__(69);
+	var ReactComponent = __webpack_require__(42);
+	var ReactPureComponent = __webpack_require__(169);
+	var ReactClass = __webpack_require__(70);
+	var ReactDOMFactories = __webpack_require__(152);
+	var ReactElement = __webpack_require__(10);
+	var ReactPropTypes = __webpack_require__(80);
+	var ReactVersion = __webpack_require__(81);
 
-	var onlyChild = __webpack_require__(172);
+	var onlyChild = __webpack_require__(195);
 	var warning = __webpack_require__(3);
 
 	var createElement = ReactElement.createElement;
@@ -14425,7 +18471,7 @@
 	module.exports = React;
 
 /***/ },
-/* 121 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14441,12 +18487,12 @@
 
 	'use strict';
 
-	var ReactReconciler = __webpack_require__(18);
+	var ReactReconciler = __webpack_require__(20);
 
-	var instantiateReactComponent = __webpack_require__(83);
-	var KeyEscapeUtils = __webpack_require__(38);
-	var shouldUpdateReactComponent = __webpack_require__(54);
-	var traverseAllChildren = __webpack_require__(55);
+	var instantiateReactComponent = __webpack_require__(89);
+	var KeyEscapeUtils = __webpack_require__(40);
+	var shouldUpdateReactComponent = __webpack_require__(56);
+	var traverseAllChildren = __webpack_require__(57);
 	var warning = __webpack_require__(3);
 
 	var ReactComponentTreeHook;
@@ -14457,7 +18503,7 @@
 	  // https://github.com/facebook/react/issues/7240
 	  // Remove the inline requires when we don't need them anymore:
 	  // https://github.com/facebook/react/pull/7178
-	  ReactComponentTreeHook = __webpack_require__(42);
+	  ReactComponentTreeHook = __webpack_require__(44);
 	}
 
 	function instantiateChild(childInstances, child, name, selfDebugID) {
@@ -14582,10 +18628,10 @@
 	};
 
 	module.exports = ReactChildReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(35)))
 
 /***/ },
-/* 122 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14601,8 +18647,8 @@
 
 	'use strict';
 
-	var DOMChildrenOperations = __webpack_require__(34);
-	var ReactDOMIDOperations = __webpack_require__(131);
+	var DOMChildrenOperations = __webpack_require__(36);
+	var ReactDOMIDOperations = __webpack_require__(154);
 
 	/**
 	 * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -14620,7 +18666,7 @@
 	module.exports = ReactComponentBrowserEnvironment;
 
 /***/ },
-/* 123 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14639,21 +18685,21 @@
 	var _prodInvariant = __webpack_require__(2),
 	    _assign = __webpack_require__(4);
 
-	var ReactComponentEnvironment = __webpack_require__(41);
-	var ReactCurrentOwner = __webpack_require__(15);
-	var ReactElement = __webpack_require__(9);
-	var ReactErrorUtils = __webpack_require__(43);
-	var ReactInstanceMap = __webpack_require__(22);
-	var ReactInstrumentation = __webpack_require__(8);
-	var ReactNodeTypes = __webpack_require__(73);
-	var ReactPropTypeLocations = __webpack_require__(46);
-	var ReactReconciler = __webpack_require__(18);
+	var ReactComponentEnvironment = __webpack_require__(43);
+	var ReactCurrentOwner = __webpack_require__(16);
+	var ReactElement = __webpack_require__(10);
+	var ReactErrorUtils = __webpack_require__(45);
+	var ReactInstanceMap = __webpack_require__(24);
+	var ReactInstrumentation = __webpack_require__(9);
+	var ReactNodeTypes = __webpack_require__(79);
+	var ReactPropTypeLocations = __webpack_require__(48);
+	var ReactReconciler = __webpack_require__(20);
 
-	var checkReactTypeSpec = __webpack_require__(165);
-	var emptyObject = __webpack_require__(19);
+	var checkReactTypeSpec = __webpack_require__(188);
+	var emptyObject = __webpack_require__(21);
 	var invariant = __webpack_require__(1);
-	var shallowEqual = __webpack_require__(32);
-	var shouldUpdateReactComponent = __webpack_require__(54);
+	var shallowEqual = __webpack_require__(34);
+	var shouldUpdateReactComponent = __webpack_require__(56);
 	var warning = __webpack_require__(3);
 
 	var CompositeTypes = {
@@ -15545,7 +19591,7 @@
 	module.exports = ReactCompositeComponent;
 
 /***/ },
-/* 124 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15563,16 +19609,16 @@
 
 	'use strict';
 
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactDefaultInjection = __webpack_require__(139);
-	var ReactMount = __webpack_require__(71);
-	var ReactReconciler = __webpack_require__(18);
-	var ReactUpdates = __webpack_require__(10);
-	var ReactVersion = __webpack_require__(75);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactDefaultInjection = __webpack_require__(162);
+	var ReactMount = __webpack_require__(77);
+	var ReactReconciler = __webpack_require__(20);
+	var ReactUpdates = __webpack_require__(11);
+	var ReactVersion = __webpack_require__(81);
 
-	var findDOMNode = __webpack_require__(167);
-	var getHostComponentFromComposite = __webpack_require__(80);
-	var renderSubtreeIntoContainer = __webpack_require__(174);
+	var findDOMNode = __webpack_require__(190);
+	var getHostComponentFromComposite = __webpack_require__(86);
+	var renderSubtreeIntoContainer = __webpack_require__(197);
 	var warning = __webpack_require__(3);
 
 	ReactDefaultInjection.inject();
@@ -15660,7 +19706,7 @@
 	module.exports = ReactDOM;
 
 /***/ },
-/* 125 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15676,7 +19722,7 @@
 
 	'use strict';
 
-	var DisabledInputUtils = __webpack_require__(27);
+	var DisabledInputUtils = __webpack_require__(28);
 
 	/**
 	 * Implements a <button> host component that does not receive mouse events
@@ -15689,7 +19735,7 @@
 	module.exports = ReactDOMButton;
 
 /***/ },
-/* 126 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15710,34 +19756,34 @@
 	var _prodInvariant = __webpack_require__(2),
 	    _assign = __webpack_require__(4);
 
-	var AutoFocusUtils = __webpack_require__(111);
-	var CSSPropertyOperations = __webpack_require__(113);
-	var DOMLazyTree = __webpack_require__(16);
-	var DOMNamespaces = __webpack_require__(35);
-	var DOMProperty = __webpack_require__(17);
-	var DOMPropertyOperations = __webpack_require__(62);
-	var EventConstants = __webpack_require__(11);
-	var EventPluginHub = __webpack_require__(20);
-	var EventPluginRegistry = __webpack_require__(36);
-	var ReactBrowserEventEmitter = __webpack_require__(28);
-	var ReactDOMButton = __webpack_require__(125);
-	var ReactDOMComponentFlags = __webpack_require__(65);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactDOMInput = __webpack_require__(132);
-	var ReactDOMOption = __webpack_require__(133);
-	var ReactDOMSelect = __webpack_require__(66);
-	var ReactDOMTextarea = __webpack_require__(136);
-	var ReactInstrumentation = __webpack_require__(8);
-	var ReactMultiChild = __webpack_require__(144);
-	var ReactServerRenderingTransaction = __webpack_require__(149);
+	var AutoFocusUtils = __webpack_require__(134);
+	var CSSPropertyOperations = __webpack_require__(136);
+	var DOMLazyTree = __webpack_require__(18);
+	var DOMNamespaces = __webpack_require__(37);
+	var DOMProperty = __webpack_require__(19);
+	var DOMPropertyOperations = __webpack_require__(68);
+	var EventConstants = __webpack_require__(12);
+	var EventPluginHub = __webpack_require__(22);
+	var EventPluginRegistry = __webpack_require__(38);
+	var ReactBrowserEventEmitter = __webpack_require__(29);
+	var ReactDOMButton = __webpack_require__(148);
+	var ReactDOMComponentFlags = __webpack_require__(71);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactDOMInput = __webpack_require__(155);
+	var ReactDOMOption = __webpack_require__(156);
+	var ReactDOMSelect = __webpack_require__(72);
+	var ReactDOMTextarea = __webpack_require__(159);
+	var ReactInstrumentation = __webpack_require__(9);
+	var ReactMultiChild = __webpack_require__(167);
+	var ReactServerRenderingTransaction = __webpack_require__(172);
 
-	var emptyFunction = __webpack_require__(7);
-	var escapeTextContentForBrowser = __webpack_require__(30);
+	var emptyFunction = __webpack_require__(8);
+	var escapeTextContentForBrowser = __webpack_require__(31);
 	var invariant = __webpack_require__(1);
-	var isEventSupported = __webpack_require__(53);
-	var keyOf = __webpack_require__(13);
-	var shallowEqual = __webpack_require__(32);
-	var validateDOMNesting = __webpack_require__(56);
+	var isEventSupported = __webpack_require__(55);
+	var keyOf = __webpack_require__(14);
+	var shallowEqual = __webpack_require__(34);
+	var validateDOMNesting = __webpack_require__(58);
 	var warning = __webpack_require__(3);
 
 	var Flags = ReactDOMComponentFlags;
@@ -16699,7 +20745,7 @@
 	module.exports = ReactDOMComponent;
 
 /***/ },
-/* 127 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16715,7 +20761,7 @@
 
 	'use strict';
 
-	var validateDOMNesting = __webpack_require__(56);
+	var validateDOMNesting = __webpack_require__(58);
 
 	var DOC_NODE_TYPE = 9;
 
@@ -16737,7 +20783,7 @@
 	module.exports = ReactDOMContainerInfo;
 
 /***/ },
-/* 128 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16755,8 +20801,8 @@
 
 	var _assign = __webpack_require__(4);
 
-	var DOMLazyTree = __webpack_require__(16);
-	var ReactDOMComponentTree = __webpack_require__(5);
+	var DOMLazyTree = __webpack_require__(18);
+	var ReactDOMComponentTree = __webpack_require__(6);
 
 	var ReactDOMEmptyComponent = function (instantiate) {
 	  // ReactCompositeComponent uses this:
@@ -16802,7 +20848,7 @@
 	module.exports = ReactDOMEmptyComponent;
 
 /***/ },
-/* 129 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16818,7 +20864,7 @@
 
 	'use strict';
 
-	var ReactElement = __webpack_require__(9);
+	var ReactElement = __webpack_require__(10);
 
 	/**
 	 * Create a factory that creates HTML tag elements.
@@ -16977,7 +21023,7 @@
 	module.exports = ReactDOMFactories;
 
 /***/ },
-/* 130 */
+/* 153 */
 /***/ function(module, exports) {
 
 	/**
@@ -17000,7 +21046,7 @@
 	module.exports = ReactDOMFeatureFlags;
 
 /***/ },
-/* 131 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17016,8 +21062,8 @@
 
 	'use strict';
 
-	var DOMChildrenOperations = __webpack_require__(34);
-	var ReactDOMComponentTree = __webpack_require__(5);
+	var DOMChildrenOperations = __webpack_require__(36);
+	var ReactDOMComponentTree = __webpack_require__(6);
 
 	/**
 	 * Operations used to process updates to DOM nodes.
@@ -17039,7 +21085,7 @@
 	module.exports = ReactDOMIDOperations;
 
 /***/ },
-/* 132 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17058,11 +21104,11 @@
 	var _prodInvariant = __webpack_require__(2),
 	    _assign = __webpack_require__(4);
 
-	var DisabledInputUtils = __webpack_require__(27);
-	var DOMPropertyOperations = __webpack_require__(62);
-	var LinkedValueUtils = __webpack_require__(39);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactUpdates = __webpack_require__(10);
+	var DisabledInputUtils = __webpack_require__(28);
+	var DOMPropertyOperations = __webpack_require__(68);
+	var LinkedValueUtils = __webpack_require__(41);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactUpdates = __webpack_require__(11);
 
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
@@ -17313,7 +21359,7 @@
 	module.exports = ReactDOMInput;
 
 /***/ },
-/* 133 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17331,9 +21377,9 @@
 
 	var _assign = __webpack_require__(4);
 
-	var ReactChildren = __webpack_require__(63);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactDOMSelect = __webpack_require__(66);
+	var ReactChildren = __webpack_require__(69);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactDOMSelect = __webpack_require__(72);
 
 	var warning = __webpack_require__(3);
 	var didWarnInvalidOptionChildren = false;
@@ -17441,7 +21487,7 @@
 	module.exports = ReactDOMOption;
 
 /***/ },
-/* 134 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17457,10 +21503,10 @@
 
 	'use strict';
 
-	var ExecutionEnvironment = __webpack_require__(6);
+	var ExecutionEnvironment = __webpack_require__(7);
 
-	var getNodeForCharacterOffset = __webpack_require__(170);
-	var getTextContentAccessor = __webpack_require__(82);
+	var getNodeForCharacterOffset = __webpack_require__(193);
+	var getTextContentAccessor = __webpack_require__(88);
 
 	/**
 	 * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -17658,7 +21704,7 @@
 	module.exports = ReactDOMSelection;
 
 /***/ },
-/* 135 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17677,13 +21723,13 @@
 	var _prodInvariant = __webpack_require__(2),
 	    _assign = __webpack_require__(4);
 
-	var DOMChildrenOperations = __webpack_require__(34);
-	var DOMLazyTree = __webpack_require__(16);
-	var ReactDOMComponentTree = __webpack_require__(5);
+	var DOMChildrenOperations = __webpack_require__(36);
+	var DOMLazyTree = __webpack_require__(18);
+	var ReactDOMComponentTree = __webpack_require__(6);
 
-	var escapeTextContentForBrowser = __webpack_require__(30);
+	var escapeTextContentForBrowser = __webpack_require__(31);
 	var invariant = __webpack_require__(1);
-	var validateDOMNesting = __webpack_require__(56);
+	var validateDOMNesting = __webpack_require__(58);
 
 	/**
 	 * Text nodes violate a couple assumptions that React makes about components:
@@ -17827,7 +21873,7 @@
 	module.exports = ReactDOMTextComponent;
 
 /***/ },
-/* 136 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17846,10 +21892,10 @@
 	var _prodInvariant = __webpack_require__(2),
 	    _assign = __webpack_require__(4);
 
-	var DisabledInputUtils = __webpack_require__(27);
-	var LinkedValueUtils = __webpack_require__(39);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactUpdates = __webpack_require__(10);
+	var DisabledInputUtils = __webpack_require__(28);
+	var LinkedValueUtils = __webpack_require__(41);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactUpdates = __webpack_require__(11);
 
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
@@ -17987,7 +22033,7 @@
 	module.exports = ReactDOMTextarea;
 
 /***/ },
-/* 137 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18128,7 +22174,7 @@
 	};
 
 /***/ },
-/* 138 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18146,10 +22192,10 @@
 
 	var _assign = __webpack_require__(4);
 
-	var ReactUpdates = __webpack_require__(10);
-	var Transaction = __webpack_require__(24);
+	var ReactUpdates = __webpack_require__(11);
+	var Transaction = __webpack_require__(26);
 
-	var emptyFunction = __webpack_require__(7);
+	var emptyFunction = __webpack_require__(8);
 
 	var RESET_BATCHED_UPDATES = {
 	  initialize: emptyFunction,
@@ -18201,7 +22247,7 @@
 	module.exports = ReactDefaultBatchingStrategy;
 
 /***/ },
-/* 139 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18217,24 +22263,24 @@
 
 	'use strict';
 
-	var BeforeInputEventPlugin = __webpack_require__(112);
-	var ChangeEventPlugin = __webpack_require__(114);
-	var DefaultEventPluginOrder = __webpack_require__(116);
-	var EnterLeaveEventPlugin = __webpack_require__(117);
-	var HTMLDOMPropertyConfig = __webpack_require__(119);
-	var ReactComponentBrowserEnvironment = __webpack_require__(122);
-	var ReactDOMComponent = __webpack_require__(126);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactDOMEmptyComponent = __webpack_require__(128);
-	var ReactDOMTreeTraversal = __webpack_require__(137);
-	var ReactDOMTextComponent = __webpack_require__(135);
-	var ReactDefaultBatchingStrategy = __webpack_require__(138);
-	var ReactEventListener = __webpack_require__(141);
-	var ReactInjection = __webpack_require__(142);
-	var ReactReconcileTransaction = __webpack_require__(147);
-	var SVGDOMPropertyConfig = __webpack_require__(151);
-	var SelectEventPlugin = __webpack_require__(152);
-	var SimpleEventPlugin = __webpack_require__(153);
+	var BeforeInputEventPlugin = __webpack_require__(135);
+	var ChangeEventPlugin = __webpack_require__(137);
+	var DefaultEventPluginOrder = __webpack_require__(139);
+	var EnterLeaveEventPlugin = __webpack_require__(140);
+	var HTMLDOMPropertyConfig = __webpack_require__(142);
+	var ReactComponentBrowserEnvironment = __webpack_require__(145);
+	var ReactDOMComponent = __webpack_require__(149);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactDOMEmptyComponent = __webpack_require__(151);
+	var ReactDOMTreeTraversal = __webpack_require__(160);
+	var ReactDOMTextComponent = __webpack_require__(158);
+	var ReactDefaultBatchingStrategy = __webpack_require__(161);
+	var ReactEventListener = __webpack_require__(164);
+	var ReactInjection = __webpack_require__(165);
+	var ReactReconcileTransaction = __webpack_require__(170);
+	var SVGDOMPropertyConfig = __webpack_require__(174);
+	var SelectEventPlugin = __webpack_require__(175);
+	var SimpleEventPlugin = __webpack_require__(176);
 
 	var alreadyInjected = false;
 
@@ -18290,7 +22336,7 @@
 	};
 
 /***/ },
-/* 140 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18306,7 +22352,7 @@
 
 	'use strict';
 
-	var EventPluginHub = __webpack_require__(20);
+	var EventPluginHub = __webpack_require__(22);
 
 	function runEventQueueInBatch(events) {
 	  EventPluginHub.enqueueEvents(events);
@@ -18328,7 +22374,7 @@
 	module.exports = ReactEventEmitterMixin;
 
 /***/ },
-/* 141 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18346,14 +22392,14 @@
 
 	var _assign = __webpack_require__(4);
 
-	var EventListener = __webpack_require__(57);
-	var ExecutionEnvironment = __webpack_require__(6);
-	var PooledClass = __webpack_require__(14);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactUpdates = __webpack_require__(10);
+	var EventListener = __webpack_require__(62);
+	var ExecutionEnvironment = __webpack_require__(7);
+	var PooledClass = __webpack_require__(15);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactUpdates = __webpack_require__(11);
 
-	var getEventTarget = __webpack_require__(52);
-	var getUnboundedScrollPosition = __webpack_require__(103);
+	var getEventTarget = __webpack_require__(54);
+	var getUnboundedScrollPosition = __webpack_require__(123);
 
 	/**
 	 * Find the deepest React component completely containing the root of the
@@ -18490,7 +22536,7 @@
 	module.exports = ReactEventListener;
 
 /***/ },
-/* 142 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18506,15 +22552,15 @@
 
 	'use strict';
 
-	var DOMProperty = __webpack_require__(17);
-	var EventPluginHub = __webpack_require__(20);
-	var EventPluginUtils = __webpack_require__(37);
-	var ReactComponentEnvironment = __webpack_require__(41);
-	var ReactClass = __webpack_require__(64);
-	var ReactEmptyComponent = __webpack_require__(67);
-	var ReactBrowserEventEmitter = __webpack_require__(28);
-	var ReactHostComponent = __webpack_require__(69);
-	var ReactUpdates = __webpack_require__(10);
+	var DOMProperty = __webpack_require__(19);
+	var EventPluginHub = __webpack_require__(22);
+	var EventPluginUtils = __webpack_require__(39);
+	var ReactComponentEnvironment = __webpack_require__(43);
+	var ReactClass = __webpack_require__(70);
+	var ReactEmptyComponent = __webpack_require__(73);
+	var ReactBrowserEventEmitter = __webpack_require__(29);
+	var ReactHostComponent = __webpack_require__(75);
+	var ReactUpdates = __webpack_require__(11);
 
 	var ReactInjection = {
 	  Component: ReactComponentEnvironment.injection,
@@ -18531,7 +22577,7 @@
 	module.exports = ReactInjection;
 
 /***/ },
-/* 143 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18547,7 +22593,7 @@
 
 	'use strict';
 
-	var adler32 = __webpack_require__(164);
+	var adler32 = __webpack_require__(187);
 
 	var TAG_END = /\/?>/;
 	var COMMENT_START = /^<\!\-\-/;
@@ -18586,7 +22632,7 @@
 	module.exports = ReactMarkupChecksum;
 
 /***/ },
-/* 144 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18604,17 +22650,17 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactComponentEnvironment = __webpack_require__(41);
-	var ReactInstanceMap = __webpack_require__(22);
-	var ReactInstrumentation = __webpack_require__(8);
-	var ReactMultiChildUpdateTypes = __webpack_require__(72);
+	var ReactComponentEnvironment = __webpack_require__(43);
+	var ReactInstanceMap = __webpack_require__(24);
+	var ReactInstrumentation = __webpack_require__(9);
+	var ReactMultiChildUpdateTypes = __webpack_require__(78);
 
-	var ReactCurrentOwner = __webpack_require__(15);
-	var ReactReconciler = __webpack_require__(18);
-	var ReactChildReconciler = __webpack_require__(121);
+	var ReactCurrentOwner = __webpack_require__(16);
+	var ReactReconciler = __webpack_require__(20);
+	var ReactChildReconciler = __webpack_require__(144);
 
-	var emptyFunction = __webpack_require__(7);
-	var flattenChildren = __webpack_require__(168);
+	var emptyFunction = __webpack_require__(8);
+	var flattenChildren = __webpack_require__(191);
 	var invariant = __webpack_require__(1);
 
 	/**
@@ -19042,7 +23088,7 @@
 	module.exports = ReactMultiChild;
 
 /***/ },
-/* 145 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19141,7 +23187,7 @@
 	module.exports = ReactOwner;
 
 /***/ },
-/* 146 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19159,10 +23205,10 @@
 
 	var _assign = __webpack_require__(4);
 
-	var ReactComponent = __webpack_require__(40);
-	var ReactNoopUpdateQueue = __webpack_require__(44);
+	var ReactComponent = __webpack_require__(42);
+	var ReactNoopUpdateQueue = __webpack_require__(46);
 
-	var emptyObject = __webpack_require__(19);
+	var emptyObject = __webpack_require__(21);
 
 	/**
 	 * Base class helpers for the updating state of a component.
@@ -19188,7 +23234,7 @@
 	module.exports = ReactPureComponent;
 
 /***/ },
-/* 147 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19206,13 +23252,13 @@
 
 	var _assign = __webpack_require__(4);
 
-	var CallbackQueue = __webpack_require__(61);
-	var PooledClass = __webpack_require__(14);
-	var ReactBrowserEventEmitter = __webpack_require__(28);
-	var ReactInputSelection = __webpack_require__(70);
-	var ReactInstrumentation = __webpack_require__(8);
-	var Transaction = __webpack_require__(24);
-	var ReactUpdateQueue = __webpack_require__(48);
+	var CallbackQueue = __webpack_require__(67);
+	var PooledClass = __webpack_require__(15);
+	var ReactBrowserEventEmitter = __webpack_require__(29);
+	var ReactInputSelection = __webpack_require__(76);
+	var ReactInstrumentation = __webpack_require__(9);
+	var Transaction = __webpack_require__(26);
+	var ReactUpdateQueue = __webpack_require__(50);
 
 	/**
 	 * Ensures that, when possible, the selection range (currently selected text
@@ -19371,7 +23417,7 @@
 	module.exports = ReactReconcileTransaction;
 
 /***/ },
-/* 148 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19387,7 +23433,7 @@
 
 	'use strict';
 
-	var ReactOwner = __webpack_require__(145);
+	var ReactOwner = __webpack_require__(168);
 
 	var ReactRef = {};
 
@@ -19456,7 +23502,7 @@
 	module.exports = ReactRef;
 
 /***/ },
-/* 149 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19474,10 +23520,10 @@
 
 	var _assign = __webpack_require__(4);
 
-	var PooledClass = __webpack_require__(14);
-	var Transaction = __webpack_require__(24);
-	var ReactInstrumentation = __webpack_require__(8);
-	var ReactServerUpdateQueue = __webpack_require__(150);
+	var PooledClass = __webpack_require__(15);
+	var Transaction = __webpack_require__(26);
+	var ReactInstrumentation = __webpack_require__(9);
+	var ReactServerUpdateQueue = __webpack_require__(173);
 
 	/**
 	 * Executed within the scope of the `Transaction` instance. Consider these as
@@ -19551,7 +23597,7 @@
 	module.exports = ReactServerRenderingTransaction;
 
 /***/ },
-/* 150 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19570,8 +23616,8 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var ReactUpdateQueue = __webpack_require__(48);
-	var Transaction = __webpack_require__(24);
+	var ReactUpdateQueue = __webpack_require__(50);
+	var Transaction = __webpack_require__(26);
 	var warning = __webpack_require__(3);
 
 	function warnNoop(publicInstance, callerName) {
@@ -19697,7 +23743,7 @@
 	module.exports = ReactServerUpdateQueue;
 
 /***/ },
-/* 151 */
+/* 174 */
 /***/ function(module, exports) {
 
 	/**
@@ -20004,7 +24050,7 @@
 	module.exports = SVGDOMPropertyConfig;
 
 /***/ },
-/* 152 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20020,17 +24066,17 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(11);
-	var EventPropagators = __webpack_require__(21);
-	var ExecutionEnvironment = __webpack_require__(6);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactInputSelection = __webpack_require__(70);
-	var SyntheticEvent = __webpack_require__(12);
+	var EventConstants = __webpack_require__(12);
+	var EventPropagators = __webpack_require__(23);
+	var ExecutionEnvironment = __webpack_require__(7);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactInputSelection = __webpack_require__(76);
+	var SyntheticEvent = __webpack_require__(13);
 
-	var getActiveElement = __webpack_require__(59);
-	var isTextInputElement = __webpack_require__(84);
-	var keyOf = __webpack_require__(13);
-	var shallowEqual = __webpack_require__(32);
+	var getActiveElement = __webpack_require__(64);
+	var isTextInputElement = __webpack_require__(90);
+	var keyOf = __webpack_require__(14);
+	var shallowEqual = __webpack_require__(34);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -20205,7 +24251,7 @@
 	module.exports = SelectEventPlugin;
 
 /***/ },
-/* 153 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20223,26 +24269,26 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var EventConstants = __webpack_require__(11);
-	var EventListener = __webpack_require__(57);
-	var EventPropagators = __webpack_require__(21);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var SyntheticAnimationEvent = __webpack_require__(154);
-	var SyntheticClipboardEvent = __webpack_require__(155);
-	var SyntheticEvent = __webpack_require__(12);
-	var SyntheticFocusEvent = __webpack_require__(158);
-	var SyntheticKeyboardEvent = __webpack_require__(160);
-	var SyntheticMouseEvent = __webpack_require__(29);
-	var SyntheticDragEvent = __webpack_require__(157);
-	var SyntheticTouchEvent = __webpack_require__(161);
-	var SyntheticTransitionEvent = __webpack_require__(162);
-	var SyntheticUIEvent = __webpack_require__(23);
-	var SyntheticWheelEvent = __webpack_require__(163);
+	var EventConstants = __webpack_require__(12);
+	var EventListener = __webpack_require__(62);
+	var EventPropagators = __webpack_require__(23);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var SyntheticAnimationEvent = __webpack_require__(177);
+	var SyntheticClipboardEvent = __webpack_require__(178);
+	var SyntheticEvent = __webpack_require__(13);
+	var SyntheticFocusEvent = __webpack_require__(181);
+	var SyntheticKeyboardEvent = __webpack_require__(183);
+	var SyntheticMouseEvent = __webpack_require__(30);
+	var SyntheticDragEvent = __webpack_require__(180);
+	var SyntheticTouchEvent = __webpack_require__(184);
+	var SyntheticTransitionEvent = __webpack_require__(185);
+	var SyntheticUIEvent = __webpack_require__(25);
+	var SyntheticWheelEvent = __webpack_require__(186);
 
-	var emptyFunction = __webpack_require__(7);
-	var getEventCharCode = __webpack_require__(50);
+	var emptyFunction = __webpack_require__(8);
+	var getEventCharCode = __webpack_require__(52);
 	var invariant = __webpack_require__(1);
-	var keyOf = __webpack_require__(13);
+	var keyOf = __webpack_require__(14);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -20845,7 +24891,7 @@
 	module.exports = SimpleEventPlugin;
 
 /***/ },
-/* 154 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20861,7 +24907,7 @@
 
 	'use strict';
 
-	var SyntheticEvent = __webpack_require__(12);
+	var SyntheticEvent = __webpack_require__(13);
 
 	/**
 	 * @interface Event
@@ -20889,7 +24935,7 @@
 	module.exports = SyntheticAnimationEvent;
 
 /***/ },
-/* 155 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20905,7 +24951,7 @@
 
 	'use strict';
 
-	var SyntheticEvent = __webpack_require__(12);
+	var SyntheticEvent = __webpack_require__(13);
 
 	/**
 	 * @interface Event
@@ -20932,7 +24978,7 @@
 	module.exports = SyntheticClipboardEvent;
 
 /***/ },
-/* 156 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20948,7 +24994,7 @@
 
 	'use strict';
 
-	var SyntheticEvent = __webpack_require__(12);
+	var SyntheticEvent = __webpack_require__(13);
 
 	/**
 	 * @interface Event
@@ -20973,7 +25019,7 @@
 	module.exports = SyntheticCompositionEvent;
 
 /***/ },
-/* 157 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20989,7 +25035,7 @@
 
 	'use strict';
 
-	var SyntheticMouseEvent = __webpack_require__(29);
+	var SyntheticMouseEvent = __webpack_require__(30);
 
 	/**
 	 * @interface DragEvent
@@ -21014,7 +25060,7 @@
 	module.exports = SyntheticDragEvent;
 
 /***/ },
-/* 158 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21030,7 +25076,7 @@
 
 	'use strict';
 
-	var SyntheticUIEvent = __webpack_require__(23);
+	var SyntheticUIEvent = __webpack_require__(25);
 
 	/**
 	 * @interface FocusEvent
@@ -21055,7 +25101,7 @@
 	module.exports = SyntheticFocusEvent;
 
 /***/ },
-/* 159 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21071,7 +25117,7 @@
 
 	'use strict';
 
-	var SyntheticEvent = __webpack_require__(12);
+	var SyntheticEvent = __webpack_require__(13);
 
 	/**
 	 * @interface Event
@@ -21097,7 +25143,7 @@
 	module.exports = SyntheticInputEvent;
 
 /***/ },
-/* 160 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21113,11 +25159,11 @@
 
 	'use strict';
 
-	var SyntheticUIEvent = __webpack_require__(23);
+	var SyntheticUIEvent = __webpack_require__(25);
 
-	var getEventCharCode = __webpack_require__(50);
-	var getEventKey = __webpack_require__(169);
-	var getEventModifierState = __webpack_require__(51);
+	var getEventCharCode = __webpack_require__(52);
+	var getEventKey = __webpack_require__(192);
+	var getEventModifierState = __webpack_require__(53);
 
 	/**
 	 * @interface KeyboardEvent
@@ -21186,7 +25232,7 @@
 	module.exports = SyntheticKeyboardEvent;
 
 /***/ },
-/* 161 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21202,9 +25248,9 @@
 
 	'use strict';
 
-	var SyntheticUIEvent = __webpack_require__(23);
+	var SyntheticUIEvent = __webpack_require__(25);
 
-	var getEventModifierState = __webpack_require__(51);
+	var getEventModifierState = __webpack_require__(53);
 
 	/**
 	 * @interface TouchEvent
@@ -21236,7 +25282,7 @@
 	module.exports = SyntheticTouchEvent;
 
 /***/ },
-/* 162 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21252,7 +25298,7 @@
 
 	'use strict';
 
-	var SyntheticEvent = __webpack_require__(12);
+	var SyntheticEvent = __webpack_require__(13);
 
 	/**
 	 * @interface Event
@@ -21280,7 +25326,7 @@
 	module.exports = SyntheticTransitionEvent;
 
 /***/ },
-/* 163 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21296,7 +25342,7 @@
 
 	'use strict';
 
-	var SyntheticMouseEvent = __webpack_require__(29);
+	var SyntheticMouseEvent = __webpack_require__(30);
 
 	/**
 	 * @interface WheelEvent
@@ -21339,7 +25385,7 @@
 	module.exports = SyntheticWheelEvent;
 
 /***/ },
-/* 164 */
+/* 187 */
 /***/ function(module, exports) {
 
 	/**
@@ -21388,7 +25434,7 @@
 	module.exports = adler32;
 
 /***/ },
-/* 165 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21406,8 +25452,8 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactPropTypeLocationNames = __webpack_require__(45);
-	var ReactPropTypesSecret = __webpack_require__(47);
+	var ReactPropTypeLocationNames = __webpack_require__(47);
+	var ReactPropTypesSecret = __webpack_require__(49);
 
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
@@ -21420,7 +25466,7 @@
 	  // https://github.com/facebook/react/issues/7240
 	  // Remove the inline requires when we don't need them anymore:
 	  // https://github.com/facebook/react/pull/7178
-	  ReactComponentTreeHook = __webpack_require__(42);
+	  ReactComponentTreeHook = __webpack_require__(44);
 	}
 
 	var loggedTypeFailures = {};
@@ -21478,10 +25524,10 @@
 	}
 
 	module.exports = checkReactTypeSpec;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(35)))
 
 /***/ },
-/* 166 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21497,7 +25543,7 @@
 
 	'use strict';
 
-	var CSSProperty = __webpack_require__(60);
+	var CSSProperty = __webpack_require__(66);
 	var warning = __webpack_require__(3);
 
 	var isUnitlessNumber = CSSProperty.isUnitlessNumber;
@@ -21565,7 +25611,7 @@
 	module.exports = dangerousStyleValue;
 
 /***/ },
-/* 167 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21583,11 +25629,11 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactCurrentOwner = __webpack_require__(15);
-	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactInstanceMap = __webpack_require__(22);
+	var ReactCurrentOwner = __webpack_require__(16);
+	var ReactDOMComponentTree = __webpack_require__(6);
+	var ReactInstanceMap = __webpack_require__(24);
 
-	var getHostComponentFromComposite = __webpack_require__(80);
+	var getHostComponentFromComposite = __webpack_require__(86);
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(3);
 
@@ -21630,7 +25676,7 @@
 	module.exports = findDOMNode;
 
 /***/ },
-/* 168 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21647,8 +25693,8 @@
 
 	'use strict';
 
-	var KeyEscapeUtils = __webpack_require__(38);
-	var traverseAllChildren = __webpack_require__(55);
+	var KeyEscapeUtils = __webpack_require__(40);
+	var traverseAllChildren = __webpack_require__(57);
 	var warning = __webpack_require__(3);
 
 	var ReactComponentTreeHook;
@@ -21659,7 +25705,7 @@
 	  // https://github.com/facebook/react/issues/7240
 	  // Remove the inline requires when we don't need them anymore:
 	  // https://github.com/facebook/react/pull/7178
-	  ReactComponentTreeHook = __webpack_require__(42);
+	  ReactComponentTreeHook = __webpack_require__(44);
 	}
 
 	/**
@@ -21709,10 +25755,10 @@
 	}
 
 	module.exports = flattenChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(35)))
 
 /***/ },
-/* 169 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21728,7 +25774,7 @@
 
 	'use strict';
 
-	var getEventCharCode = __webpack_require__(50);
+	var getEventCharCode = __webpack_require__(52);
 
 	/**
 	 * Normalization of deprecated HTML5 `key` values
@@ -21819,7 +25865,7 @@
 	module.exports = getEventKey;
 
 /***/ },
-/* 170 */
+/* 193 */
 /***/ function(module, exports) {
 
 	/**
@@ -21898,7 +25944,7 @@
 	module.exports = getNodeForCharacterOffset;
 
 /***/ },
-/* 171 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21914,7 +25960,7 @@
 
 	'use strict';
 
-	var ExecutionEnvironment = __webpack_require__(6);
+	var ExecutionEnvironment = __webpack_require__(7);
 
 	/**
 	 * Generate a mapping of standard vendor prefixes using the defined style property and event name.
@@ -22004,7 +26050,7 @@
 	module.exports = getVendorPrefixedEventName;
 
 /***/ },
-/* 172 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22021,7 +26067,7 @@
 
 	var _prodInvariant = __webpack_require__(2);
 
-	var ReactElement = __webpack_require__(9);
+	var ReactElement = __webpack_require__(10);
 
 	var invariant = __webpack_require__(1);
 
@@ -22047,7 +26093,7 @@
 	module.exports = onlyChild;
 
 /***/ },
-/* 173 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22063,7 +26109,7 @@
 
 	'use strict';
 
-	var escapeTextContentForBrowser = __webpack_require__(30);
+	var escapeTextContentForBrowser = __webpack_require__(31);
 
 	/**
 	 * Escapes attribute value to prevent scripting attacks.
@@ -22078,7 +26124,7 @@
 	module.exports = quoteAttributeValueForBrowser;
 
 /***/ },
-/* 174 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22094,12 +26140,12 @@
 
 	'use strict';
 
-	var ReactMount = __webpack_require__(71);
+	var ReactMount = __webpack_require__(77);
 
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-/* 175 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -22351,23 +26397,23 @@
 
 
 /***/ },
-/* 176 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(93);
+	var content = __webpack_require__(115);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
+	var update = __webpack_require__(198)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./song.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./song.css");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/postcss-loader/index.js!./index.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/postcss-loader/index.js!./index.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22377,191 +26423,76 @@
 	}
 
 /***/ },
-/* 177 */
-/***/ function(module, exports, __webpack_require__) {
+/* 200 */
+/***/ function(module, exports) {
 
-	module.exports = __webpack_require__(180);
+	/* WEBPACK VAR INJECTION */(function(global) {
+	var rng;
 
-
-/***/ },
-/* 178 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
-
-	const events = __webpack_require__(96);
-	const defaults = __webpack_require__(181);
-	const defaultContext = __webpack_require__(179);
-
-	class WebAudioScheduler extends events.EventEmitter {
-	  constructor(opts) {
-	    opts = opts || /* istanbul ignore next */{};
-
-	    super();
-
-	    this.context = defaults(opts.context, defaultContext);
-	    this.interval = defaults(opts.interval, 0.025);
-	    this.aheadTime = defaults(opts.aheadTime, 0.1);
-	    this.timerAPI = defaults(opts.timerAPI, global);
-	    this.playbackTime = this.currentTime;
-
-	    this._timerId = 0;
-	    this._schedId = 0;
-	    this._scheds = [];
-	  }
-
-	  get state() {
-	    return this._timerId !== 0 ? "running" : "suspended";
-	  }
-
-	  get currentTime() {
-	    return this.context.currentTime;
-	  }
-
-	  get events() {
-	    return this._scheds.slice();
-	  }
-
-	  start(callback, args) {
-	    const loop = () => {
-	      let t0 = this.context.currentTime;
-	      let t1 = t0 + this.aheadTime;
-
-	      this._process(t0, t1);
-	    };
-
-	    if (this._timerId === 0) {
-	      this._timerId = this.timerAPI.setInterval(loop, this.interval * 1000);
-
-	      if (callback) {
-	        this.insert(this.context.currentTime, callback, args);
-	        loop();
-	      }
-
-	      this.emit("start");
-	    } else {
-	      this.insert(this.context.currentTime, callback, args);
-	    }
-
-	    return this;
-	  }
-
-	  stop(reset) {
-	    if (this._timerId !== 0) {
-	      this.timerAPI.clearInterval(this._timerId);
-	      this._timerId = 0;
-
-	      this.emit("stop");
-	    }
-
-	    if (reset) {
-	      this._scheds.splice(0);
-	    }
-
-	    return this;
-	  }
-
-	  insert(time, callback, args) {
-	    let id = ++this._schedId;
-	    let event = { id, time, callback, args };
-	    let scheds = this._scheds;
-
-	    if (scheds.length === 0 || scheds[scheds.length - 1].time <= time) {
-	      scheds.push(event);
-	    } else {
-	      for (let i = 0, imax = scheds.length; i < imax; i++) {
-	        if (time < scheds[i].time) {
-	          scheds.splice(i, 0, event);
-	          break;
-	        }
-	      }
-	    }
-
-	    return id;
-	  }
-
-	  nextTick(time, callback, args) {
-	    if (typeof time === "function") {
-	      args = callback;
-	      callback = time;
-	      time = this.playbackTime;
-	    }
-
-	    return this.insert(time + this.aheadTime, callback, args);
-	  }
-
-	  remove(schedId) {
-	    let scheds = this._scheds;
-
-	    if (typeof schedId === "number") {
-	      for (let i = 0, imax = scheds.length; i < imax; i++) {
-	        if (schedId === scheds[i].id) {
-	          scheds.splice(i, 1);
-	          break;
-	        }
-	      }
-	    }
-
-	    return schedId;
-	  }
-
-	  removeAll() {
-	    this._scheds.splice(0);
-	  }
-
-	  _process(t0, t1) {
-	    let scheds = this._scheds;
-
-	    this.playbackTime = t0;
-	    this.emit("process", { playbackTime: this.playbackTime });
-
-	    while (scheds.length && scheds[0].time < t1) {
-	      let event = scheds.shift();
-	      let playbackTime = event.time;
-	      let args = event.args;
-
-	      this.playbackTime = playbackTime;
-
-	      event.callback({ playbackTime, args });
-	    }
-
-	    this.playbackTime = t0;
-	    this.emit("processed", { playbackTime: this.playbackTime });
-	  }
+	if (global.crypto && crypto.getRandomValues) {
+	  // WHATWG crypto-based RNG - http://wiki.whatwg.org/wiki/Crypto
+	  // Moderately fast, high quality
+	  var _rnds8 = new Uint8Array(16);
+	  rng = function whatwgRNG() {
+	    crypto.getRandomValues(_rnds8);
+	    return _rnds8;
+	  };
 	}
 
-	module.exports = WebAudioScheduler;
+	if (!rng) {
+	  // Math.random()-based (RNG)
+	  //
+	  // If all else fails, use Math.random().  It's fast, but is of unspecified
+	  // quality.
+	  var  _rnds = new Array(16);
+	  rng = function() {
+	    for (var i = 0, r; i < 16; i++) {
+	      if ((i & 0x03) === 0) r = Math.random() * 0x100000000;
+	      _rnds[i] = r >>> ((i & 0x03) << 3) & 0xff;
+	    }
+
+	    return _rnds;
+	  };
+	}
+
+	module.exports = rng;
+
+
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 179 */
+/* 201 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict'
 
-	module.exports = {
-	  get currentTime() {
-	    return Date.now() / 1000;
-	  }
-	};
-
-/***/ },
-/* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(178);
-
-/***/ },
-/* 181 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	function defaults(value, defaultValue) {
-	  return value !== undefined ? value : defaultValue;
+	module.exports = function (ac, value) {
+	  value = (value || value === 0) ? value : 1
+	  var buffer = ac.createBuffer(1, 2, ac.sampleRate)
+	  var data = buffer.getChannelData(0)
+	  data[0] = data[1] = value
+	  var source = ac.createBufferSource()
+	  source.buffer = buffer
+	  source.loop = true
+	  return source
 	}
 
-	module.exports = defaults;
+
+/***/ },
+/* 202 */
+/***/ function(module, exports) {
+
+	module.exports = function(module) {
+		if(!module.webpackPolyfill) {
+			module.deprecate = function() {};
+			module.paths = [];
+			// module.parent = undefined by default
+			module.children = [];
+			module.webpackPolyfill = 1;
+		}
+		return module;
+	}
+
 
 /***/ }
 /******/ ]);
